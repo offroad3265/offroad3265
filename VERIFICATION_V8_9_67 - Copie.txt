@@ -1,0 +1,7 @@
+V8.9.67 — à partir de la V8.9.66.
+- Phrase d'introduction affichée intégralement :
+  « OFFROAD 32 65 vous propose de concevoir votre propre raid sur mesure »
+- « VOUS AVEZ UNE IDÉE ? » agrandi à 24 px.
+- Conclusion noire conservée.
+- Vert WhatsApp officiel #25D366 conservé sur les boutons.
+- Architecture, fond orange et autres réglages inchangés.

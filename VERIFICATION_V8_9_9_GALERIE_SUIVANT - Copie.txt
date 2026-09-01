@@ -1,0 +1,11 @@
+OFFROAD 32 65 — V8.9.9 GALERIE SUIVANT DÉFILANT
+=====================================================
+- présentation V8.9.8 conservée
+- bouton SUIVANT à droite conservé/activé automatiquement dès qu'il y a plus de 10 photos dans la sélection
+- clic SUIVANT : animation des photos vers la gauche
+- groupe suivant de 10 photos affiché
+- retour au premier groupe après le dernier
+- fonctionnement indépendant pour chaque filtre pays
+- titre et filtres centrés conservés
+- 2 lignes x 5 photos conservées
+- marges 1,5 cm conservées

@@ -1,0 +1,7 @@
+V8.9.119 — PARAMÉTRAGE À PROPOS
+Base graphique verrouillée : V8.9.118.
+Aucune modification visuelle.
+Identifiants stables ajoutés aux titres, textes, sections et photos.
+Registre dédié ajouté : a-propos-config.js.
+Les futures modifications, ajouts, suppressions/masquages et remplacements de photos
+pourront être ciblés sans reconstruire le design validé.

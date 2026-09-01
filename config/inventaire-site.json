@@ -1,0 +1,51 @@
+{
+  "html": [
+    "a-propos.html",
+    "confirmation-document.html",
+    "contrat-inscription.html",
+    "detail-raid.html",
+    "documents.html",
+    "fiche-individuelle-renseignements.html",
+    "galerie.html",
+    "index.html",
+    "inscription-raid.html",
+    "maroc-2026.html",
+    "nos-raids.html",
+    "partenaires.html",
+    "presentation-raid.html",
+    "programme-detail.html",
+    "programme-maroc-2026.html",
+    "programme-raid.html",
+    "programme-universel.html",
+    "raids-espagne.html",
+    "raids-maroc.html",
+    "raids-sardaigne.html",
+    "raids-tunisie.html"
+  ],
+  "pdf": [
+    "CONTRAT_D_INSCRIPTION_A_UN_RAID_OFFROAD_32_65.pdf",
+    "Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf",
+    "RIB_OFFROAD_32_65.pdf"
+  ],
+  "images": [
+    "17546.jpg",
+    "17550.jpg",
+    "17663.jpg",
+    "18542.jpg",
+    "18843.jpg",
+    "20100.jpg",
+    "20102.jpg",
+    "20113.jpg",
+    "20115.jpg",
+    "accueil-offroad3265.png",
+    "nomad-travel.jpg",
+    "photos-maroc-2026/agence-maroc-1.jpg",
+    "photos-maroc-2026/agence-maroc-2.jpg",
+    "photos-maroc-2026/agence-maroc-3.jpg",
+    "photos-maroc-2026/agence-maroc-4.jpg",
+    "raid-espagne-aragon-catalogne-2026.jpg",
+    "tdr-logistic.png",
+    "tunisie-offroad-drapeau.png",
+    "whatsapp-icon-white.png"
+  ]
+}

@@ -1,0 +1,16 @@
+OFFROAD 32 65 — V8.9.1 GALERIE ALIGNÉE SUR LA RÉFÉRENCE
+=============================================================
+Page modifiée : galerie.html uniquement.
+
+Ajustements :
+- titre GALERIE unique, orange, aligné à gauche
+- aucun bandeau derrière
+- aucun texte sous le titre
+- filtres pays immédiatement sous le titre
+- bouton actif orange
+- grille pleine largeur en 4 colonnes
+- espacements réduits entre les photos
+- vignettes plus larges, proches des proportions de la référence
+- légendes masquées sur les vignettes
+- page fixe conservée
+- visionneuse et logique paramétrable conservées

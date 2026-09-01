@@ -1,0 +1,21 @@
+V8.9.121 — PARAMÉTRAGE DE LA FICHE INDIVIDUELLE DE RENSEIGNEMENTS
+
+Base de référence : V8.9.120.
+
+Aucune modification visuelle ni de contenu :
+- mêmes textes ;
+- mêmes champs ;
+- mêmes obligations ;
+- mêmes boutons ;
+- mêmes couleurs, marges, polices et proportions ;
+- même fonctionnement d'envoi.
+
+Paramétrage ajouté :
+- formulaire principal identifié par #fiche-individuelle-form ;
+- 4 champs existants dotés d'identifiants éditoriaux stables ;
+- labels associés identifiables sans casser les attributs for/id ;
+- 2 titres/rubriques repérés pour modification future ;
+- registre dédié ajouté : fiche-individuelle-config.js.
+
+Cela permet désormais de modifier, ajouter, supprimer/masquer ou réordonner
+des rubriques, textes et champs de la fiche sans devoir reconstruire la structure validée.
