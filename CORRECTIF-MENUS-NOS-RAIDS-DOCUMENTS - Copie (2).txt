@@ -1,0 +1,11 @@
+CORRECTIF DES MENUS DÉROULANTS
+
+NOS RAIDS :
+- ajout de « TOUS NOS RAIDS » en tête du menu ;
+- Espagne, Maroc, Tunisie, Sardaigne conservés.
+
+DOCUMENTS :
+- suppression de la rubrique « TOUS LES DOCUMENTS » ajoutée à tort ;
+- Contrat d’inscription et Fiche individuelle conservés.
+
+Aucun autre élément du bandeau ni du site n’a été modifié.

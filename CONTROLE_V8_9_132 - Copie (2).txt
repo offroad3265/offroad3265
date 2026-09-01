@@ -1,0 +1,16 @@
+V8.9.132 — MENU DOCUMENTS COMPLET DEPUIS LA FICHE INDIVIDUELLE
+
+Cause :
+La fiche autonome V8.9.131 utilisait le bandeau historique, mais ne chargeait plus
+le registre central Documents ni son runtime. Le menu restait donc limité aux
+3 liens codés en dur dans le header.
+
+Correction :
+- ajout de documents-config.js sur la fiche individuelle ;
+- ajout de documents-runtime.js sur la fiche individuelle ;
+- le menu DOCUMENTS est désormais alimenté par le registre central ;
+- Conditions de Vente NOMAD RAID Travel réapparaît automatiquement comme 4e entrée.
+
+Contrôle différentiel :
+- seul fiche-individuelle-renseignements.html a été modifié par rapport à V8.9.131.
+- aucun autre fichier du site n'a été modifié.

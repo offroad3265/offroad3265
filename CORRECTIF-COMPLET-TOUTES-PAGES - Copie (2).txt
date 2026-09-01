@@ -1,0 +1,17 @@
+CAUSE IDENTIFIÉE APRÈS CONTRÔLE DE TOUTES LES PAGES PROGRAMME
+
+Il existe deux gabarits de programme :
+- programme-raid.html
+- programme-universel.html
+
+Le premier avait été corrigé, mais programme-universel.html conservait encore son
+bouton #signupLink avec un fond vert inline #169c4b. Selon le lien utilisé pour
+ARAGON/CATALOGNE, c'est ce second gabarit qui pouvait être affiché.
+
+CORRECTION
+- suppression du fond vert inline dans programme-universel.html ;
+- traitement explicite du statut COMPLET sur ce gabarit ;
+- bouton COMPLET forcé en rouge #c61f1f et désactivé ;
+- contrôle de tous les fichiers programme*.html pour supprimer tout signupLink vert.
+
+La finalisation du dossier contrôlée reste intégrée.

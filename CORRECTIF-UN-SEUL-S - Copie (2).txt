@@ -1,0 +1,6 @@
+Correction définitive de MOTOS :
+- retour à l'image propre contenant MOTO ;
+- cause identifiée : le précédent recadrage copiait les deux S de SSV ;
+- prélèvement limité à un seul S ;
+- ajout d'un seul S après MOTO ;
+- aucun autre élément du site modifié.

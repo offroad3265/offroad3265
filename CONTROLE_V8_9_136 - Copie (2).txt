@@ -1,0 +1,13 @@
+V8.9.136 — PREMIER CADRE UNIQUEMENT
+
+Modifications :
+- suppression de « DOCUMENT PARTICIPANT » ;
+- centrage de « FICHE INDIVIDUELLE DE RENSEIGNEMENTS » ;
+- texte remplacé par :
+  « Merci de compléter cette fiche avec les informations exactes à jour »
+- centrage de cette phrase ;
+- logos et reste de la fiche inchangés.
+
+Fichiers existants modifiés :
+- fiche-individuelle-renseignements.html
+- fiche-individuelle.css
