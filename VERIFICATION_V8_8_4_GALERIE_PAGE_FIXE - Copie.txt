@@ -1,0 +1,13 @@
+OFFROAD 32 65 — V8.8.4 GALERIE PAGE FIXE
+=============================================
+Page modifiée : galerie.html uniquement.
+
+- page GALERIE fixe
+- aucun défilement vertical global de la page
+- en-tête et filtres restent visibles
+- la grille photo occupe tout l'espace restant
+- si le nombre de photos dépasse la zone disponible, seule la grille défile
+- lightbox conservée
+- filtres conservés
+- clics GALERIE corrigés sur les autres pages : conservés
+- aucune autre page modifiée

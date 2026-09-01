@@ -1,0 +1,5 @@
+V8.9.86 — à partir de la V8.9.85 validée.
+- Micro-typographie décorative agrandie.
+- ROADBOOK / OFFROAD : 12 px.
+- Coordonnées et PISTE • VOYAGE • AVENTURE : 10 px.
+- Positionnement, relief, lignes décoratives, contenu central, couleurs et CTA inchangés.

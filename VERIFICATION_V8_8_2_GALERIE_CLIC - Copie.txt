@@ -1,0 +1,12 @@
+OFFROAD 32 65 — V8.8.2 CORRECTION CLIC GALERIE
+==================================================
+Correction ciblée sur index.html.
+
+- destination GALERIE = galerie.html
+- interception du clic GALERIE au niveau capture
+- arrêt de toute propagation vers un gestionnaire/overlay concurrent
+- priorité d'affichage/clic donnée à la navigation
+- liens WhatsApp conservés
+- galerie.html et autres pages inchangées
+
+Objectif : le clic sur GALERIE ouvre obligatoirement galerie.html.

@@ -1,0 +1,8 @@
+OFFROAD 32 65 — V8.8.1 CORRECTION LIEN GALERIE
+=================================================
+Page corrigée : index.html uniquement
+Liens GALERIE détectés : 1
+Liens GALERIE corrigés : 1
+Destination finale : galerie.html
+Liens WhatsApp conservés : 7
+Autres pages : inchangées

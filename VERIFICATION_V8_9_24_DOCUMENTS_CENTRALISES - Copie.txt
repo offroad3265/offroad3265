@@ -1,0 +1,26 @@
+OFFROAD 32 65 — V8.9.24 DOCUMENTS CENTRALISÉS
+==================================================
+La gestion des documents est maintenant centralisée.
+
+Source unique : documents-config.js
+Runtime : documents-runtime.js
+
+Propagation automatique :
+- menus DOCUMENTS
+- page DOCUMENTS
+- parcours d'inscription
+- nombre de documents obligatoires
+- texte Dossier complet
+- sélecteurs de documents
+
+Documents actuels :
+1. Fiche individuelle de renseignements
+2. Contrat d'inscription
+3. CGV OFFROAD 32 65
+4. RIB OFFROAD 32 65 (page DOCUMENTS uniquement)
+
+Validation :
+- JavaScript valide
+- registre exécutable
+- scripts chargés sur toutes les pages
+- aucun lien local cassé

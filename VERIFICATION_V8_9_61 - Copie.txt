@@ -1,0 +1,8 @@
+V8.9.61 — à partir de la V8.9.60.
+- Architecture, textes et espacements strictement conservés.
+- Fond de page orange chaud légèrement terre cuite.
+- Titres, repères 01/02/03 et petits libellés en ivoire clair.
+- Texte courant et mots-clés en noir anthracite.
+- Filets de séparation en ivoire translucide.
+- Bouton PROPOSER MON PROJET noir avec texte ivoire.
+- Aucune autre modification.

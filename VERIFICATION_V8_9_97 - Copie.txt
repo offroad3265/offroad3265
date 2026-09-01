@@ -1,0 +1,8 @@
+V8.9.97 — depuis V8.9.96 validée.
+- « NOS PARTENAIRES » agrandi à 17 px.
+- Dans les descriptifs des logos uniquement :
+  • PARTENAIRE OFFICIEL OFFROAD 32 65 : 14 px
+  • rôle du partenaire : 17 px
+  • phrase descriptive : 18 px
+- Les titres ivoire NOMAD RAID Travel / TDR LOGISTIC restent à leur taille validée.
+- Aucun autre élément de la page n'a été modifié.

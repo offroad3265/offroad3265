@@ -1,0 +1,16 @@
+OFFROAD 32 65 — V8.5 PARTENAIRES PARAMÉTRÉS
+================================================
+OK — source centralisée partenaires
+OK — champ actif
+OK — champ ordre
+OK — champ nom
+OK — champ role
+OK — champ logo
+OK — champ description
+OK — champ lien
+OK — champ bouton
+OK — champ fond_sombre
+OK — rendu automatique
+OK — tri automatique
+OK — masquage automatique
+OK — disposition verticale conservée

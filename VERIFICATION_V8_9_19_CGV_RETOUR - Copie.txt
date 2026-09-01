@@ -1,0 +1,10 @@
+OFFROAD 32 65 — V8.9.19
+Retour des CGV ajouté.
+
+- CGV OFFROAD 32 65 sélectionnables dans le formulaire de retour de documents
+- instruction claire ajoutée sur la page DOCUMENTS
+- bouton "Renvoyer les CGV complétées" ajouté dans le parcours d'inscription
+- lien direct vers la zone de retour du document
+- PDF interactif inchangé
+- aucun lien local cassé
+- JavaScript valide

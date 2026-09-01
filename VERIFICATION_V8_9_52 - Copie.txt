@@ -1,0 +1,6 @@
+V8.9.52 — à partir de la V8.9.51.
+- Ajout d'un espace nettement plus important entre l'introduction/titre et la séquence 01.
+- 42 px sur desktop standard, 52 px sur écrans hauts.
+- Architecture, textes, couleurs et typographies inchangés.
+- Les séquences 01/02/03 restent aérées.
+- CTA maintenu en bas de la hauteur disponible.

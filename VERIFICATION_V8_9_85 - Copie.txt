@@ -1,0 +1,8 @@
+V8.9.85 — reconstruite depuis la V8.9.75 validée.
+- Suppression de tous les essais décoratifs 76 à 84.
+- Nouvelle ambiance carnet de route / agence de voyage premium.
+- Micro-typographie latérale très discrète, lignes éditoriales fines.
+- Relief minimaliste uniquement en pied de page.
+- Le vide orange est volontairement conservé pour une sensation plus haut de gamme.
+- Aucun tracé GPS, pictogramme, nom de ville ou image générée.
+- Contenu central de la V8.9.75 inchangé.
