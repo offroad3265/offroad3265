@@ -1,0 +1,7 @@
+OFFROAD 32 65 — V8.7 DOCUMENTS PARAMÉTRÉS
+==============================================
+OK — champ actif
+OK — champ ordre
+OK — filtrage automatique
+OK — tri automatique
+OK — documents.html intact visuellement

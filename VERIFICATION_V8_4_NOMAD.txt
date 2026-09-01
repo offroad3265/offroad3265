@@ -1,0 +1,9 @@
+OFFROAD 32 65 — V8.4 PARTENAIRES NOMAD
+==========================================
+Texte NOMAD RAID TRAVEL modifié dans la donnée centralisée contenu-site.js
+et dans le contenu HTML de secours de partenaires.html.
+
+Nouveau descriptif :
+Agence de Voyage spécialisée dans la commercialisation de prestations d'hébergement à destination des participants à des raids tout terrain
+
+Disposition verticale et largeur validées : inchangées.

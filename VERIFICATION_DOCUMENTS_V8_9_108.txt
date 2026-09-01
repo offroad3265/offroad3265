@@ -1,0 +1,40 @@
+V8.9.108 — AUDIT ET CORRECTION DU PARCOURS DOCUMENTS
+
+Audit effectué depuis la V8.9.107.
+
+PROBLÈME TROUVÉ ET CORRIGÉ
+L'ancien documents-runtime.js utilisait une détection trop large des listes <select>.
+Les deux listes « Choisir un document » et « Document envoyé » pouvaient être
+reconnues successivement comme le même type de sélecteur. Cela pouvait remplacer
+les URL d'ouverture par des libellés texte et casser la sélection d'un document.
+
+CORRECTIONS
+1. #document-select pilote uniquement l'ouverture des documents.
+2. #retour-type pilote uniquement le type de document renvoyé.
+3. Les 5 documents consultables sont alimentés depuis documents-config.js.
+4. Seuls les 4 documents marqués aRenvoyer:true sont proposés au renvoi.
+5. Le contexte du raid est conservé lors de l'ouverture d'une page document.
+6. Le formulaire de renvoi garde enctype=multipart/form-data et accepte uniquement le PDF.
+7. Une redirection _next vers confirmation-document.html est maintenant ajoutée
+   automatiquement au formulaire principal DOCUMENTS.
+8. La confirmation reçoit l'identifiant du document et le raid éventuel.
+
+FICHIERS / CIBLES CONTRÔLÉS
+- fiche-individuelle-renseignements.html : présent
+- contrat-inscription.html : présent
+- cgv-offroad.html : présent
+- conditions-vente-nomad.html : présent
+- Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf : présent
+- CONTRAT_D_INSCRIPTION_A_UN_RAID_OFFROAD_32_65.pdf : présent
+- CGV_OFFROAD_32_65.pdf : présent
+- CONDITIONS_VENTE_NOMAD_RAID_TRAVEL.pdf : présent
+- RIB_OFFROAD_32_65.pdf : présent
+
+ENVOI
+Le formulaire envoie vers :
+aventureoffroad.3265@gmail.com via FormSubmit,
+avec pièce jointe PDF obligatoire et consentement obligatoire.
+
+NOTE
+Le code et le parcours côté site sont vérifiés. La réception finale dépend du
+service externe FormSubmit et de l'activation de l'adresse destinataire sur ce service.

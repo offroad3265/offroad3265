@@ -1,0 +1,32 @@
+OFFROAD 32 65 — MODÈLE PROGRAMMES GLOBAL
+
+Le modèle validé sur ARAGON/CATALOGNE est généralisé à tous les raids déclarés
+dans dates-raids.js, quel que soit le pays.
+
+Structure disponible pour chaque raid :
+- nombre de jours variable ;
+- distance totale facultative ;
+- kilométrage par journée facultatif ;
+- titre de journée ;
+- moments libres : DÉPART, MATINÉE, MIDI, APRÈS-MIDI, SOIR, ARRIVÉE ou tout autre intitulé ;
+- ajout/suppression/modification libre d'un moment ou d'une journée.
+
+Présentation commune :
+- un seul bandeau : Programme jour par jour + nom du raid ;
+- 1 à 3 jours : vertical ;
+- 4 à 6 jours : deux colonnes ;
+- 7 jours et plus : grille compacte ;
+- densité adaptative pour préserver la page fixe ;
+- mobile : une colonne ;
+- distance totale affichée uniquement si elle est renseignée ;
+- kilométrage quotidien affiché uniquement s'il est renseigné.
+
+Raids actuellement déclarés :
+- Maroc 2026
+- Aragon/Catalogne 2026
+- Tunisie 2027
+
+Les données manquantes ne sont pas inventées. Le système peut les signaler via
+OFFROAD_PROGRAMME_HELPERS.missing(id).
+
+Tout futur raid ajouté à dates-raids.js reçoit automatiquement une structure de programme.

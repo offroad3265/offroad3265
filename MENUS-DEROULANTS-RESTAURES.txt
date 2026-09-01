@@ -1,0 +1,12 @@
+CORRECTIF DE PARCOURS
+
+Base conservée : bandeau à marges uniformes validé.
+
+Restauration :
+- menu déroulant NOS RAIDS ;
+- menu déroulant DOCUMENTS ;
+- fonctionnement au survol et au focus clavier ;
+- les pages de destination restent accessibles ;
+- espacement, logos, zone sable et reste du site inchangés.
+
+Ce correctif ne modifie pas la disposition visuelle validée du bandeau.

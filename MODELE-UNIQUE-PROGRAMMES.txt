@@ -1,0 +1,22 @@
+OFFROAD 32 65 — MODÈLE UNIQUE DES PROGRAMMES
+
+Base : OFFROAD3265_COMPLET_ROUGE_GLOBAL
+
+Principe intégré :
+- Le Maroc devient le modèle de référence pour la logique des programmes.
+- Tous les raids peuvent être paramétrés avec nb_jours + une liste de journées.
+- Affichage standardisé : Jour 1, Jour 2, Jour 3, etc.
+- Le nombre de cartes est généré automatiquement depuis nb_jours.
+- Le contenu de chaque jour est indépendant et modifiable.
+- Une information absente n'est jamais inventée : elle apparaît "À compléter".
+- OFFROAD_PROGRAMME_HELPERS.missing(id) permet d'identifier précisément les informations manquantes.
+
+Fichier central ajouté :
+programmes-raids.js
+
+État initial :
+- Maroc 2026 : modèle déclaré comme référence.
+- Aragon/Catalogne 2026 : 2 jours, contenus laissés À compléter en attente des indications.
+- Tunisie 2027 : nombre de jours et contenus à compléter.
+
+Les corrections précédentes, notamment boutons COMPLET rouges et finalisation du dossier, sont conservées.

@@ -1,0 +1,11 @@
+OFFROAD 32 65 — NETTOYAGE CIBLÉ V8
+==================================
+Anciennes règles Maroc page fixe supprimées : 2
+Référence PDF inscription inexistante : corrigée vers inscription-raid.html
+Moteur universel programme : OK
+1 à 3 jours = 1 colonne : OK
+4 jours et + = 2 colonnes : OK
+PDF existants conservés : 3
+- CONTRAT_D_INSCRIPTION_A_UN_RAID_OFFROAD_32_65.pdf
+- Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf
+- RIB_OFFROAD_32_65.pdf

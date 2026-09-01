@@ -1,0 +1,12 @@
+OFFROAD 32 65 — V8.9.25
+Intégration des Conditions de Vente NOMAD RAID Travel
+
+- PDF interactif NOMAD 4 pages ajouté.
+- Page dédiée conditions-vente-nomad.html ajoutée.
+- Document déclaré dans documents-config.js.
+- Présence automatique dans le menu DOCUMENTS.
+- Présence automatique dans la page DOCUMENTS.
+- Présence automatique dans le parcours d'inscription.
+- Document obligatoire, remplissable et à renvoyer.
+- Textes de dossier et nombre de documents requis recalculés automatiquement par documents-runtime.js.
+- Même logique centralisée que les autres documents : les futurs documents suivent automatiquement les paramètres du registre.
