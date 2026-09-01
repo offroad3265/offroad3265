@@ -1,0 +1,5 @@
+V8.9.106 — correction ciblée depuis la V8.9.105.
+- La page « S'INSCRIRE À CE RAID » (inscription-raid.html) a été restaurée exactement depuis la V8.9.104 validée.
+- Le garde-fou global ajouté en V8.9.105 a été supprimé uniquement de cette page.
+- Ses proportions, hauteurs, espacements et comportement reviennent donc à l'état validé avant l'audit global.
+- Toutes les autres pages restent celles de la V8.9.105.

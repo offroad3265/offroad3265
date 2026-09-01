@@ -1,0 +1,5 @@
+V8.9.57 — à partir de la V8.9.56.
+- Titre « IMAGINEZ LE RAID QUI VOUS RESSEMBLE » retravaillé dans un esprit sport mécanique.
+- Typographie plus tendue, condensée, lourde et inclinée vers l'avant.
+- Ancien effet de lettrage OFFROAD visuellement neutralisé par la nouvelle surcharge.
+- Aucun changement sur les textes, espacements, palette ivoire, séquences 01/02/03 ou CTA.

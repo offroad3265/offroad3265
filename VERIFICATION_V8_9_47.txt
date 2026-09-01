@@ -1,0 +1,9 @@
+V8.9.47 — à partir de la V8.9.46 validée.
+- Architecture inchangée.
+- Titre principal sur une ligne conservé.
+- Corps du texte passé sur une typographie plus marketing et plus dense.
+- Paragraphes légèrement renforcés en taille, graisse et espacement des lettres.
+- Intertitres plus impactants, en capitales.
+- Mots clés en gras davantage mis en évidence.
+- Repères 01 / 02 / 03 légèrement renforcés.
+- CTA WhatsApp inchangé.

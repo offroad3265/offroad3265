@@ -1,0 +1,5 @@
+V8.9.72 — à partir de la V8.9.71.
+- Partie basse de RAIDS À LA CARTE remontée afin de réduire le grand vide orange sous le CTA.
+- Réduction ciblée du padding inférieur du conteneur et du bloc final.
+- Espacement important entre 03 et la conclusion conservé.
+- Textes noirs Arial, fond orange, couleurs, bouton WhatsApp et architecture inchangés.

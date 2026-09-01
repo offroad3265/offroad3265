@@ -1,0 +1,11 @@
+OFFROAD 32 65 — V8.9.8 GALERIE CENTRÉE
+===========================================
+Page modifiée : galerie.html uniquement.
+
+- titre GALERIE centré
+- filtres pays centrés sous le titre
+- ordre : TOUS / MAROC / ESPAGNE / SARDAIGNE / TUNISIE
+- architecture 2 x 5 conservée
+- marges latérales 1,5 cm conservées
+- bouton SUIVANT conservé
+- visionneuse conservée

@@ -1,0 +1,10 @@
+V8.9.37 — RAIDS À LA CARTE
+Nouvelle architecture narrative.
+- Présentation explicative sous forme de texte continu.
+- Suppression des blocs publics et Destination / Dates / Durée / Type de parcours.
+- Informations intégrées naturellement aux paragraphes.
+- Titre et identité visuelle conservés.
+- CTA final : Vous avez un projet de raid ? Parlons-en. / PROPOSER MON PROJET.
+- Lien WhatsApp conservé.
+- Page fixe desktop >= 1000 px / 800 px.
+- Défilement naturel sur écrans plus petits.

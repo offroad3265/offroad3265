@@ -1,0 +1,5 @@
+V8.9.73 — correction ciblée depuis la V8.9.72.
+- La rubrique de conclusion « VOUS AVEZ UNE IDÉE ? / Donnons-lui une destination. » est réellement remontée vers 03 « DE L'IDÉE AU RAID ».
+- L'ancien grand espace après 03 est réduit à environ 24 px sur desktop.
+- Le vide inférieur n'est plus traité comme priorité : c'est bien la distance 03 -> conclusion qui est corrigée.
+- Textes, couleurs, Arial, bouton WhatsApp et architecture restent inchangés.

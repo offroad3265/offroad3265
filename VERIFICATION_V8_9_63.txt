@@ -1,0 +1,7 @@
+V8.9.63 — à partir de la V8.9.62.
+- Introduction agrandie à 18 px.
+- Paragraphes narratifs 01/02/03 agrandis à 17,5 px.
+- Intertitres agrandis à 20 px.
+- Interligne ajusté pour conserver une lecture élégante.
+- Espacements internes très légèrement optimisés afin de préserver la mise en page.
+- Fond orange, titres ivoire, texte noir, grands espacements et CTA inchangés.

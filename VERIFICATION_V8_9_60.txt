@@ -1,0 +1,7 @@
+V8.9.60 — à partir de la V8.9.59 validée.
+- Fond de page encore éclairci : blanc chaud presque pur.
+- Numéros 01 / 02 / 03 passés en orange franc.
+- Tous les caractères qui utilisaient la couleur d'accent des numéros sont harmonisés dans le même orange.
+- Mots-clés en couleur, labels et bouton CTA harmonisés en orange.
+- Séparateurs très légèrement orangés.
+- Architecture, textes et espacements de la V8.9.59 inchangés.

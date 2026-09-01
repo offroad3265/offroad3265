@@ -1,0 +1,15 @@
+OFFROAD 32 65 — V8.9.6 GALERIE PLEINE LARGEUR
+================================================
+Page modifiée : galerie.html uniquement.
+
+- suppression de la contrainte de largeur Accueil / Partenaires
+- galerie étendue presque sur toute la largeur de l'écran
+- 5 photos par ligne conservées
+- 2 lignes conservées
+- objectif : préserver une grande taille de vignette malgré 5 colonnes
+- centrage conservé
+- bouton SUIVANT conservé
+- filtres pays conservés
+- suppression du bandeau conservée
+- visionneuse plein écran conservée
+- aucune autre page modifiée

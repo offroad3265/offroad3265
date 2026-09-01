@@ -1,0 +1,18 @@
+OFFROAD 32 65 — V8.8.9 GALERIE ARCHITECTURE RÉFÉRENCE
+==========================================================
+Architecture intégrée sur galerie.html uniquement :
+
+- fond sombre uniforme
+- un seul titre GALERIE orange, aligné à gauche
+- aucun bandeau derrière le titre
+- aucun texte sous le titre
+- filtres pays directement sous le titre
+- bouton actif orange
+- grande mosaïque 4 colonnes
+- aucune légende affichée sur les vignettes
+- page fixe, seule la grille photo peut défiler si nécessaire
+- visionneuse plein écran conservée
+- responsive 4 / 3 / 2 / 1 colonnes
+- paramétrage des photos conservé
+- clics GALERIE corrigés sur tout le site conservés
+- aucune autre page modifiée
