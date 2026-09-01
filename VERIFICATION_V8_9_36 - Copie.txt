@@ -1,9 +1,0 @@
-V8.9.36 — RAIDS À LA CARTE
-- Architecture éditoriale V8.9.35 conservée.
-- Typographie fine conservée.
-- Respiration augmentée d'environ 20 à 25 %.
-- Hero, introduction, publics, critères, texte et CTA davantage espacés.
-- Aucun retour aux cartes massives.
-- Aucun zoom global.
-- Page fixe sur desktop >= 1000 px de large et >= 800 px de haut.
-- En dessous : défilement naturel pour préserver la lisibilité.

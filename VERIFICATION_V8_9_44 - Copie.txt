@@ -1,8 +1,0 @@
-V8.9.44 — ajustement depuis la V8.9.43 validée.
-- Architecture narrative inchangée.
-- Gros titre encore réduit.
-- Bandeau titre réduit de 150 px à 132 px sur desktop.
-- Marges internes du bandeau resserrées.
-- Le contenu narratif remonte mécaniquement.
-- Taille des paragraphes de la V8.9.43 conservée.
-- CTA WhatsApp inchangé.

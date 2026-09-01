@@ -1,7 +1,0 @@
-PAGE D'ACCUEIL
-
-- Instagram et Facebook restent exactement à leur position validée.
-- Le téléphone est déplacé à droite de Facebook, dans le même alignement.
-- Le téléphone est retiré du bandeau noir supérieur.
-- Mail et WhatsApp restent dans le bandeau supérieur.
-- Aucun autre élément du site n'est modifié.

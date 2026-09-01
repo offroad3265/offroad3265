@@ -1,7 +1,0 @@
-V8.9.50 — à partir de la V8.9.49 Ivoire Premium.
-- Bandeau « VOTRE RAID VOTRE GROUPE VOTRE AVENTURE » entièrement supprimé.
-- Palette ivoire premium conservée.
-- Architecture narrative 01 / 02 / 03 conservée.
-- Espace vertical récupéré redistribué au contenu.
-- Accroche « Imaginez le raid qui vous ressemble. » conservée.
-- CTA WhatsApp inchangé.

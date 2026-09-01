@@ -1,7 +1,0 @@
-V8.9.116 — ajustements ciblés de la page À PROPOS depuis V8.9.115.
-- Numéros 01 et 02 agrandis.
-- Numéros passés en ivoire.
-- Les deux photos existantes ont été inversées :
-  section 01 = 20115.jpg
-  section 02 = 20113.jpg
-- Aucun texte, menu ou autre page modifié.

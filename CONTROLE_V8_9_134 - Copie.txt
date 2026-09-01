@@ -1,9 +1,0 @@
-V8.9.134 — LOGOS HARMONISÉS
-
-Correction vérifiée :
-- les deux logos sont placés dans des cadres strictement identiques (500 x 180 px) ;
-- hauteur visuelle normalisée ;
-- alignement horizontal et vertical identique ;
-- fonds parasites supprimés puis remplacés par le fond exact de la fiche (#121212) ;
-- aucun rectangle blanc/noir distinct ne doit apparaître derrière les logos ;
-- aucun autre élément du site ou de la fiche n'a été modifié.

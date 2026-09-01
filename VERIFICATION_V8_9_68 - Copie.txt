@@ -1,3 +1,0 @@
-V8.9.68 — à partir de la V8.9.67.
-- Phrase « OFFROAD 32 65 vous propose de concevoir votre propre raid sur mesure » entièrement passée en gras.
-- Aucun autre changement.

@@ -1,8 +1,0 @@
-PAGE D'ACCUEIL — CONTACTS VALIDÉS
-
-- Téléphone agrandi et rendu très lisible.
-- Mail représenté uniquement par une enveloppe.
-- WhatsApp sous forme de bouton vert avec le sigle WhatsApp blanc.
-- Placement conservé dans le bandeau noir à côté de GALERIE.
-- Logos OFFROAD / NOMAD et onglets inchangés.
-- Aucun autre élément du site modifié.

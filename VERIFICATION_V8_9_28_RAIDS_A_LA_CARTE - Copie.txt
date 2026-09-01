@@ -1,7 +1,0 @@
-V8.9.28 - RAIDS À LA CARTE
-
-- Ajout de raids-a-la-carte.html comme page informative uniquement.
-- Aucun ajout dans OFFROAD_PAYS, dates-raids.js, programmes-raids.js ou les calendriers.
-- Menu NOS RAIDS centralisé dans l’ordre : Maroc, Espagne, Sardaigne, Tunisie, Tous nos raids, Raids à la carte.
-- Bouton PROPOSER MON PROJET vers WhatsApp OFFROAD 32 65.
-- La page n’a aucun parcours d’inscription et ne crée aucun raid programmé.

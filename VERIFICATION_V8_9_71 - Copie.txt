@@ -1,5 +1,0 @@
-V8.9.71 — à partir de la V8.9.70 validée.
-- Tous les textes noirs de la page RAIDS À LA CARTE passent en Arial.
-- Titres ivoire et repères conservent leur typographie actuelle.
-- Bouton « PROPOSER MON PROJET » conserve sa taille agrandie et son style WhatsApp.
-- Aucun changement de texte, couleur, architecture ou espacement.

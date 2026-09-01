@@ -1,6 +1,0 @@
-V8.9.70 — à partir de la V8.9.69 validée.
-- Seul le bouton « PROPOSER MON PROJET » est agrandi.
-- Hauteur portée à 52 px, texte à 17 px, graisse renforcée.
-- Pictogramme WhatsApp blanc agrandi à 23 px.
-- Vert WhatsApp officiel conservé.
-- Tous les autres boutons WhatsApp du site restent inchangés.

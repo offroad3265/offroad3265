@@ -1,8 +1,0 @@
-CORRECTIF WHATSAPP APRÈS VÉRIFICATION
-
-- Le pictogramme n'est plus un SVG ni une image externe.
-- Il est embarqué directement dans le CSS du bouton sous forme de PNG base64.
-- Il est injecté via ::before sur le bouton réellement visible .whatsapp-uniform.
-- Taille forcée : 23 x 23 px.
-- Aucun chemin de fichier ne peut donc empêcher son affichage.
-- Menus NOS RAIDS et DOCUMENTS inchangés.

@@ -1,1 +1,0 @@
-Base V8.9.121. Seule la fiche existante est remplacée. Deux fichiers dédiés ajoutés: fiche-individuelle.css et fiche-individuelle.js. Aucun système doc-workflow/fitDocumentPage. 7 rubriques présentes. Conditions NOMAD conservées.

@@ -1,9 +1,0 @@
-OFFROAD 32 65 — V8.9.18
-Correction du vrai menu déroulant DOCUMENTS visible sur la page d'accueil.
-
-Menu visible :
-- FICHE INDIVIDUELLE DE RENSEIGNEMENTS
-- CONTRAT D’INSCRIPTION
-- CONDITIONS GÉNÉRALES DE VENTE OFFROAD 32 65
-
-Les CGV restent également présentes dans le parcours d'inscription et la page DOCUMENTS.

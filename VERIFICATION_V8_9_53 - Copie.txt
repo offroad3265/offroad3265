@@ -1,6 +1,0 @@
-V8.9.53 — à partir de la V8.9.52.
-- Espace renforcé entre 03 « De l'idée au raid » et le bloc final « Vous avez une idée ? Donnons-lui une destination. »
-- 42 px sur desktop standard, 52 px sur écrans hauts.
-- Espace titre / 01 de la V8.9.52 conservé.
-- Textes, couleurs, typographies et architecture inchangés.
-- CTA WhatsApp inchangé.

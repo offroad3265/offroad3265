@@ -1,8 +1,0 @@
-V8.9.69 — à partir de la V8.9.68.
-- Tous les boutons WhatsApp visibles du site suivent désormais la logique du bouton de la page d'accueil :
-  vert WhatsApp #25D366, texte blanc, pictogramme téléphone/WhatsApp blanc, bord arrondi, disposition en ligne.
-- Le bouton « PROPOSER MON PROJET » reçoit le même pictogramme blanc et la même logique visuelle.
-- Le bouton WhatsApp de la page d'accueil lui-même est conservé tel quel.
-- Les hotspots invisibles de la page d'accueil ne sont pas modifiés.
-- Le bouton dynamique Tunisie est inclus.
-- 24 pages HTML traitées.

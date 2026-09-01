@@ -1,8 +1,0 @@
-V8.9.48 — TRAVEL PREMIUM
-- Base V8.9.47 conservée sans modification d'architecture ni de texte.
-- Noir pur adouci vers un brun-noir profond.
-- Blanc adouci vers ivoire chaud.
-- Accent sable / ocre sur la signature, les repères 01/02/03 et les mots clés.
-- Séparateurs réchauffés et plus discrets.
-- Bouton PROPOSER MON PROJET traité en ocre chaud.
-- Aucune photo ajoutée à ce stade afin d'évaluer d'abord la nouvelle palette.

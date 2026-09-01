@@ -1,8 +1,0 @@
-V8.9.133 — CORRECTION DES LOGOS DE LA FICHE INDIVIDUELLE
-
-Corrections :
-- logo OFFROAD 32 65 recadré avec davantage de marge en haut pour éviter toute coupe ;
-- logo NOMAD RAID Travel recadré plus serré pour supprimer les inscriptions parasites sous le logo ;
-- affichage CSS ajusté pour empêcher tout rognage sur ordinateur et mobile.
-
-Aucun autre élément de la fiche ou du site n'a été modifié.

@@ -1,9 +1,0 @@
-V8.9.35 — RAIDS À LA CARTE
-Architecture éditoriale type brochure d'agence de voyage.
-- Typographie fine de V8.9.34 conservée.
-- Suppression de l'effet succession de cartes.
-- À partir de 8 véhicules + publics sur une ligne éditoriale.
-- Destination / Dates / Durée / Type de parcours présentés sans cartes ni numéros.
-- Texte explicatif puis CTA Parlons-en / PROPOSER MON PROJET.
-- Page fixe desktop à partir de 1000 px de large et 720 px de haut.
-- Responsive avec défilement sur petits écrans.

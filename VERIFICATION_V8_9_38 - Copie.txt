@@ -1,1 +1,0 @@
-V8.9.38 : architecture narrative structurée, deux chapitres explicatifs, filet vertical discret, accroche et CTA centrés, aucune carte dans le contenu principal, responsive et fixe sur desktop >=850px de haut.

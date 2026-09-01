@@ -1,8 +1,0 @@
-CORRECTIF WHATSAPP
-
-- Le pictogramme blanc provient directement du visuel WhatsApp fourni.
-- Il est intégré comme image PNG transparente dans le bouton vert.
-- Taille 21 px.
-- Aucun SVG ni caractère typographique n'est utilisé.
-- Les menus NOS RAIDS et DOCUMENTS restent inchangés.
-- Aucun autre élément du site n'est modifié.

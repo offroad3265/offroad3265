@@ -1,7 +1,0 @@
-V8.9.62 — à partir de la V8.9.61 validée.
-- Textes narratifs agrandis pour une présence et une lisibilité supérieures.
-- Introduction portée à 16,5 px.
-- Paragraphes 01/02/03 portés à 16 px.
-- Intertitres légèrement renforcés à 19 px.
-- Fond orange, titres ivoire, texte noir, architecture et espacements conservés.
-- CTA WhatsApp inchangé.

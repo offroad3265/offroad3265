@@ -1,9 +1,0 @@
-OFFROAD 32 65 — V8.3 PARTENAIRES VERTICAL
-============================================
-Page modifiée : partenaires.html uniquement.
-
-- largeur générale identique à l'accueil
-- partenaires disposés sur UNE SEULE COLONNE
-- chaque partenaire apparaît sous le précédent
-- structure interne logo + texte conservée
-- autres pages inchangées

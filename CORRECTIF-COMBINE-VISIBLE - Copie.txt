@@ -1,9 +1,0 @@
-CORRECTION APRÈS VÉRIFICATION
-
-Le pictogramme est maintenant appliqué directement au lien téléphone réellement visible
-du bandeau via a[href^="tel:"]::before.
-
-- anciennes icônes du lien masquées ;
-- combiné blanc affiché devant le numéro ;
-- aucun changement du numéro ou de sa position ;
-- espacement, WhatsApp, NOS RAIDS et DOCUMENTS conservés.

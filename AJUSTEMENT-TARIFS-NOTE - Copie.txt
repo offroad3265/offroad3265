@@ -1,8 +1,0 @@
-Ajustement TARIFS & PRESTATIONS
-
-- Suppression de la mention « par participant » dans les cartes tarifs.
-- Agrandissement de la mention :
-  « LISTE NON EXHAUSTIVE À ADAPTER EN FONCTION DU RAID »
-- Police portée à 11 px sur écran standard, avec graisse renforcée.
-- Adaptation légère conservée sur les écrans de faible hauteur.
-- Tous les autres éléments validés restent inchangés.

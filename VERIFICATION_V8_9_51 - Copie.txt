@@ -1,8 +1,0 @@
-V8.9.51 — à partir de la V8.9.50 validée.
-- Aucun changement de texte, de palette ou d'architecture.
-- Toute la hauteur disponible sous le header est maintenant exploitée sur desktop.
-- Introduction, séquences 01/02/03 et CTA sont répartis verticalement avec space-between.
-- Marges verticales des paragraphes augmentées.
-- Respiration supplémentaire sur écrans de 950 px de haut et plus.
-- Sur écrans plus petits, défilement naturel pour éviter toute coupure.
-- CTA WhatsApp inchangé.

@@ -1,4 +1,0 @@
-V8.9.74 — à partir de la V8.9.73.
-- « VOUS AVEZ UNE IDÉE ? » légèrement agrandi à 26 px.
-- « Donnons-lui une destination. » légèrement réduit à 15,5 px.
-- Position de la conclusion, couleurs, Arial, CTA WhatsApp et reste de la page inchangés.

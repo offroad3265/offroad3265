@@ -1,7 +1,0 @@
-CORRECTION PROGRAMME MAROC
-
-- Repère J-1 restauré pour l’arrivée à Errachidia.
-- Repères J1 à J7 restaurés pour les étapes suivantes.
-- Le bandeau DISTANCE TOTALE occupe de nouveau toute la largeur de la grille.
-- Les données restent centralisées dans programmes-raids.js.
-- Aucun changement de design ou de parcours en dehors de cette correction.

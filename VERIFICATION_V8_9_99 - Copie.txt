@@ -1,6 +1,0 @@
-V8.9.99 — depuis la V8.9.98 validée.
-- Bloc « NOS PARTENAIRES / L'AVENTURE SE CONSTRUIT AUSSI EN ÉQUIPE » légèrement remonté.
-- Espacement sous le gros titre réduit.
-- Phrase « OFFROAD 32 65 s’entoure... législation en vigueur » contrainte à la largeur utile de la page.
-- Suppression du nowrap sur cette phrase afin qu'elle ne puisse plus être coupée et respecte toujours les marges.
-- Aucun autre élément modifié.

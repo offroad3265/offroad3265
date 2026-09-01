@@ -1,6 +1,0 @@
-FAVICON À FOURNIR
-=================
-Aucun favicon officiel n'est présent dans la base.
-Pour éviter d'inventer ou de déformer l'identité visuelle OFFROAD 32 65,
-fournir le logo/visuel que vous souhaitez utiliser comme favicon.
-Formats conseillés : PNG carré 512x512 ou SVG.

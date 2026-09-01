@@ -1,5 +1,0 @@
-V8.9.117 — ajustement ciblé de la page À PROPOS.
-- Numéros 01 et 02 légèrement réduits.
-- Numéros repassés en noir.
-- Numéros centrés dans leur colonne et alignés avec le début vertical des titres.
-- Photos inversées et tous les autres éléments de V8.9.116 conservés.

@@ -1,3 +1,0 @@
-V8.9.100 — depuis la V8.9.99 validée.
-- Seule modification : « NOS PARTENAIRES » passe à 19 px.
-- Aucun autre élément graphique, texte, marge ou espacement modifié.

@@ -1,8 +1,0 @@
-CORRECTIF CIBLÉ
-
-- Petite flèche déroulante ajoutée à droite de DOCUMENTS.
-- Elle suit la couleur de l'onglet, y compris au survol.
-- Menu déroulant DOCUMENTS inchangé et fonctionnel.
-- Espacement régulier du bandeau conservé.
-- Bouton WhatsApp complet et pictogramme blanc conservés.
-- Aucun autre élément modifié.

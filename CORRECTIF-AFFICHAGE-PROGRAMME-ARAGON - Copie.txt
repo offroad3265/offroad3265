@@ -1,3 +1,0 @@
-Le contenu était bien enregistré mais detail-raid.html lisait encore l'ancien champ "etapes".
-Correction : la page lit maintenant nb_jours + jours, avec compatibilité pour les anciens gabarits.
-Le programme ARAGON/CATALOGNE est désormais alimenté par les données saisies.

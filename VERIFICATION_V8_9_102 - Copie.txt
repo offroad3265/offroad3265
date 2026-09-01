@@ -1,4 +1,0 @@
-V8.9.102 — depuis V8.9.101.
-- « NOS PARTENAIRES » passe à 32 px, exactement la même taille que « L’AVENTURE SE CONSTRUIT AUSSI EN ÉQUIPE ».
-- Couleur noire conservée.
-- Aucun autre élément modifié.

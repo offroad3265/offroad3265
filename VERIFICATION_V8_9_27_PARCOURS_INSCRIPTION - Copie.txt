@@ -1,8 +1,0 @@
-OFFROAD 32 65 — V8.9.27
-
-Corrections ciblées validées :
-1. Étape Dossier : suppression du nombre figé « deux documents » et formulation compatible avec le registre central.
-2. CGV OFFROAD : libellés corrigés pour parler de CGV complétées.
-3. Confirmation de renvoi : message adapté au type de document, y compris NOMAD RAID Travel.
-
-Aucun changement apporté à l’organisation du paiement ni au RIB OFFROAD 32 65.

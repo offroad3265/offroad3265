@@ -1,9 +1,0 @@
-OFFROAD 32 65 — V8.1 CORRECTION ACCUEIL MOBILE
-================================================
-Correction appliquée uniquement à index.html.
-<= 760 px :
-- .site : largeur fluide 100 %
-- .visual : largeur fluide 100 %
-- suppression du risque de débordement horizontal lié aux 980 px
-Desktop : aucune règle modifiée.
-Pages RAID / programmes / documents / inscription : inchangés.

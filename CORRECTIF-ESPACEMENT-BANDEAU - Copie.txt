@@ -1,8 +1,0 @@
-CORRECTIF DU BANDEAU
-
-- Le pictogramme WhatsApp blanc validé est conservé.
-- Le bouton WhatsApp avait été élargi, ce qui avait cassé l'espacement uniforme.
-- Les 8 positions du bandeau sont désormais réparties sur 8 colonnes identiques.
-- Chaque onglet/pictogramme occupe donc exactement la même part de largeur.
-- Les marges générales entre les deux logos restent celles validées.
-- Menus NOS RAIDS et DOCUMENTS inchangés et fonctionnels.

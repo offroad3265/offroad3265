@@ -1,6 +1,0 @@
-V8.9.96 — hiérarchie des descriptifs partenaires modifiée uniquement.
-1 Nom
-2 PARTENAIRE OFFICIEL OFFROAD 32 65
-3 rôle en casse normale
-4 description
-Même logique dans le rendu dynamique.

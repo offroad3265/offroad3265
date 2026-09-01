@@ -1,8 +1,0 @@
-CORRECTIF DU BOUTON WHATSAPP
-
-- Le SVG précédent, trop discret/invisible selon le rendu navigateur, est remplacé.
-- Un pictogramme téléphone blanc « ☎ » est maintenant placé devant WHATSAPP.
-- Taille : 17 px, dans le cadre vert existant.
-- Le bouton ne change ni de position ni de dimensions.
-- Les menus NOS RAIDS et DOCUMENTS restent fonctionnels.
-- Aucun autre élément du site n'est modifié.

@@ -1,9 +1,0 @@
-V8.9.93 — correction ciblée depuis V8.9.86.
-- Bandeau supérieur repris sur le modèle exact des pages internes.
-- Menu DOCUMENTS déroulant conservé.
-- Page recentrée avec marges : largeur max 1180 px et 24 px minimum de chaque côté.
-- Suppression des règles de hauteur/overflow qui coupaient le bas de page.
-- Titres ivoire conservés.
-- Micro-typographie roadbook conservée.
-- Logos harmonisés dans une zone 145 x 82 px.
-- Aucun bouton WhatsApp en bas de page.

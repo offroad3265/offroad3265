@@ -1,5 +1,0 @@
-Les listes PRESTATIONS INCLUSES, PRESTATIONS NON INCLUSES et ÉQUIPEMENT OBLIGATOIRE sont désormais globales pour tous les raids.
-Elles sont centralisées dans prestations-globales.js et restent modifiables.
-La colonne a été compactée en deux colonnes de listes sur ordinateur afin de préserver la page fixe.
-Les tarifs propres à chaque raid restent inchangés.
-Des exceptions par raid restent possibles avec inclus_override, non_inclus_override et equipement_override.

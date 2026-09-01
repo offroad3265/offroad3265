@@ -1,6 +1,0 @@
-V8.9.59 — à partir de la V8.9.58.
-- Titre modifié en « IMAGINEZ UN RAID QUI VOUS RESSEMBLE ».
-- Point final après RESSEMBLE supprimé.
-- Titre davantage éloigné du bandeau noir supérieur.
-- Espace entre 03 « DE L'IDÉE AU RAID » et « VOUS AVEZ UNE IDÉE ? / Donnons-lui une destination. » nettement augmenté.
-- Style sport mécanique droit, palette, textes 01/02/03 et CTA conservés.

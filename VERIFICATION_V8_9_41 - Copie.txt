@@ -1,1 +1,0 @@
-V8.9.41 : reconstruction complète de RAIDS À LA CARTE. Ancienne architecture retirée, nouveau hero, composition 08+, typographie marketing, pleine hauteur desktop, WhatsApp conservé.

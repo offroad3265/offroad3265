@@ -1,8 +1,0 @@
-AJUSTEMENT DU BANDEAU D'ACCUEIL
-
-- Téléphone agrandi.
-- Mail agrandi.
-- Bouton WhatsApp transformé en bouton vert.
-- Ajout du sigle WhatsApp dans le bouton.
-- Conservation du placement validé à côté de GALERIE.
-- OFFROAD, NOMAD, les onglets et le reste du design ne sont pas modifiés.

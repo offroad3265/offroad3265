@@ -1,6 +1,0 @@
-V8.9.66 — à partir de la V8.9.65.
-- Tous les verts existants utilisés par les boutons ont été harmonisés vers le vert officiel WhatsApp #25D366.
-- Les boutons/liens identifiés WhatsApp sont forcés sur #25D366.
-- Le bouton « PROPOSER MON PROJET » est inclus.
-- Couleurs orange, noir et ivoire non modifiées.
-- 24 fichiers HTML traités.

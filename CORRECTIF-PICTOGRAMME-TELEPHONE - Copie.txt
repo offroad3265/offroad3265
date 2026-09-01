@@ -1,4 +1,0 @@
-CORRECTIF CIBLÉ
-- Le pictogramme « téléphone entier » est remplacé par un pictogramme « combiné ».
-- Le numéro et sa position restent inchangés.
-- Le bandeau, ses espacements, WhatsApp, NOS RAIDS et DOCUMENTS restent inchangés.

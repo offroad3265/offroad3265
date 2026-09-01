@@ -1,4 +1,0 @@
-V8.9.103 — depuis V8.9.102.
-- Ajout de guillemets français autour de la phrase d'introduction :
-  « OFFROAD 32 65 s’entoure de partenaires de confiance pour l’organisation de ses raids, afin de travailler dans le respect de la législation en vigueur. »
-- Aucun autre élément modifié.

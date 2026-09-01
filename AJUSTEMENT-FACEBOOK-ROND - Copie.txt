@@ -1,4 +1,0 @@
-- Pictogramme Facebook rendu rond.
-- Taille, position et lien inchangés.
-- Instagram et téléphone inchangés.
-- Aucun autre élément du site modifié.
