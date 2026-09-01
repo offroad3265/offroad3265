@@ -1,0 +1,8 @@
+AJUSTEMENT BANDEAU SUPÉRIEUR
+
+- Enveloppe Mail et bouton WhatsApp rapprochés.
+- Écart fixé à 7 px.
+- Position générale du groupe conservée.
+- Onglets et logos inchangés.
+- Zone sable inchangée.
+- Aucun autre élément du site modifié.

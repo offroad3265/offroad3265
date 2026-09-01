@@ -1,0 +1,6 @@
+AJUSTEMENT PAGE D'ACCUEIL
+
+- Instagram et Facebook décalés d'environ 1,5 cm vers la droite.
+- Taille et hauteur des pictogrammes inchangées.
+- Zone sable propre inchangée.
+- Aucun autre élément du site modifié.

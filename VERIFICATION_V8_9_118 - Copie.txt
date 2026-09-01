@@ -1,0 +1,5 @@
+V8.9.118 — ajustement très ciblé de la page À PROPOS.
+- Numéros 01 et 02 remontés légèrement.
+- Alignement vertical affiné pour les placer en face du début des titres noirs.
+- Taille, couleur noire, centrage, photos et reste du design inchangés.
+- Aucune autre page modifiée.

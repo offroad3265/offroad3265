@@ -1,0 +1,47 @@
+V8.9.120 — AUDIT GLOBAL RÉEL DU MENU « NOS RAIDS »
+
+Pages HTML totales auditées : 24
+Pages contenant un menu / logique NOS RAIDS : 22
+Pages corrigées dans cette version : 5
+Incohérences détectées avant correction : 5
+Incohérences restantes après correction : 0
+
+Contrôle spécifique demandé :
+- galerie.html contient désormais « Tous nos raids » ;
+- galerie.html contient désormais « Raids à la carte » ;
+
+Règle garantie sur chaque page concernée :
+- pays dynamiques ;
+- Tous nos raids ;
+- Raids à la carte.
+
+Pages corrigées :
+- galerie.html
+- inscription-raid.html
+- programme-detail.html
+- programme-raid.html
+- programme-universel.html
+
+Pages contrôlées comme porteuses du menu :
+- a-propos.html
+- cgv-offroad.html
+- conditions-vente-nomad.html
+- confirmation-document.html
+- contrat-inscription.html
+- detail-raid.html
+- documents.html
+- fiche-individuelle-renseignements.html
+- galerie.html
+- index.html
+- inscription-raid.html
+- nos-raids.html
+- partenaires.html
+- presentation-raid.html
+- programme-detail.html
+- programme-raid.html
+- programme-universel.html
+- raids-a-la-carte.html
+- raids-espagne.html
+- raids-maroc.html
+- raids-sardaigne.html
+- raids-tunisie.html

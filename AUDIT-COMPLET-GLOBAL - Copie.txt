@@ -1,0 +1,15 @@
+AUDIT GLOBAL DU BOUTON COMPLET
+
+Cause supplémentaire identifiée :
+Le parcours ARAGON/CATALOGNE peut utiliser detail-raid.html.
+Cette page possède un troisième bouton d'inscription : #detailSignup.
+Il changeait bien son texte en COMPLET, mais conservait son fond vert.
+
+Corrections :
+- #detailSignup est désormais explicitement rouge pour un raid COMPLET.
+- Les deux gabarits programme restent corrigés.
+- La fiche descriptive reste corrigée.
+- Une garde globale dans site-core.js force en rouge tout élément interactif dont le texte exact est COMPLET.
+- Un MutationObserver couvre aussi les changements dynamiques après chargement.
+
+La finalisation du dossier contrôlée reste intégrée.

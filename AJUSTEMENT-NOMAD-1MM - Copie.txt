@@ -1,0 +1,6 @@
+AJUSTEMENT FIN DU LOGO NOMAD RAID TRAVEL
+
+- Décalage horizontal supplémentaire : 4 px vers la droite
+  (environ 1 mm à l'échelle d'affichage de référence).
+- Dimensions du logo inchangées.
+- Aucun autre élément du site modifié.

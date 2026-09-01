@@ -1,0 +1,13 @@
+PROGRAMMES — MISE EN PAGE ADAPTATIVE
+
+Règles ajoutées :
+- 1 à 3 jours : affichage plus aéré et police plus grande.
+- 4 à 6 jours : densité intermédiaire.
+- 7 jours et plus : blocs plus compacts, tout en gardant une police lisible.
+- Les jours restent disposés verticalement.
+- Le repère orange "Jour X" est désormais compact, positionné au-dessus du contenu.
+- Il ne chevauche plus et ne masque plus le début du texte.
+- Adaptation complémentaire sur mobile.
+
+Aucun contenu de programme n'a été modifié.
+Les corrections précédemment validées sont conservées.

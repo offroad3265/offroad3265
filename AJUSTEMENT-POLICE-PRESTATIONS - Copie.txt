@@ -1,0 +1,5 @@
+La police des textes de TARIFS & PRESTATIONS a été légèrement agrandie.
+Les listes passent à 11 px sur écran standard, avec interligne adapté.
+Les intitulés des rubriques sont également légèrement agrandis.
+Sur les écrans de faible hauteur, une réduction modérée est conservée pour éviter toute coupure.
+Le bandeau d'acompte reste supprimé et tous les éléments précédemment validés sont conservés.

@@ -1,0 +1,44 @@
+AJOUTER UN NOUVEAU PAYS DANS "NOS RAIDS"
+========================================
+
+1. Ouvrir le fichier :
+   pays-raids.js
+
+2. Dans window.OFFROAD_PAYS = [ ... ], dupliquer un bloc existant.
+
+3. Modifier les informations :
+
+   id     : identifiant court sans espace, par exemple "portugal"
+   nom    : nom affiché dans le menu, par exemple "Portugal"
+   lien   : page du pays, par exemple "raids-portugal.html"
+   ordre  : position dans le menu déroulant
+
+Exemple :
+
+{ id: "portugal", nom: "Portugal", lien: "raids-portugal.html", ordre: 5 }
+
+4. Créer ensuite la page du pays correspondante.
+   Le plus simple est de dupliquer une page existante comme :
+   raids-espagne.html
+
+   Puis remplacer :
+   - le nom du pays,
+   - le texte,
+   - la photo,
+   - les liens éventuels.
+
+5. Pour ajouter ensuite des raids pour ce pays :
+   ouvrir dates-raids.js et utiliser exactement le même id dans le champ "pays".
+
+Exemple :
+
+{
+  pays: "portugal",
+  annee: 2027,
+  date: "10 → 15 MAI 2027",
+  titre: "Raid Portugal • Nord & pistes",
+  statut: "Places disponibles",
+  lien: "portugal-mai-2027.html"
+}
+
+Le menu "Nos raids" se mettra automatiquement à jour sur toutes les pages du site.
