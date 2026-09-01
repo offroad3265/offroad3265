@@ -1,0 +1,34 @@
+VÉRIFICATION BASE MAÎTRE
+Pages HTML contrôlées : 21
+Références locales manquantes détectées : 31
+- documents.html -> ${p.lien}
+- documents.html -> ${d.fichier}
+- partenaires.html -> ${p.lien}
+- partenaires.html -> ${p.logo}
+- programme-detail.html -> ${p.lien}
+- programme-detail.html -> ${e.lien}
+- programme-detail.html -> ${programme.detail}
+- raids-tunisie.html -> ${p.lien}
+- raids-tunisie.html -> ${window.OFFROAD_RAID_MODEL 
+- raids-espagne.html -> ${p.lien}
+- raids-espagne.html -> ${window.OFFROAD_RAID_MODEL 
+- inscription-raid.html -> ${p.lien}
+- programme-raid.html -> ${p.lien}
+- programme-raid.html -> ${e.lien}
+- a-propos.html -> ${p.lien}
+- index.html -> ${window.OFFROAD_RAID_MODEL 
+- index.html -> ${p.lien}
+- programme-universel.html -> ${p.lien}
+- maroc-2026.html -> ${p.lien}
+- galerie.html -> ${p.lien}
+- galerie.html -> ${x.media}
+- galerie.html -> ${x.media}
+- detail-raid.html -> ${x.lien}
+- raids-maroc.html -> ${p.lien}
+- raids-maroc.html -> ${window.OFFROAD_RAID_MODEL 
+- nos-raids.html -> ${p.lien}
+- nos-raids.html -> ${window.OFFROAD_RAID_MODEL 
+- nos-raids.html -> ${p.lien}
+- nos-raids.html -> ${href}
+- raids-sardaigne.html -> ${p.lien}
+- raids-sardaigne.html -> ${window.OFFROAD_RAID_MODEL 

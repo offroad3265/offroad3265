@@ -1,0 +1,8 @@
+V8.9.114 — refonte ciblée de la page À PROPOS depuis la V8.9.113 validée.
+- Design harmonisé avec RAIDS À LA CARTE et PARTENAIRES.
+- Fond orange, titres ivoire/noir, Arial, lignes horizontales, micro-typographie ROADBOOK.
+- Contenu textuel existant conservé.
+- Deux photographies existantes conservées.
+- Structure éditoriale 01 / 02 créée pour reprendre le langage graphique du site.
+- Bandeau de navigation et menus de la V8.9.113 conservés.
+- Aucune autre page modifiée.

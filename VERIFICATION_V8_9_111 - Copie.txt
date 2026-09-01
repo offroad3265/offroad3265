@@ -1,0 +1,15 @@
+V8.9.111 — correction ciblée depuis la V8.9.110.
+
+PROBLÈME :
+Le script dynamique de la page d'accueil reconstruisait le menu « NOS RAIDS »
+uniquement à partir de la liste des pays. Les deux entrées fixes
+« Tous nos raids » et « Raids à la carte » disparaissaient donc après chargement.
+
+CORRECTION :
+- « Tous nos raids » restauré dans le menu NOS RAIDS de la page d'accueil.
+- « Raids à la carte » restauré dans le menu NOS RAIDS de la page d'accueil.
+- Correction appliquée au rendu dynamique, pas seulement au HTML statique.
+- Les fichiers nos-raids.html et raids-a-la-carte.html sont présents et inchangés.
+- Aucun autre élément du site n'a été modifié.
+
+La refonte de la page À PROPOS n'a pas encore été engagée dans cette version.

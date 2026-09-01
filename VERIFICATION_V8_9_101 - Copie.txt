@@ -1,0 +1,4 @@
+V8.9.101 — depuis la V8.9.100 validée.
+- « NOS PARTENAIRES » agrandi de 19 px à 21 px.
+- « NOS PARTENAIRES » passe en noir #171512 pour renforcer sa visibilité.
+- Aucun autre élément de la page modifié.

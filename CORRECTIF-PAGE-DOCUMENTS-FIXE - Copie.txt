@@ -1,0 +1,7 @@
+PAGE DOCUMENTS
+
+- Le clic direct sur l'onglet DOCUMENTS ouvre toujours documents.html.
+- La page DOCUMENTS est maintenant fixe.
+- Le défilement vertical et horizontal de la page est désactivé.
+- La liste déroulante DOCUMENTS de la page d'accueil n'est pas modifiée.
+- Aucun autre élément du site n'est modifié.

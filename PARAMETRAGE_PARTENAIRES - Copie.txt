@@ -1,0 +1,22 @@
+V8.9.104 — PAGE PARTENAIRES PARAMÉTRÉE
+
+La page visuelle validée n'a pas été redessinée.
+
+Fichier de configuration :
+  partenaires-config.js
+
+Pour modifier la page :
+- Modifier un nom : champ "nom"
+- Modifier le statut : champ "statut"
+- Modifier le rôle : champ "role"
+- Modifier le texte : champ "description"
+- Modifier le logo : champ "logo"
+- Masquer un partenaire : actif: false
+- Réafficher : actif: true
+- Changer l'ordre : champ "ordre"
+- Ajouter un partenaire : dupliquer un objet dans "partenaires"
+- Supprimer un partenaire : supprimer son objet
+- Modifier la phrase d'introduction : champ "intro"
+- Modifier la phrase finale : champ "conclusion"
+
+Le HTML/CSS de la page reste la référence graphique et ne doit pas être modifié pour les simples changements de contenu.
