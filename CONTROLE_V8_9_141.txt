@@ -1,0 +1,8 @@
+V8.9.141 - AERATION GENERALE DU PDF
+
+- contenu et 7 rubriques conserves;
+- espaces avant/apres titres augmentes;
+- espaces entre groupes de champs augmentes;
+- champs de saisie legerement plus hauts;
+- nouvelle rubrique repoussee a la page suivante si espace insuffisant;
+- parcours site inchange.

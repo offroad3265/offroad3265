@@ -1,0 +1,22 @@
+V8.9.138 - FICHE INDIVIDUELLE EN PDF
+
+Décision appliquée :
+- la fiche individuelle n'est plus remplie dans une page HTML ;
+- le document de référence est le PDF Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf ;
+- ce PDF contient 62 champs AcroForm remplissables ;
+- la page fiche utilise désormais la même logique de parcours que le contrat :
+  1. ouvrir/télécharger le PDF ;
+  2. remplir et enregistrer le PDF ;
+  3. revenir sur la page ;
+  4. joindre le PDF enregistré ;
+  5. envoyer à aventureoffroad.3265@gmail.com ;
+  6. retour vers confirmation-document.html ;
+- le contexte du raid reste géré par la page ;
+- le registre central Documents reste inchangé et déclare déjà la fiche remplissable et à renvoyer.
+
+Contrôle différentiel :
+- seul fiche-individuelle-renseignements.html a été modifié par rapport à V8.9.137.
+
+Important :
+- le PDF lui-même n'a PAS encore été redessiné dans cette version.
+- il devient maintenant notre document maître à reprendre cadre par cadre.

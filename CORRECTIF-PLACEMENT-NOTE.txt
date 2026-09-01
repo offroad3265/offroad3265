@@ -1,0 +1,12 @@
+Placement corrigé.
+
+Ordre désormais affiché :
+1. TARIFS & PRESTATIONS
+2. Tarifs SOLO / DUO
+3. LISTE NON EXHAUSTIVE À ADAPTER EN FONCTION DU RAID
+4. LES PRESTATIONS INCLUSES
+5. LES PRESTATIONS NON INCLUSES
+6. ÉQUIPEMENT OBLIGATOIRE
+
+Le style élégant et compact de la mention est conservé.
+Aucun autre élément validé n'a été modifié.

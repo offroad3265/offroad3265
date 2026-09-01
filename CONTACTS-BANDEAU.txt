@@ -1,0 +1,9 @@
+PAGE D'ACCUEIL
+
+- OFFROAD reste à gauche.
+- NOMAD RAID TRAVEL reste à droite.
+- Les onglets restent entre les deux logos.
+- Téléphone, e-mail et WhatsApp sont replacés dans le bandeau noir, immédiatement après GALERIE.
+- Ils sont de vrais liens HTML cliquables.
+- Le bloc contacts précédemment placé dans le sable est supprimé.
+- Instagram/Facebook ne sont pas remis dans ce nouveau bloc, conformément à la demande.

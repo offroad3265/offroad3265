@@ -1,0 +1,23 @@
+OFFROAD 32 65 — AUDIT DU PARCOURS D'INSCRIPTION
+
+Parcours contrôlé :
+Présentation / Programme → Inscription → Documents → Renvoi du dossier
+
+Anomalies corrigées :
+- Le raid sélectionné n'était pas transmis aux liens vers la fiche individuelle et le contrat.
+- Les pages Documents savaient lire ?raid=..., mais la page d'inscription ne leur envoyait pas cet identifiant.
+- Le formulaire de renvoi n'envoyait pas systématiquement l'identifiant exact, le titre, la date et le statut du raid.
+
+Corrections :
+- Les boutons Fiche individuelle et Contrat transmettent désormais ?raid=<identifiant>.
+- Les deux pages Documents affichent le raid concerné.
+- Les formulaires de renvoi ajoutent automatiquement Raid_ID, Raid_Titre, Raid_Date et Raid_Statut.
+- Le sélecteur du contrat est prérempli avec le pays du raid lorsqu'il est reconnu.
+
+Déjà cohérent et conservé :
+- Les raids À VENIR et COMPLET ne peuvent pas poursuivre une inscription normale.
+- Le statut EN COURS D’INSCRIPTION autorise le parcours.
+- Les documents PDF et leur présentation ne sont pas modifiés.
+- Les pages Documents restent dans la mise en page fixe à deux cadres validée.
+
+Aucun changement graphique n'a été appliqué.

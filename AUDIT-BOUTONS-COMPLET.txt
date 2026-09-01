@@ -1,0 +1,17 @@
+OFFROAD 32 65 — CONTRÔLE GLOBAL DES BOUTONS COMPLET
+
+Contrôle demandé après détection d'un bouton COMPLET vert dans le programme ARAGON/CATALOGNE.
+
+Corrections :
+- Le bouton d'action de programme-raid.html applique maintenant les trois états centralisés.
+- Pour un raid COMPLET : libellé COMPLET, fond rouge, lien d'inscription désactivé.
+- Pour EN COURS D’INSCRIPTION : bouton d'inscription actif.
+- Pour À VENIR : bouton INSCRIPTIONS À VENIR désactivé.
+- Une règle CSS globale garantit qu'un bouton portant la classe is-complete/status-complet est rouge.
+- programme-detail.html et les pages pays utilisent également le moteur central de statut.
+
+Raid ARAGON/CATALOGNE :
+- dates-raids.js indique bien statut: "COMPLET".
+- Son bouton programme hérite désormais obligatoirement du traitement rouge COMPLET.
+
+Aucun autre changement graphique.

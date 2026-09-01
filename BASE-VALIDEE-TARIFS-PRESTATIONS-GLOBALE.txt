@@ -1,0 +1,37 @@
+BASE VALIDÉE — TARIFS & PRESTATIONS
+
+La présentation actuelle est figée comme modèle visuel de référence :
+- cartes tarifs compactes ;
+- aucune mention « par participant » ;
+- aucune mention « pour 2 participants » ;
+- aucun bandeau d'acompte ;
+- mention centrale mise en valeur ;
+- prestations sans lignes de séparation ;
+- carte pleine hauteur ;
+- typographie agrandie.
+
+PORTÉE
+Cette logique est utilisée par la page détail commune à tous les raids et tous les pays.
+
+PARAMÉTRAGE
+prestations-globales.js centralise :
+- la note centrale ;
+- prestations incluses ;
+- prestations non incluses ;
+- équipement obligatoire ;
+- options d'affichage des cartes tarifs.
+
+prestations-admin.js fournit une structure de maintenance pour :
+- ajouter un élément ;
+- modifier un élément ;
+- supprimer un élément ;
+- modifier la note.
+
+EXCEPTIONS PAR RAID
+Le moteur conserve les overrides par raid :
+- inclus_override
+- non_inclus_override
+- equipement_override
+- note_prestations_override
+
+Ainsi une future demande peut être globale ou spécifique à un raid sans casser le modèle commun.

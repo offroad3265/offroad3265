@@ -1,0 +1,27 @@
+OFFROAD 32 65 — ÉLÉMENTS À FOURNIR POUR LES PAGES LÉGALES
+============================================================
+
+Je n'ai pas inventé les informations juridiques manquantes.
+
+Pour créer les mentions légales / confidentialité définitives, fournir :
+- Nom ou raison sociale de l'éditeur du site
+- Forme juridique si applicable
+- Adresse postale
+- SIREN / SIRET si applicable
+- Nom du directeur/de la directrice de publication
+- Adresse e-mail de contact
+- Téléphone si vous souhaitez l'afficher
+- Nom de l'hébergeur
+- Adresse de l'hébergeur
+- Coordonnées de l'hébergeur
+- Nom de domaine définitif
+
+Pour la confidentialité / formulaires :
+- Finalité exacte des données collectées
+- Durée de conservation souhaitée
+- Personne ou entité responsable du traitement
+- Destinataires éventuels des données
+- Procédure de demande d'accès, rectification ou suppression
+- Utilisation éventuelle de cookies/mesure d'audience
+
+À valider selon votre situation juridique avant publication.

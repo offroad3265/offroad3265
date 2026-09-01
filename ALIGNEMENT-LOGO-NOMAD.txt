@@ -1,0 +1,6 @@
+Logo NOMAD RAID Travel :
+- bord droit aligné sur le bord droit de l'image d'accueil ;
+- dimensions du logo conservées ;
+- seule sa position horizontale dans l'image d'accueil a été modifiée ;
+- aucun autre élément du site modifié.
+Ancienne zone x=1284:1522; nouvelle zone x=1298:1536.

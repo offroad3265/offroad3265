@@ -1,0 +1,14 @@
+BANDEAU SUPÉRIEUR — CORRECTIF
+
+Problème de la version précédente :
+- 8 colonnes de largeur identique donnaient des écarts visuels différents,
+  car les textes n'ont pas tous la même largeur ;
+- le bouton WhatsApp était comprimé et coupé sur les côtés.
+
+Nouvelle règle :
+- chaque élément garde sa largeur naturelle ;
+- un écart unique de 18 px est appliqué ENTRE CHAQUE élément ;
+- le bouton WhatsApp garde une largeur complète de 138 px ;
+- son pictogramme blanc reste intégré et visible ;
+- NOS RAIDS et DOCUMENTS restent fonctionnels ;
+- aucun autre élément du site n'est modifié.

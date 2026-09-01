@@ -1,0 +1,5 @@
+J-1 conservé: OK
+CSS universel présent: OK
+Config universelle présente: OK
+detail-raid utilise le modèle: OK
+programme-detail utilise le modèle: OK
