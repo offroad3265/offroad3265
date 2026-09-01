@@ -1,0 +1,11 @@
+CORRECTIF CIBLÉ — ARAGON/CATALOGNE
+
+Le bouton du programme conservait une classe CSS verte malgré le statut COMPLET.
+
+Correction appliquée à programme-raid.html :
+- suppression dynamique des classes green/status-disponible/available quand le raid est COMPLET ;
+- ajout de la classe is-complete ;
+- règle CSS locale prioritaire sur #signupRaidLink.is-complete ;
+- fond rouge #c61f1f, texte blanc, inscription désactivée.
+
+La finalisation du dossier contrôlée reste incluse dans cette version cumulative.

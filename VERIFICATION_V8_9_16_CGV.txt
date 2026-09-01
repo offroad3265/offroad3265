@@ -1,0 +1,10 @@
+OFFROAD 32 65 — V8.9.16
+CGV OFFROAD 32 65 intégrées au site.
+- PDF interactif ajouté sous le nom CGV_OFFROAD_32_65.pdf
+- lien ajouté aux menus déroulants DOCUMENTS
+- option ajoutée au sélecteur de la page DOCUMENTS
+- description ajoutée dans la page DOCUMENTS
+- CGV ajoutées à la liste des documents pouvant être renvoyés
+- menus DOCUMENTS mis à jour sur 15 page(s)
+- liens locaux contrôlés : aucune cible manquante
+- JavaScript contrôlé : aucune erreur

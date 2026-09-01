@@ -1,0 +1,3884 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>OFFROAD 32 65 | Raids & Aventures</title>
+<meta name="description" content="OFFROAD 32 65 organise des raids tout-terrain en SSV, Quad, 4x4 et Motos en Espagne, Maroc, Sardaigne et Tunisie.">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;min-height:100%;background:#070707;color:#f4eee4;font-family:Arial,Helvetica,sans-serif}
+body{display:flex;justify-content:center;align-items:flex-start;overflow:hidden}
+.site{width:min(100vw,150vh);max-width:1536px;margin:0 auto;background:#070707}
+.visual{position:relative;width:100%;aspect-ratio:3/2;line-height:0}
+.visual>img{display:block;width:100%;height:100%;object-fit:contain;user-select:none;-webkit-user-drag:none}
+.hotspot{position:absolute;display:block;z-index:5;border-radius:5px;transition:background .18s ease,outline .18s ease}
+.hotspot:hover{background:rgba(255,102,0,.08);outline:2px solid rgba(255,102,0,.35)}
+.hotspot:focus-visible{outline:3px solid #ff6500;outline-offset:2px}
+/* Menu supérieur, sans Location ni Contact */
+.accueil{left:19.15%;top:4.15%;width:4.55%;height:4.75%}
+.apropos{left:25.65%;top:4.15%;width:4.95%;height:4.75%}
+.raids{left:32.05%;top:4.15%;width:6.65%;height:4.75%}
+.raid-dropdown{position:absolute;left:31.6%;top:8.55%;width:14.5%;z-index:20;display:none;line-height:1.2;background:#0d0d0d;border:1px solid #3a3a3a;border-top:3px solid #ff6b00;box-shadow:0 12px 30px rgba(0,0,0,.55)}
+.raid-dropdown a{display:block;color:#f4eee4;text-decoration:none;font-weight:800;font-size:clamp(11px,1vw,15px);padding:10px 12px;border-bottom:1px solid #2d2d2d;background:#0d0d0d}
+.raid-dropdown a:last-child{border-bottom:0}.raid-dropdown a:hover,.raid-dropdown a:focus{background:#ff6b00;color:#111;outline:none}
+.raids:hover + .raid-dropdown,.raids:focus + .raid-dropdown,.raid-dropdown:hover,.raid-dropdown:focus-within{display:block}
+.destinations{left:40.05%;top:4.15%;width:7.65%;height:4.75%}
+.documents-label{position:absolute;left:39.75%;top:4.05%;width:8.2%;height:4.95%;z-index:4;background:#0b0b0b;color:#f4eee4;display:flex;align-items:center;justify-content:center;line-height:1;font-family:"Russo One",Impact,"Arial Black",sans-serif;font-size:clamp(10px,.9vw,15px);text-transform:uppercase;letter-spacing:.02em}
+.partenaires{left:48.75%;top:4.15%;width:6.55%;height:4.75%}
+.galerie{left:55.15%;top:4.15%;width:5.55%;height:4.75%}
+/* Réseaux et contacts */
+.instagram{left:35.352%;top:50.0%;width:1.823%;height:3.516%}
+.facebook{left:37.695%;top:50.0%;width:2.018%;height:3.516%}
+.email{left:40.169%;top:50.0%;width:2.279%;height:3.516%}
+.whatsapp{left:43.294%;top:49.902%;width:6.38%;height:3.906%}
+.phone{left:50.391%;top:49.902%;width:10.091%;height:3.906%}
+/* Destinations */
+.maroc{left:2.35%;top:88.55%;width:10.45%;height:6.25%}
+.espagne{left:26.85%;top:88.55%;width:10.20%;height:6.25%}
+.sardaigne{left:50.45%;top:88.55%;width:10.45%;height:6.25%}
+.tunisie{left:74.25%;top:88.55%;width:10.45%;height:6.25%}
+/* Mobile : on garde une version lisible et défilable */
+@media(max-width:760px){
+  body{display:block;overflow:auto}
+  .site{width:980px;max-width:none;margin:0}
+  .visual{width:980px;aspect-ratio:3/2}
+}
+</style>
+<style>
+/* ===== Identité typographique OFFROAD 32 65 — harmonisation V3 ===== */
+:root{
+  --raid-orange:#ff7a00;
+  --raid-orange-dark:#d74600;
+  --raid-gold:#ffd76a;
+}
+
+/* Textes courants : écriture plus "carnet d'aventure", sans sacrifier la lisibilité */
+body,
+p,
+.story,
+.content p,
+.hero p,
+.empty p,
+.card p,
+.dest p,
+.raid-card p,
+li{
+  font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive !important;
+  font-style:normal !important;
+  letter-spacing:.005em;
+}
+
+/* Gros titres : massifs, droits, esprit rallye-raid */
+h1,h2,h3,
+.section-title,
+.hero h1,
+.content h2,
+.empty h2{
+  font-family:Impact,Haettenschweiler,"Arial Narrow Bold","Arial Black",sans-serif !important;
+  font-style:normal !important;
+  font-weight:900 !important;
+  letter-spacing:.025em !important;
+  text-transform:uppercase;
+}
+
+/* Dégradé sable / or / orange / terre cuite sur les titres majeurs */
+h1,
+.hero h1,
+.section-title,
+main > h1,
+.wrap > h1{
+  background:linear-gradient(
+    180deg,
+    #fff8d6 0%,
+    #ffe28a 23%,
+    #ffb126 48%,
+    #f36f00 73%,
+    #c93d00 100%
+  ) !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  color:transparent !important;
+  -webkit-text-fill-color:transparent !important;
+  text-shadow:0 2px 0 rgba(88,35,0,.30);
+}
+
+/* Les spans colorés inclus dans les grands titres suivent aussi le dégradé */
+h1 .orange,
+.hero h1 .orange,
+.section-title span{
+  color:inherit !important;
+  -webkit-text-fill-color:inherit !important;
+}
+
+/* Sous-titres forts : même esprit RAID, orange plein */
+h2,h3,
+.content h2,
+.empty h2{
+  color:var(--raid-orange) !important;
+}
+
+/* Navigation et boutons : RAID droit, très lisible */
+nav a,
+.brand,
+.btn,
+.wa,
+.tag,
+.back,
+.vehicles,
+.eyebrow,
+.kicker{
+  font-family:Impact,Haettenschweiler,"Arial Narrow Bold","Arial Black",sans-serif !important;
+  font-style:normal !important;
+  letter-spacing:.045em !important;
+  text-transform:uppercase;
+}
+
+/* Menus déroulants */
+.nav-drop-menu a{
+  font-family:Impact,Haettenschweiler,"Arial Narrow Bold","Arial Black",sans-serif !important;
+  font-style:normal !important;
+  letter-spacing:.04em !important;
+}
+
+/* Liens d'action */
+.btn,.wa{
+  border-radius:4px;
+}
+
+/* À propos : préserver la page fixe et l'intégralité du texte */
+.about-page .story,
+.about-page .story p{
+  font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive !important;
+  font-style:normal !important;
+}
+.about-page .content{
+  font-style:normal !important;
+}
+.about-page .section-title,
+.about-page h1,
+.about-page .kicker,
+.about-page .vehicles,
+.about-page .signature{
+  font-style:normal !important;
+}
+.about-page .signature{
+  font-family:"Segoe Print","Bradley Hand","Comic Sans MS",cursive !important;
+  font-weight:700 !important;
+}
+
+/* La police manuscrite est plus large : réglages protecteurs sur la page fixe */
+@media (min-width:901px){
+  .about-page .story{
+    font-size:clamp(12px,.88vw,15px) !important;
+    line-height:1.12 !important;
+  }
+  .about-page .story p{
+    margin-bottom:2px !important;
+  }
+  .about-page .chapter{
+    margin-top:18px !important;
+  }
+}
+@media (max-width:1120px) and (min-width:901px){
+  .about-page .story{
+    font-size:11.2px !important;
+    line-height:1.08 !important;
+  }
+  .about-page .chapter{
+    margin-top:12px !important;
+  }
+}
+
+/* Sur mobile, retour à une taille confortable */
+@media (max-width:900px){
+  body,p,.story,.content p,.hero p,.empty p,.card p,.dest p,.raid-card p,li{
+    line-height:1.45;
+  }
+  .about-page .story{
+    font-size:16px !important;
+    line-height:1.45 !important;
+  }
+}
+</style><style>
+/* ===== OFFROAD 32 65 — identité sport mécanique validée ===== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&family=Russo+One&display=swap');
+
+:root{
+  --off-orange-light:#ffad42;
+  --off-orange:#ff7200;
+  --off-orange-dark:#c84a00;
+}
+
+/* Texte courant : condensé, droit, lisible */
+body, p, li, .story, .content p, .hero p, .empty p, .card p,
+.dest p, .raid-card p, .about-page .story, .about-page .story p {
+  font-family:"Roboto Condensed","Arial Narrow",Arial,sans-serif !important;
+  font-style:normal !important;
+  font-weight:400;
+  letter-spacing:.01em;
+}
+
+/* Titres : sport mécanique, carrés, droits */
+h1, h2, h3, .section-title, .hero h1, .content h2, .empty h2,
+.kicker, .signature {
+  font-family:"Russo One",Impact,"Arial Black",sans-serif !important;
+  font-style:normal !important;
+  font-weight:400 !important;
+  text-transform:uppercase;
+  letter-spacing:.015em !important;
+}
+
+/* Gros titres : dégradé 100 % orange */
+h1, .hero h1, .section-title, main > h1, .wrap > h1 {
+  background:linear-gradient(
+    180deg,
+    var(--off-orange-light) 0%,
+    #ff8a16 35%,
+    var(--off-orange) 62%,
+    var(--off-orange-dark) 100%
+  ) !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  color:transparent !important;
+  text-shadow:0 2px 0 rgba(70,24,0,.22);
+}
+h1 .orange, .hero h1 .orange, .section-title span {
+  color:inherit !important;
+  -webkit-text-fill-color:inherit !important;
+}
+
+/* Navigation, menus, boutons : Russo One */
+nav a, .brand, .btn, .wa, .tag, .back, .vehicles, .eyebrow,
+.nav-drop-menu a {
+  font-family:"Russo One",Impact,"Arial Black",sans-serif !important;
+  font-style:normal !important;
+  font-weight:400 !important;
+  letter-spacing:.025em !important;
+  text-transform:uppercase;
+}
+
+/* Sous-titres forts */
+h2, h3, .content h2, .empty h2 {
+  color:var(--off-orange) !important;
+}
+
+/* À propos : préserver la page fixe et éviter toute coupure */
+.about-page .story, .about-page .story p {
+  font-family:"Roboto Condensed","Arial Narrow",Arial,sans-serif !important;
+}
+.about-page .signature {
+  font-family:"Russo One",Impact,"Arial Black",sans-serif !important;
+}
+@media (min-width:901px){
+  .about-page .story{
+    font-size:clamp(13px,.94vw,16px) !important;
+    line-height:1.13 !important;
+  }
+  .about-page .story p{margin-bottom:3px !important;}
+  .about-page .chapter{margin-top:18px !important;}
+}
+@media (max-width:1120px) and (min-width:901px){
+  .about-page .story{
+    font-size:12px !important;
+    line-height:1.09 !important;
+  }
+  .about-page .chapter{margin-top:13px !important;}
+}
+@media (max-width:900px){
+  body,p,li,.story,.content p,.hero p,.empty p,.card p,.dest p,.raid-card p{
+    line-height:1.45;
+  }
+  .about-page .story{
+    font-size:16px !important;
+    line-height:1.45 !important;
+  }
+}
+</style><style>
+/* ===== OFFROAD 32 65 — dégradé orange sur les titres orange uniquement ===== */
+h2, h3, .content h2, .empty h2,
+.orange,
+.eyebrow,
+.kicker,
+.section-title,
+.hero h1,
+h1,
+main > h1,
+.wrap > h1 {
+  background:linear-gradient(
+    180deg,
+    #ffad42 0%,
+    #ff8a16 35%,
+    #ff7200 62%,
+    #c84a00 100%
+  ) !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  color:transparent !important;
+  -webkit-text-fill-color:transparent !important;
+}
+
+/* Les textes blancs/gris restent inchangés et lisibles */
+body, p, li, .story, .content p, .hero p, .empty p, .card p,
+.dest p, .raid-card p, nav a, .brand {
+  -webkit-text-fill-color:initial;
+}
+
+/* Navigation : conserver blanc / orange actif selon le design existant */
+nav a, .brand {
+  background:none !important;
+  -webkit-background-clip:border-box !important;
+  background-clip:border-box !important;
+}
+nav a:not(.active):not(:hover) {
+  color:#ddd;
+}
+.brand {
+  color:#f4eee4;
+}
+.brand span {
+  color:#ff6b00;
+}
+
+/* Boutons et tags conservent leurs aplats pour le contraste */
+.btn, .wa, .tag, .vehicles, .back {
+  background-clip:border-box !important;
+  -webkit-background-clip:border-box !important;
+  -webkit-text-fill-color:initial !important;
+}
+</style>
+<style>
+/* ===== Accueil : cartes calendriers raids ===== */
+.home-calendars{
+  position:absolute;
+  z-index:15;
+  left:4%;
+  right:4%;
+  bottom:2.2%;
+  height:28%;
+  box-sizing:border-box;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:1%;
+}
+.country-calendar{
+  min-width:0;
+  padding:8px 9px 9px;
+  border:1px solid rgba(255,122,0,.65);
+  background:linear-gradient(180deg,rgba(12,12,12,.97),rgba(3,3,3,.98));
+  box-shadow:0 8px 22px rgba(0,0,0,.5);
+}
+.country-calendar h3{
+  margin:0 0 5px;
+  font-family:"Russo One",Impact,sans-serif !important;
+  font-size:clamp(12px,1.15vw,19px);
+  line-height:1;
+  text-transform:uppercase;
+  background:linear-gradient(180deg,#ffb24b,#ff7200 55%,#bd4300);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.month-select{
+  width:100%;margin:0 0 5px;padding:4px 6px;
+  border:1px solid #3c3c3c;background:#111;color:#eee;
+  font-family:"Roboto Condensed","Arial Narrow",Arial,sans-serif;
+  font-size:clamp(8px,.65vw,11px)
+}
+.mini-calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:2px}
+.day-name{
+  text-align:center;color:#888;font-family:"Roboto Condensed","Arial Narrow",Arial,sans-serif;
+  font-size:clamp(7px,.52vw,9px);text-transform:uppercase;padding-bottom:1px
+}
+.day{
+  min-height:18px;display:flex;align-items:center;justify-content:center;
+  border:1px solid #252525;background:#101010;color:#aaa;
+  font-family:"Roboto Condensed","Arial Narrow",Arial,sans-serif;
+  font-size:clamp(7px,.58vw,10px);cursor:default
+}
+.day.empty{border-color:transparent;background:transparent}
+.day.raid{
+  background:linear-gradient(180deg,#ff9a24,#ff6500);
+  color:#090909;border-color:#ffb04a;font-weight:800;cursor:pointer;
+  box-shadow:0 0 8px rgba(255,102,0,.28)
+}
+.day.raid:hover{transform:translateY(-1px);filter:brightness(1.12)}
+.raid-caption{
+  min-height:25px;margin-top:5px;color:#bbb;
+  font-family:"Roboto Condensed","Arial Narrow",Arial,sans-serif;
+  font-size:clamp(7px,.57vw,10px);line-height:1.15
+}
+.raid-caption strong{color:#ff8a16}
+.calendar-link{
+  display:inline-block;margin-top:3px;color:#ff8a16;text-decoration:none;
+  font-family:"Russo One",Impact,sans-serif;font-size:clamp(7px,.55vw,9px);text-transform:uppercase
+}
+.home-calendars:before{
+  content:"";position:absolute;z-index:-1;left:-2%;right:-2%;top:-8%;bottom:-5%;
+  background:linear-gradient(180deg,rgba(5,5,5,.86),#050505 16%,#050505);
+}
+@media(max-width:760px){
+  .home-calendars{
+    position:relative;left:auto;right:auto;bottom:auto;height:auto;
+    grid-template-columns:1fr 1fr;padding:12px 3%;background:#050505
+  }
+}
+</style>
+
+<style>
+/* ===== Cartes pays : raids affichés date par date ===== */
+.raid-date-list{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  margin-top:7px;
+}
+.raid-date-row{
+  display:block;
+  padding:7px 8px;
+  background:rgba(18,18,18,.96);
+  border-left:3px solid #ff7200;
+  text-decoration:none;
+  box-sizing:border-box;
+}
+.raid-date-row:hover{background:#1b1b1b}
+.raid-date-value{
+  display:block;
+  color:#ff8a16;
+  font-family:"Russo One",Impact,sans-serif;
+  font-size:clamp(9px,.72vw,12px);
+  line-height:1.1;
+}
+.raid-date-title{
+  display:block;
+  margin-top:4px;
+  color:#f4eee4;
+  font-family:"Roboto Condensed","Arial Narrow",Arial,sans-serif;
+  font-size:clamp(8px,.65vw,11px);
+  line-height:1.18;
+  font-weight:700;
+}
+.raid-date-status{
+  display:inline-block;
+  margin-top:5px;
+  color:#ff9a24;
+  font-family:"Roboto Condensed","Arial Narrow",Arial,sans-serif;
+  font-size:clamp(7px,.54vw,9px);
+  text-transform:uppercase;
+}
+.no-announced-raid{
+  padding:8px;
+  margin-top:7px;
+  color:#999;
+  border:1px dashed #333;
+  font-family:"Roboto Condensed","Arial Narrow",Arial,sans-serif;
+  font-size:clamp(8px,.62vw,10px);
+}
+</style>
+
+<style>
+/* ===== Cartes Raid : choix de l'année ===== */
+.raid-year-select{
+  width:100%;
+  margin:6px 0 7px;
+  padding:5px 7px;
+  box-sizing:border-box;
+  border:1px solid #3b3b3b;
+  background:#0d0d0d;
+  color:#f2f2f2;
+  font-family:"Roboto Condensed","Arial Narrow",Arial,sans-serif;
+  font-size:clamp(8px,.64vw,10px);
+  font-weight:700;
+  outline:none;
+}
+.raid-year-select:focus{border-color:#ff7200}
+</style>
+
+<style>
+/* ===== Statuts des raids ===== */
+.raid-date-status.status-complet,
+.sync-status.status-complet{
+  color:#e53935 !important;
+  font-weight:800 !important;
+}
+.raid-date-status.status-disponible,
+.sync-status.status-disponible{
+  color:#35b85a !important;
+  font-weight:800 !important;
+}
+</style>
+
+<style>
+/* ===== Accueil : menu déroulant directement sous DOCUMENTS ===== */
+.documents-dropdown-home{
+  position:absolute;
+  left:39.75%;
+  top:8.55%;
+  width:max-content;
+  min-width:320px;
+  max-width:420px;
+  box-sizing:border-box;
+  z-index:40;
+  display:none;
+  line-height:1.2;
+  background:#0d0d0d;
+  border:1px solid #3a3a3a;
+  border-top:3px solid #ff6b00;
+  box-shadow:0 12px 30px rgba(0,0,0,.65);
+}
+.documents-dropdown-home a{
+  display:block;
+  padding:11px 12px;
+  color:#f4eee4;
+  background:#0d0d0d;
+  border-bottom:1px solid #2d2d2d;
+  text-decoration:none;
+  font-family:"Russo One",Impact,"Arial Black",sans-serif;
+  font-size:clamp(10px,.9vw,14px);
+  font-weight:400;
+  text-transform:uppercase;
+  letter-spacing:.02em;
+  white-space:normal;
+  overflow-wrap:anywhere;
+}
+
+.documents-dropdown-home a:last-child{border-bottom:0}
+.documents-dropdown-home a:hover,
+.documents-dropdown-home a:focus{
+  background:#ff6b00;
+  color:#111;
+  outline:none;
+}
+
+/* Ouverture au survol/clavier, comme NOS RAIDS */
+.documents-trigger:hover + .documents-dropdown-home,
+.documents-trigger:focus + .documents-dropdown-home,
+.documents-dropdown-home:hover,
+.documents-dropdown-home:focus-within,
+.documents-dropdown-home.is-open{
+  display:block;
+}
+
+/* Le hotspot doit rester au-dessus du libellé graphique */
+.documents-trigger{z-index:35!important}
+</style>
+
+
+<style>
+/* Petite flèche indiquant le menu déroulant DOCUMENTS */
+.documents-label .documents-arrow{
+  display:inline-block;
+  margin-left:5px;
+  font-size:.68em;
+  line-height:1;
+  color:#f4eee4;
+  transform:translateY(-1px);
+}
+</style>
+
+
+<style id="dropdown-arrows-white">
+/* Règle globale : toutes les flèches signalant un menu déroulant restent blanches. */
+.documents-arrow,
+.nav-documents-arrow,
+.raid-arrow,
+.dropdown-arrow,
+.nav-drop-arrow,
+[aria-haspopup="true"] .arrow,
+[aria-haspopup="true"] .caret{
+  color:#f4eee4 !important;
+  -webkit-text-fill-color:#f4eee4 !important;
+}
+
+/* ===== Police OFFROAD 32 65 : harmonisation des gros titres ===== */
+h1,
+h2,
+h3,
+.hero h1,
+.hero h2,
+.section-title,
+.program-title h2,
+.tarifs-heading h2,
+.raid-copy h1,
+.route,
+.steps-intro span,
+.step-head h2,
+.eyebrow,
+.kicker{
+  font-family:Impact,Haettenschweiler,"Arial Narrow Bold","Arial Black",sans-serif!important;
+  font-style:normal!important;
+  font-weight:900!important;
+  letter-spacing:.025em!important;
+}
+
+</style>
+
+<link rel="stylesheet" href="site-core.css">
+<style>
+.calendar-year-toolbar{display:flex;justify-content:center;align-items:center;gap:10px;margin:0 0 14px}
+.calendar-year-toolbar span{font-family:Impact,Haettenschweiler,"Arial Narrow Bold","Arial Black",sans-serif;letter-spacing:.08em}
+#calendarYearSelect{min-width:110px;padding:8px 10px;border:1px solid #f57916;background:#0b0b0b;color:#f57916;font-weight:900}
+</style>
+<link rel="stylesheet" href="offroad-theme.css">
+
+<style>
+/* ===== ACCUEIL : grands calendriers entièrement visibles ===== */
+@media(min-width:761px){
+  html,body{
+    width:100%!important;
+    height:100%!important;
+    min-height:100%!important;
+    overflow:hidden!important;
+  }
+  body{
+    display:flex!important;
+    justify-content:center!important;
+    align-items:flex-start!important;
+  }
+  .site{
+    width:min(100vw,150vh)!important;
+    max-width:1536px!important;
+    height:auto!important;
+    margin:0 auto!important;
+  }
+  .visual{
+    position:relative!important;
+    width:100%!important;
+    aspect-ratio:3/2!important;
+    overflow:visible!important;
+  }
+
+  /* Sélecteur d'année placé juste au-dessus des cartes, sans réduire leur hauteur */
+  .calendar-year-toolbar{
+    position:absolute!important;
+    z-index:18!important;
+    left:4%!important;
+    right:4%!important;
+    bottom:33.2%!important;
+    height:3.8%!important;
+    margin:0!important;
+    display:flex!important;
+    justify-content:center!important;
+    align-items:center!important;
+    gap:8px!important;
+    line-height:1!important;
+  }
+  .calendar-year-toolbar span{
+    font-size:clamp(10px,.72vw,13px)!important;
+  }
+  #calendarYearSelect{
+    min-width:88px!important;
+    padding:4px 8px!important;
+    font-size:clamp(9px,.68vw,12px)!important;
+  }
+
+  /* Cartes : taille proche de la version validée, mais légèrement plus hautes */
+  .home-calendars{
+    position:absolute!important;
+    z-index:15!important;
+    left:4%!important;
+    right:4%!important;
+    bottom:2.2%!important;
+    height:29.8%!important;
+    min-height:0!important;
+    padding:0!important;
+    display:grid!important;
+    grid-template-columns:repeat(4,minmax(0,1fr))!important;
+    gap:1%!important;
+    overflow:visible!important;
+  }
+  .country-calendar{
+    height:100%!important;
+    min-height:0!important;
+    padding:9px 10px 8px!important;
+    overflow:hidden!important;
+    display:flex!important;
+    flex-direction:column!important;
+  }
+  .country-calendar h3{
+    flex:0 0 auto!important;
+    margin:0 0 5px!important;
+    font-size:clamp(13px,1.15vw,19px)!important;
+  }
+  .raid-year-select,
+  .month-select{
+    flex:0 0 auto!important;
+    width:100%!important;
+    margin:0 0 5px!important;
+    padding:4px 6px!important;
+  }
+  .raid-date-list{
+    flex:1 1 auto!important;
+    min-height:0!important;
+    display:flex!important;
+    flex-direction:column!important;
+    gap:5px!important;
+    overflow:hidden!important;
+  }
+  .raid-date-row{
+    padding:7px 8px!important;
+  }
+  .raid-date-value{
+    font-size:clamp(9px,.72vw,12px)!important;
+  }
+  .raid-date-title{
+    font-size:clamp(8px,.65vw,11px)!important;
+    line-height:1.14!important;
+  }
+  .raid-date-status{
+    margin-top:4px!important;
+  }
+}
+</style>
+
+<style>
+/* ===== ACCUEIL V3 : calendriers lisibles, sans sélecteur d'année global ===== */
+.calendar-year-toolbar,
+#calendarYearSelect{
+  display:none!important;
+}
+@media(min-width:761px){
+  .home-calendars{
+    bottom:2.2%!important;
+    height:34.5%!important;
+  }
+  .country-calendar{
+    padding:12px 13px 11px!important;
+  }
+  .country-calendar h3{
+    margin:0 0 7px!important;
+    font-size:clamp(18px,1.42vw,24px)!important;
+    line-height:1!important;
+  }
+  .country-calendar select,
+  .raid-year-select,
+  .month-select{
+    padding:6px 8px!important;
+    font-size:clamp(13px,.9vw,16px)!important;
+    line-height:1.15!important;
+  }
+  .raid-date-list{
+    gap:7px!important;
+  }
+  .raid-date-row{
+    padding:9px 10px!important;
+  }
+  .raid-date-value{
+    font-size:clamp(13px,.9vw,16px)!important;
+    line-height:1.15!important;
+  }
+  .raid-date-title{
+    font-size:clamp(12px,.82vw,15px)!important;
+    line-height:1.22!important;
+  }
+  .raid-date-status{
+    margin-top:5px!important;
+    font-size:clamp(11px,.74vw,13px)!important;
+    line-height:1.15!important;
+  }
+}
+</style>
+
+<style>
+/* ===== ACCUEIL V4 : bandeau central préservé ===== */
+@media(min-width:761px){
+  .home-calendars{
+    left:4%!important;
+    right:4%!important;
+    bottom:2.2%!important;
+    height:28%!important;
+    min-height:0!important;
+    padding:0!important;
+    overflow:visible!important;
+  }
+  .country-calendar{
+    height:100%!important;
+    padding:9px 10px 8px!important;
+    overflow:hidden!important;
+  }
+
+  /* Police agrandie, mais sans remonter les cartes sur le bandeau central */
+  .country-calendar h3{
+    font-size:clamp(16px,1.25vw,21px)!important;
+    margin-bottom:6px!important;
+  }
+  .country-calendar select,
+  .raid-year-select,
+  .month-select{
+    padding:5px 7px!important;
+    font-size:clamp(12px,.82vw,14px)!important;
+  }
+  .raid-date-list{
+    gap:5px!important;
+    margin-top:5px!important;
+  }
+  .raid-date-row{
+    padding:7px 8px!important;
+  }
+  .raid-date-value{
+    font-size:clamp(12px,.82vw,14px)!important;
+  }
+  .raid-date-title{
+    font-size:clamp(11px,.76vw,13px)!important;
+    line-height:1.16!important;
+  }
+  .raid-date-status{
+    font-size:clamp(10px,.68vw,12px)!important;
+    margin-top:4px!important;
+  }
+}
+</style>
+
+<style id="espagne-trois-raids-visibles-v10235">
+/* Calendrier Espagne : conserver les trois raids 2026 visibles simultanément. */
+@media(min-width:761px){
+  .country-calendar[data-country="espagne"] .raid-date-list{gap:3px!important;margin-top:3px!important;}
+  .country-calendar[data-country="espagne"] .raid-date-row{padding:4px 7px!important;}
+  .country-calendar[data-country="espagne"] .raid-date-value{font-size:clamp(10px,.70vw,12px)!important;line-height:1.05!important;}
+  .country-calendar[data-country="espagne"] .raid-date-title{margin-top:2px!important;font-size:clamp(9px,.64vw,11px)!important;line-height:1.08!important;}
+  .country-calendar[data-country="espagne"] .raid-date-status{margin-top:2px!important;font-size:clamp(8px,.56vw,10px)!important;line-height:1.05!important;}
+}
+</style>
+
+<style id="contacts-bandeau-apres-galerie">
+/* Les anciens hotspots de contact dans l'image sont remplacés par de vrais boutons dans le bandeau. */
+.hotspot.instagram,.hotspot.facebook,.hotspot.email,.hotspot.whatsapp,.hotspot.phone{
+  display:none!important;
+}
+.top-contact-actions{
+  position:absolute;
+  z-index:30;
+  left:61.7%;
+  top:5.15%;
+  display:flex;
+  align-items:center;
+  gap:7px;
+  white-space:nowrap;
+}
+.top-contact-actions a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:22px;
+  padding:3px 7px;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:4px;
+  color:#f4eee4;
+  background:rgba(0,0,0,.18);
+  text-decoration:none;
+  font:700 9px/1 Arial,sans-serif;
+  letter-spacing:.2px;
+}
+.top-contact-actions a:hover{
+  border-color:#f28a1a;
+  color:#f28a1a;
+}
+.top-contact-actions .contact-icon{
+  font-size:12px;
+  margin-right:4px;
+}
+.top-contact-actions .whatsapp-top{
+  border-color:rgba(255,255,255,.34);
+}
+@media(max-width:900px){
+  .top-contact-actions{
+    left:52%;
+    top:9.7%;
+    gap:4px;
+    transform:scale(.82);
+    transform-origin:left top;
+  }
+}
+</style>
+
+
+<style id="contacts-bandeau-lisibilite-final">
+.top-contact-actions{
+  gap:8px!important;
+}
+.top-contact-actions a{
+  min-height:27px!important;
+  padding:4px 9px!important;
+  font-size:11.5px!important;
+  font-weight:800!important;
+  letter-spacing:.25px!important;
+}
+.top-contact-actions .phone-top{
+  font-size:12.5px!important;
+}
+.top-contact-actions .mail-top{
+  font-size:12px!important;
+}
+.top-contact-actions .contact-icon{
+  font-size:15px!important;
+  margin-right:5px!important;
+}
+.top-contact-actions .whatsapp-top{
+  gap:5px!important;
+  color:#f4eee4!important;
+  background:#25D366!important;
+  border:1px solid #25D366!important;
+  border-radius:6px!important;
+  padding:4px 10px!important;
+  font-size:11.5px!important;
+}
+.top-contact-actions .whatsapp-top:hover{
+  color:#f4eee4!important;
+  background:#20bd5a!important;
+  border-color:#20bd5a!important;
+}
+.top-contact-actions .whatsapp-logo{
+  width:17px!important;
+  height:17px!important;
+  flex:0 0 17px!important;
+  display:block!important;
+}
+@media(max-width:900px){
+  .top-contact-actions{
+    transform:scale(.78)!important;
+  }
+}
+</style>
+
+
+<style id="contacts-bandeau-final-valide">
+.top-contact-actions{
+  gap:10px!important;
+  align-items:center!important;
+}
+
+.top-contact-actions a{
+  min-height:32px!important;
+  box-sizing:border-box!important;
+  transition:transform .15s ease, opacity .15s ease!important;
+}
+.top-contact-actions a:hover{
+  transform:translateY(-1px)!important;
+  opacity:1!important;
+}
+
+/* Téléphone : nettement lisible, sans cartouche lourd */
+.top-contact-actions .phone-top{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:7px!important;
+  padding:3px 2px!important;
+  border:none!important;
+  background:transparent!important;
+  color:#f4eee4!important;
+  font-size:14px!important;
+  font-weight:800!important;
+  letter-spacing:.15px!important;
+}
+.top-contact-actions .phone-symbol{
+  font-size:17px!important;
+  line-height:1!important;
+}
+.top-contact-actions .phone-number{
+  white-space:nowrap!important;
+}
+
+/* Mail : enveloppe seule, clairement identifiable */
+.top-contact-actions .mail-top{
+  width:38px!important;
+  min-width:38px!important;
+  padding:0!important;
+  border:none!important;
+  background:transparent!important;
+  color:#f4eee4!important;
+}
+.top-contact-actions .mail-logo{
+  width:30px!important;
+  height:23px!important;
+  display:block!important;
+}
+
+/* WhatsApp : bouton vert avec sigle blanc */
+.top-contact-actions .whatsapp-top{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:7px!important;
+  min-width:126px!important;
+  padding:5px 12px!important;
+  border:1px solid #25D366!important;
+  border-radius:7px!important;
+  background:#25D366!important;
+  color:#f4eee4!important;
+  font-size:12.5px!important;
+  font-weight:900!important;
+  letter-spacing:.2px!important;
+  box-shadow:0 2px 8px rgba(37,211,102,.2)!important;
+}
+.top-contact-actions .whatsapp-top:hover{
+  background:#20bd5a!important;
+  border-color:#20bd5a!important;
+}
+.top-contact-actions .whatsapp-logo{
+  width:19px!important;
+  height:19px!important;
+  display:block!important;
+  flex:0 0 19px!important;
+}
+
+@media(max-width:900px){
+  .top-contact-actions{
+    transform:scale(.72)!important;
+    transform-origin:left center!important;
+  }
+}
+</style>
+
+
+<style id="sociaux-position-verifiee-final">
+.hotspot.instagram,.hotspot.facebook{
+  display:none!important;
+}
+
+.sand-socials-final{
+  position:absolute!important;
+  z-index:30!important;
+  left:29.5%!important;
+  top:47.7%!important;
+  transform:translateY(-50%)!important;
+  display:flex!important;
+  align-items:center!important;
+  gap:8px!important;
+  margin:0!important;
+  padding:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+  filter:none!important;
+  backdrop-filter:none!important;
+  -webkit-backdrop-filter:none!important;
+  line-height:0!important;
+}
+
+.sand-socials-final a{
+  width:36px!important;
+  height:36px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  border-radius:9px!important;
+  padding:0!important;
+  margin:0!important;
+  text-decoration:none!important;
+  box-shadow:0 2px 6px rgba(0,0,0,.24)!important;
+}
+
+.sand-socials-final .instagram-final{
+  background:radial-gradient(circle at 30% 105%,#fdf497 0 5%,#fd5949 42%,#d6249f 62%,#285AEB 92%)!important;
+  color:#f4eee4!important;
+}
+.sand-socials-final .facebook-final{
+  background:#1877F2!important;
+  color:#f4eee4!important;
+}
+.sand-socials-final svg{
+  width:21px!important;
+  height:21px!important;
+  display:block!important;
+}
+
+@media(max-width:760px){
+  .sand-socials-final{
+    left:29.5%!important;
+    top:47.7%!important;
+  }
+}
+</style>
+
+
+<style id="telephone-apres-sociaux-final">
+.sand-socials-final .phone-social-final{
+  width:auto!important;
+  height:36px!important;
+  min-width:142px!important;
+  padding:0 10px!important;
+  margin-left:3px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:6px!important;
+  border:1px solid rgba(255,255,255,.58)!important;
+  border-radius:8px!important;
+  background:rgba(0,0,0,.62)!important;
+  color:#f4eee4!important;
+  text-decoration:none!important;
+  box-sizing:border-box!important;
+  line-height:1!important;
+  white-space:nowrap!important;
+}
+.sand-socials-final .phone-social-symbol{
+  font-size:17px!important;
+  line-height:1!important;
+}
+.sand-socials-final .phone-social-number{
+  font:800 12.5px/1 Arial,sans-serif!important;
+  letter-spacing:.15px!important;
+}
+</style>
+
+
+<style id="facebook-rond-final">
+.sand-socials-final .facebook-final{
+  border-radius:50%!important;
+}
+</style>
+
+
+
+
+<style id="masque-anciens-hotspots-bandeau">
+.hotspot.accueil,
+.hotspot.apropos,
+.hotspot.raids,
+.hotspot.destinations,
+.hotspot.partenaires,
+.hotspot.galerie{
+  display:none!important;
+}
+.documents-label{
+  display:none!important;
+}
+</style>
+
+
+<style id="bandeau-visible-uniforme-final">
+.topbar-uniform{
+  position:absolute!important;
+  z-index:40!important;
+  left:16.4%!important;
+  right:16.4%!important;
+  top:2.0%!important;
+  height:7.8%!important;
+  display:grid!important;
+  grid-template-columns:repeat(6,max-content) 34px 124px!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  column-gap:0!important;
+  background:transparent!important;
+}
+
+.topbar-uniform a{
+  color:#f4eee4!important;
+  text-decoration:none!important;
+  font:800 11px/1 Arial,sans-serif!important;
+  letter-spacing:.25px!important;
+  white-space:nowrap!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  height:30px!important;
+  padding:0!important;
+  margin:0!important;
+}
+
+.topbar-uniform a:hover{
+  color:#f28a1a!important;
+}
+
+.topbar-uniform .mail-uniform{
+  width:34px!important;
+  color:#f4eee4!important;
+}
+.topbar-uniform .mail-uniform svg{
+  width:27px!important;
+  height:20px!important;
+  display:block!important;
+}
+
+.topbar-uniform .whatsapp-uniform{
+  width:124px!important;
+  border-radius:6px!important;
+  background:#25D366!important;
+  color:#f4eee4!important;
+  gap:6px!important;
+  padding:0 8px!important;
+  box-sizing:border-box!important;
+}
+.topbar-uniform .whatsapp-uniform svg{
+  width:18px!important;
+  height:18px!important;
+  display:block!important;
+  flex:0 0 18px!important;
+}
+
+@media(max-width:900px){
+  .topbar-uniform{
+    left:15.5%!important;
+    right:15.5%!important;
+    transform:scale(.76)!important;
+    transform-origin:center top!important;
+  }
+}
+</style>
+
+
+<style id="masque-ancien-contact-bandeau">
+.top-contact-actions{display:none!important}
+</style>
+
+
+<style id="bandeau-marges-uniformes-final">
+.topbar-uniform{
+  left:17.8%!important;
+  right:17.8%!important;
+  grid-template-columns:repeat(6,max-content) 34px 124px!important;
+  justify-content:space-between!important;
+}
+</style>
+
+
+<style id="regle-nos-raids-pays-partout">
+
+.nav-drop{position:relative;display:inline-flex}
+.nav-drop-menu{
+  position:absolute;
+  display:none;
+  top:100%;
+  left:0;
+  min-width:175px;
+  background:#0d0d0d;
+  border:1px solid #333;
+  border-top:3px solid #ff6b00;
+  box-shadow:0 12px 28px rgba(0,0,0,.5);
+  z-index:50
+}
+.nav-drop-menu a{
+  display:block;
+  padding:11px 13px;
+  white-space:nowrap;
+  border-bottom:1px solid #292929;
+  color:#eee!important
+}
+.nav-drop:hover .nav-drop-menu,
+.nav-drop:focus-within .nav-drop-menu{display:block}
+
+</style>
+
+<style id="accueil-nav-drop-adapte-grille">
+.topbar-uniform .nav-drop{
+  position:relative!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  height:30px!important;
+}
+.topbar-uniform .nav-drop>a{
+  height:30px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  color:#f4eee4!important;
+  text-decoration:none!important;
+  font:800 11px/1 Arial,sans-serif!important;
+  letter-spacing:.25px!important;
+  white-space:nowrap!important;
+}
+.topbar-uniform .nav-drop-menu{
+  top:100%!important;
+  left:0!important;
+  min-width:175px!important;
+  background:#0d0d0d!important;
+  border:1px solid #333!important;
+  border-top:3px solid #ff6b00!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.5)!important;
+  z-index:100!important;
+}
+.topbar-uniform .nav-drop-menu a{
+  display:block!important;
+  height:auto!important;
+  padding:11px 13px!important;
+  white-space:nowrap!important;
+  border-bottom:1px solid #292929!important;
+  color:#eee!important;
+  text-align:left!important;
+  justify-content:flex-start!important;
+  font:700 14px/1.2 Arial,Helvetica,sans-serif!important;
+  letter-spacing:0!important;
+  text-transform:none!important;
+}
+</style>
+
+
+<style id="documents-menu-restaure-final">
+.topbar-uniform .topbar-documents-menu{
+  position:relative!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  height:30px!important;
+  overflow:visible!important;
+}
+
+.topbar-uniform .topbar-documents-menu .topbar-menu-trigger{
+  height:30px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+
+.topbar-uniform .topbar-documents-menu .documents-dropdown-restored{
+  position:absolute!important;
+  display:none!important;
+  top:100%!important;
+  left:0!important;
+  transform:none!important;
+  min-width:245px!important;
+  padding:0!important;
+  background:#0d0d0d!important;
+  border:1px solid #333!important;
+  border-top:3px solid #ff6b00!important;
+  border-radius:0!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.5)!important;
+  z-index:120!important;
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+}
+
+.topbar-uniform .topbar-documents-menu .documents-dropdown-restored a{
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  padding:11px 13px!important;
+  white-space:nowrap!important;
+  border-bottom:1px solid #292929!important;
+  border-radius:0!important;
+  background:#0d0d0d!important;
+  color:#eee!important;
+  text-align:left!important;
+  justify-content:flex-start!important;
+  font:700 14px/1.2 Arial,Helvetica,sans-serif!important;
+  letter-spacing:0!important;
+  text-transform:none!important;
+}
+
+.topbar-uniform .topbar-documents-menu .documents-dropdown-restored a:last-child{
+  border-bottom:0!important;
+}
+
+.topbar-uniform .topbar-documents-menu .documents-dropdown-restored a:hover,
+.topbar-uniform .topbar-documents-menu .documents-dropdown-restored a:focus{
+  background:#161616!important;
+  color:#ff6b00!important;
+}
+
+.topbar-uniform .topbar-documents-menu:hover .documents-dropdown-restored,
+.topbar-uniform .topbar-documents-menu:focus-within .documents-dropdown-restored{
+  display:block!important;
+}
+</style>
+
+
+<style id="nos-raids-survol-orange-final">
+.topbar-uniform .nav-drop:hover > a,
+.topbar-uniform .nav-drop:focus-within > a,
+.topbar-uniform .nav-drop > a:hover,
+.topbar-uniform .nav-drop > a:focus{
+  color:#f28a1a!important;
+  -webkit-text-fill-color:#f28a1a!important;
+}
+</style>
+
+
+<style id="whatsapp-picto-telephone-final">
+.topbar-uniform .whatsapp-uniform .whatsapp-phone-icon{
+  width:17px!important;
+  height:17px!important;
+  display:block!important;
+  flex:0 0 17px!important;
+  color:#f4eee4!important;
+}
+</style>
+
+
+
+
+
+<style id="whatsapp-icone-embarquee-definitive">
+.topbar-uniform .whatsapp-uniform{
+  width:142px!important;
+  min-width:142px!important;
+  max-width:142px!important;
+  height:32px!important;
+  padding:0 10px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:7px!important;
+  overflow:visible!important;
+  background:#18b84a!important;
+  color:#f4eee4!important;
+  box-sizing:border-box!important;
+}
+.topbar-uniform .whatsapp-uniform::before{
+  content:""!important;
+  display:block!important;
+  visibility:visible!important;
+  opacity:1!important;
+  width:23px!important;
+  height:23px!important;
+  min-width:23px!important;
+  flex:0 0 23px!important;
+  background-image:url("data:image/png;base64,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")!important;
+  background-repeat:no-repeat!important;
+  background-position:center!important;
+  background-size:23px 23px!important;
+}
+.topbar-uniform .whatsapp-uniform > span{
+  display:block!important;
+  color:#f4eee4!important;
+  -webkit-text-fill-color:#f4eee4!important;
+  white-space:nowrap!important;
+}
+</style>
+
+
+
+<style id="bandeau-espacement-regulier-final">
+.topbar-uniform{
+  left:17.8%!important;
+  right:17.8%!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:18px!important;
+  padding:0!important;
+  box-sizing:border-box!important;
+}
+
+/* Chaque élément reprend sa largeur naturelle */
+.topbar-uniform > a,
+.topbar-uniform > .nav-drop,
+.topbar-uniform > .topbar-menu{
+  flex:0 0 auto!important;
+  width:auto!important;
+  min-width:0!important;
+  max-width:none!important;
+  margin:0!important;
+}
+
+/* Les onglets restent compacts et centrés */
+.topbar-uniform > a:not(.mail-uniform):not(.whatsapp-uniform),
+.topbar-uniform .nav-drop > a,
+.topbar-uniform .topbar-menu > a{
+  padding:0 2px!important;
+}
+
+/* Enveloppe mail */
+.topbar-uniform .mail-uniform{
+  flex:0 0 34px!important;
+  width:34px!important;
+  min-width:34px!important;
+  max-width:34px!important;
+}
+
+/* WhatsApp : largeur complète, sans rognage */
+.topbar-uniform .whatsapp-uniform{
+  flex:0 0 138px!important;
+  width:138px!important;
+  min-width:138px!important;
+  max-width:138px!important;
+  height:32px!important;
+  padding:0 10px!important;
+  gap:7px!important;
+  overflow:visible!important;
+  border-radius:7px!important;
+  box-sizing:border-box!important;
+}
+
+/* Le pictogramme blanc validé reste intact */
+.topbar-uniform .whatsapp-uniform::before{
+  width:22px!important;
+  height:22px!important;
+  min-width:22px!important;
+  flex:0 0 22px!important;
+  background-size:22px 22px!important;
+}
+
+@media(max-width:1100px){
+  .topbar-uniform{
+    gap:12px!important;
+  }
+  .topbar-uniform .whatsapp-uniform{
+    flex-basis:132px!important;
+    width:132px!important;
+    min-width:132px!important;
+    max-width:132px!important;
+  }
+}
+</style>
+
+
+<style id="documents-fleche-restauree">
+.topbar-uniform .topbar-documents-menu .topbar-menu-trigger{
+  gap:4px!important;
+}
+.topbar-uniform .topbar-documents-menu .documents-arrow{
+  display:inline-block!important;
+  color:currentColor!important;
+  -webkit-text-fill-color:currentColor!important;
+  font-size:10px!important;
+  line-height:1!important;
+  transform:translateY(-1px)!important;
+}
+</style>
+
+
+<style id="telephone-combine-final">
+.topbar-uniform .phone-handset-icon{
+  display:block!important;
+  width:19px!important;
+  height:19px!important;
+  flex:0 0 19px!important;
+  color:#f4eee4!important;
+  -webkit-text-fill-color:#f4eee4!important;
+}
+</style>
+
+
+<style id="telephone-combine-visible-definitif">
+/* Le lien téléphone réellement visible dans le bandeau */
+.topbar-uniform a[href^="tel:"]{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:6px!important;
+}
+/* Masquer toute ancienne icône SVG/image éventuelle */
+.topbar-uniform a[href^="tel:"] > svg,
+.topbar-uniform a[href^="tel:"] > img,
+.topbar-uniform a[href^="tel:"] .phone-icon,
+.topbar-uniform a[href^="tel:"] .phone-handset-icon{
+  display:none!important;
+}
+/* Afficher un combiné, et non un téléphone complet */
+.topbar-uniform a[href^="tel:"]::before{
+  content:"☎"!important;
+  display:inline-block!important;
+  color:#f4eee4!important;
+  -webkit-text-fill-color:#f4eee4!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:18px!important;
+  font-weight:700!important;
+  line-height:1!important;
+  transform:rotate(-18deg)!important;
+  transform-origin:center!important;
+  flex:0 0 auto!important;
+}
+</style>
+
+
+<style id="combine-zone-sable-definitif">
+.sand-socials-final .phone-social-symbol{
+  display:none!important;
+}
+.sand-socials-final .phone-social-handset{
+  display:block!important;
+  width:19px!important;
+  height:19px!important;
+  min-width:19px!important;
+  flex:0 0 19px!important;
+  color:#f4eee4!important;
+  overflow:visible!important;
+}
+</style>
+
+
+<style id="offroad-whatsapp-hitbox-fix">
+/* La zone cliquable WhatsApp reste strictement limitée à son propre bouton. */
+a[href*="wa.me"], a[href*="whatsapp"]{
+  pointer-events:auto;
+}
+header, nav, .menu, .nav, .topbar{
+  position:relative;
+  z-index:50;
+}
+</style>
+
+
+<style id="offroad-galerie-hitbox-global">
+a[href="galerie.html"]{
+  position:relative;
+  z-index:20;
+  pointer-events:auto;
+}
+</style>
+
+<style id="wa-green-global-v8966">
+a.whatsapp,a.whatsapp-btn,button.whatsapp,.btn-whatsapp,.whatsapp-button,
+a[class*="whatsapp"],button[class*="whatsapp"]{
+ background-color:#25D366!important;border-color:#25D366!important;
+}
+a.whatsapp:hover,a.whatsapp-btn:hover,button.whatsapp:hover,.btn-whatsapp:hover,
+.whatsapp-button:hover,a[class*="whatsapp"]:hover,button[class*="whatsapp"]:hover{
+ background-color:#1FBD5A!important;border-color:#1FBD5A!important;
+}
+</style>
+<style id="whatsapp-style-global-v8969">
+/* Tous les boutons WhatsApp suivent la logique visuelle du bouton de l'accueil :
+   vert WhatsApp, texte blanc, pictogramme téléphone blanc, forme compacte et arrondie. */
+a[href*="wa.me"]:not(.hotspot):not(.whatsapp-uniform):not(.whatsapp-top),
+a.wa,
+a.wa-top,
+#tunisieRaidAction{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:7px!important;
+  min-height:32px!important;
+  padding:0 12px!important;
+  box-sizing:border-box!important;
+  border:1px solid #25D366!important;
+  border-radius:7px!important;
+  background:#25D366!important;
+  color:#f4eee4!important;
+  -webkit-text-fill-color:#f4eee4!important;
+  text-decoration:none!important;
+  font-weight:800!important;
+  line-height:1!important;
+  box-shadow:0 2px 8px rgba(37,211,102,.20)!important;
+}
+
+a[href*="wa.me"]:not(.hotspot):not(.whatsapp-uniform):not(.whatsapp-top)::before,
+a.wa::before,
+a.wa-top::before,
+#tunisieRaidAction::before{
+  content:""!important;
+  display:block!important;
+  width:18px!important;
+  height:18px!important;
+  min-width:18px!important;
+  flex:0 0 18px!important;
+  background:url("whatsapp-icon-white.png") center/18px 18px no-repeat!important;
+}
+
+a[href*="wa.me"]:not(.hotspot):not(.whatsapp-uniform):not(.whatsapp-top):hover,
+a.wa:hover,
+a.wa-top:hover,
+#tunisieRaidAction:hover{
+  background:#20BD5A!important;
+  border-color:#20BD5A!important;
+  color:#f4eee4!important;
+  -webkit-text-fill-color:#f4eee4!important;
+}
+
+/* CTA RAIDS À LA CARTE : même logique, avec un format un peu plus généreux. */
+.impact-cta a{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:9px!important;
+  min-height:40px!important;
+  padding:0 18px!important;
+  border-radius:7px!important;
+  background:#25D366!important;
+  border-color:#25D366!important;
+  color:#f4eee4!important;
+  -webkit-text-fill-color:#f4eee4!important;
+}
+.impact-cta a::before{
+  content:""!important;
+  width:20px!important;
+  height:20px!important;
+  min-width:20px!important;
+  flex:0 0 20px!important;
+  background:url("whatsapp-icon-white.png") center/20px 20px no-repeat!important;
+}
+.impact-cta a:hover{
+  background:#20BD5A!important;
+  border-color:#20BD5A!important;
+}
+</style>
+
+<style id="offroad-global-fixed-page-v89105">
+/* GARDE-FOU GLOBAL :
+   sur ordinateur, la page reste dans la hauteur visible sans couper le contenu.
+   Sur petit écran, le défilement normal reste autorisé. */
+@media (min-width:1000px) and (min-height:650px){
+  html.offroad-fixed-page,
+  html.offroad-fixed-page body{
+    height:100%!important;
+    min-height:100%!important;
+    overflow:hidden!important;
+  }
+
+  html.offroad-fixed-page body{
+    position:relative!important;
+  }
+
+  .offroad-fixed-stage{
+    position:relative!important;
+    width:100%!important;
+    overflow:hidden!important;
+    box-sizing:border-box!important;
+  }
+
+  .offroad-fixed-stage > main{
+    transform-origin:top center!important;
+    will-change:transform;
+  }
+}
+</style>
+
+<script src="site-config.js"></script>
+<script src="site-config-runtime.js"></script>
+
+<style id="v261-marges-accueil-orange">
+html,
+body{
+  background:#f57916 !important;
+}
+
+/* Le contenu central de l'accueil conserve son design actuel.
+   L'orange reste visible uniquement dans les marges latérales. */
+body > .page,
+body > .site,
+body > .wrapper,
+body > main,
+body > #page,
+body > #site{
+  margin-left:auto;
+  margin-right:auto;
+}
+</style>
+
+
+<style id="v262-reperes-roadbook-marges">
+/* Petits repères topographiques / roadbook dans les marges orange,
+   inspirés de la page À PROPOS. */
+.home-roadbook-margins{
+  position:fixed;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  overflow:hidden;
+}
+.home-roadbook-margins .rb-mark{
+  position:absolute;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#171512;
+  opacity:.34;
+  letter-spacing:2.6px;
+}
+.home-roadbook-margins .rb-mark span{
+  font-size:12px;
+  font-weight:900;
+}
+.home-roadbook-margins .rb-mark small{
+  font-size:10px;
+  font-weight:700;
+}
+.home-roadbook-margins .rb-mark i{
+  display:block;
+  background:#fff8ed;
+}
+.home-roadbook-margins .rb-left-top{
+  left:5px;
+  top:24%;
+  writing-mode:vertical-rl;
+  transform:rotate(180deg);
+}
+.home-roadbook-margins .rb-left-top i{
+  width:1px;
+  height:48px;
+  margin:8px 4px;
+}
+.home-roadbook-margins .rb-right-mid{
+  right:5px;
+  top:53%;
+  writing-mode:vertical-rl;
+}
+.home-roadbook-margins .rb-right-mid i{
+  width:1px;
+  height:56px;
+  margin:8px 4px;
+}
+.home-roadbook-margins .rb-horizon{
+  position:absolute;
+  height:1px;
+  width:70px;
+  background:#fff8ed;
+  opacity:.38;
+}
+.home-roadbook-margins .rb-horizon-left{left:5px;top:44%;}
+.home-roadbook-margins .rb-horizon-right{right:5px;top:70%;}
+
+/* Le contenu de l'accueil reste au-dessus des repères. */
+body > *:not(.home-roadbook-margins){
+  position:relative;
+  z-index:2;
+}
+
+@media(max-width:900px){
+  .home-roadbook-margins{display:none !important;}
+}
+</style>
+
+
+<style id="v263-reperes-topo-plus-grands">
+/* Repères topographiques plus grands et plus visibles,
+   sans modifier leur position ni la page d'accueil. */
+.home-roadbook-margins .rb-mark span{
+  font-size:18px !important;
+  font-weight:900 !important;
+}
+.home-roadbook-margins .rb-mark small{
+  font-size:15px !important;
+  font-weight:800 !important;
+}
+.home-roadbook-margins .rb-mark{
+  opacity:.48 !important;
+  letter-spacing:3px !important;
+}
+</style>
+
+
+<style id="v264-traits-topo-plus-visibles">
+/* Traits topographiques plus grands et plus visibles. */
+.home-roadbook-margins .rb-mark i{
+  width:2px !important;
+  background:#fff8ed !important;
+  opacity:.85 !important;
+}
+.home-roadbook-margins .rb-left-top i{
+  height:72px !important;
+}
+.home-roadbook-margins .rb-right-mid i{
+  height:82px !important;
+}
+.home-roadbook-margins .rb-horizon{
+  width:100px !important;
+  height:2px !important;
+  background:#fff8ed !important;
+  opacity:.72 !important;
+}
+</style>
+
+
+<style id="v275-telephone-visible-orange">
+/* Numéro de téléphone réellement visible sur l'accueil */
+.sand-socials-final .phone-social-final{
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  gap:7px !important;
+  width:auto !important;
+  min-width:142px !important;
+  height:36px !important;
+  padding:0 12px !important;
+  background:#f57916 !important;
+  background-color:#f57916 !important;
+  border:2px solid #f57916 !important;
+  border-radius:8px !important;
+  color:#111 !important;
+  -webkit-text-fill-color:#111 !important;
+  text-decoration:none !important;
+  box-sizing:border-box !important;
+}
+.sand-socials-final .phone-social-final .phone-social-number,
+.sand-socials-final .phone-social-final .phone-social-handset{
+  color:#111 !important;
+  -webkit-text-fill-color:#111 !important;
+}
+.sand-socials-final .phone-social-final .phone-social-handset{
+  fill:#111 !important;
+}
+.sand-socials-final .phone-social-final:hover,
+.sand-socials-final .phone-social-final:focus{
+  background:#f57916 !important;
+  background-color:#f57916 !important;
+  color:#111 !important;
+  -webkit-text-fill-color:#111 !important;
+  opacity:1 !important;
+}
+</style>
+
+
+<style id="v276-pneus-boussoles-marges">
+/* Décor OFFROAD ajouté uniquement dans les marges orange de l'accueil */
+.home-roadbook-margins .rb-tire{
+  position:absolute;
+  width:32px;
+  height:310px;
+  opacity:.24;
+  filter:contrast(1.15);
+  background:
+    linear-gradient(32deg, transparent 0 31%, #171512 32% 42%, transparent 43% 57%, #171512 58% 68%, transparent 69%) 0 0/16px 34px repeat-y,
+    linear-gradient(-32deg, transparent 0 31%, #171512 32% 42%, transparent 43% 57%, #171512 58% 68%, transparent 69%) 16px 17px/16px 34px repeat-y;
+  border-left:2px dashed rgba(23,21,18,.55);
+  border-right:2px dashed rgba(23,21,18,.55);
+  box-sizing:border-box;
+}
+.home-roadbook-margins .rb-tire-left{
+  left:9px;
+  top:61%;
+  transform:rotate(-7deg);
+  transform-origin:center;
+}
+.home-roadbook-margins .rb-tire-right{
+  right:10px;
+  top:12%;
+  transform:rotate(8deg);
+  transform-origin:center;
+}
+.home-roadbook-margins .rb-compass{
+  position:absolute;
+  width:54px;
+  height:54px;
+  border:1.5px solid rgba(255,248,237,.62);
+  border-radius:50%;
+  opacity:.72;
+  color:#171512;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:0;
+}
+.home-roadbook-margins .rb-compass-left{left:7px;top:51%;}
+.home-roadbook-margins .rb-compass-right{right:7px;top:77%;}
+.home-roadbook-margins .rb-compass span{position:absolute;line-height:1}
+.home-roadbook-margins .rb-compass .rb-n{top:-12px;left:50%;transform:translateX(-50%)}
+.home-roadbook-margins .rb-compass .rb-e{right:-11px;top:50%;transform:translateY(-50%)}
+.home-roadbook-margins .rb-compass .rb-s{bottom:-12px;left:50%;transform:translateX(-50%)}
+.home-roadbook-margins .rb-compass .rb-w{left:-11px;top:50%;transform:translateY(-50%)}
+.home-roadbook-margins .rb-compass-v,
+.home-roadbook-margins .rb-compass-h{
+  position:absolute;
+  display:block;
+  background:#fff8ed !important;
+  opacity:.72 !important;
+  margin:0 !important;
+}
+.home-roadbook-margins .rb-compass-v{
+  width:1.5px !important;
+  height:42px !important;
+  left:50%;
+  top:6px;
+  transform:translateX(-50%);
+}
+.home-roadbook-margins .rb-compass-h{
+  width:42px !important;
+  height:1.5px !important;
+  left:6px;
+  top:50%;
+  transform:translateY(-50%);
+}
+.home-roadbook-margins .rb-compass b{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:14px;
+  height:14px;
+  background:#171512;
+  clip-path:polygon(50% 0, 68% 42%, 100% 50%, 68% 58%, 50% 100%, 32% 58%, 0 50%, 32% 42%);
+  transform:translate(-50%,-50%) rotate(22deg);
+}
+@media(max-width:1100px){
+  .home-roadbook-margins .rb-tire{opacity:.17}
+  .home-roadbook-margins .rb-compass{opacity:.58}
+}
+</style>
+
+
+<style id="v277-marges-offroad-plus-presentes">
+/* Traces plus grandes, plus longues et davantage présentes, sans image */
+.home-roadbook-margins .rb-tire{
+  width:46px !important;
+  height:430px !important;
+  opacity:.34 !important;
+  background:
+    linear-gradient(32deg, transparent 0 27%, #171512 28% 43%, transparent 44% 56%, #171512 57% 72%, transparent 73%) 0 0/23px 42px repeat-y,
+    linear-gradient(-32deg, transparent 0 27%, #171512 28% 43%, transparent 44% 56%, #171512 57% 72%, transparent 73%) 23px 21px/23px 42px repeat-y !important;
+  border-left:2px dashed rgba(23,21,18,.68) !important;
+  border-right:2px dashed rgba(23,21,18,.68) !important;
+}
+.home-roadbook-margins .rb-tire-left{
+  left:7px !important;
+  top:56% !important;
+  transform:rotate(-6deg) !important;
+}
+.home-roadbook-margins .rb-tire-right{
+  right:7px !important;
+  top:9% !important;
+  transform:rotate(7deg) !important;
+}
+
+/* Roses des vents plus grandes, plus nettes et plus visibles */
+.home-roadbook-margins .rb-compass{
+  width:76px !important;
+  height:76px !important;
+  border:2px solid rgba(255,248,237,.88) !important;
+  opacity:.90 !important;
+  font-size:10px !important;
+  box-shadow:
+    inset 0 0 0 5px rgba(255,248,237,.08),
+    0 0 0 1px rgba(23,21,18,.20);
+}
+.home-roadbook-margins .rb-compass-left{
+  left:8px !important;
+  top:47% !important;
+}
+.home-roadbook-margins .rb-compass-right{
+  right:8px !important;
+  top:72% !important;
+}
+.home-roadbook-margins .rb-compass-v{
+  width:2px !important;
+  height:62px !important;
+  left:50% !important;
+  top:7px !important;
+  opacity:.86 !important;
+}
+.home-roadbook-margins .rb-compass-h{
+  width:62px !important;
+  height:2px !important;
+  left:7px !important;
+  top:50% !important;
+  opacity:.86 !important;
+}
+.home-roadbook-margins .rb-compass b{
+  width:24px !important;
+  height:24px !important;
+  opacity:.90 !important;
+}
+.home-roadbook-margins .rb-compass .rb-n{top:-15px !important}
+.home-roadbook-margins .rb-compass .rb-e{right:-14px !important}
+.home-roadbook-margins .rb-compass .rb-s{bottom:-15px !important}
+.home-roadbook-margins .rb-compass .rb-w{left:-14px !important}
+
+@media(max-width:1100px) and (min-width:901px){
+  .home-roadbook-margins .rb-tire{
+    width:38px !important;
+    height:370px !important;
+    opacity:.27 !important;
+  }
+  .home-roadbook-margins .rb-compass{
+    width:64px !important;
+    height:64px !important;
+    opacity:.78 !important;
+  }
+}
+</style>
+
+
+<style id="v278-traces-fines-bord-cadre">
+/* Traces secondaires plus fines pour habiller le vide orange près du cadre central */
+.home-roadbook-margins .rb-tire-fine{
+  position:absolute;
+  width:20px;
+  height:520px;
+  opacity:.20;
+  box-sizing:border-box;
+  background:
+    linear-gradient(34deg, transparent 0 30%, #171512 31% 43%, transparent 44% 57%, #171512 58% 70%, transparent 71%) 0 0/10px 32px repeat-y,
+    linear-gradient(-34deg, transparent 0 30%, #171512 31% 43%, transparent 44% 57%, #171512 58% 70%, transparent 71%) 10px 16px/10px 32px repeat-y;
+  border-left:1px dashed rgba(23,21,18,.42);
+  border-right:1px dashed rgba(23,21,18,.42);
+}
+.home-roadbook-margins .rb-tire-fine-left{
+  left:clamp(40px,4.1vw,66px);
+  top:8%;
+  transform:rotate(3deg);
+}
+.home-roadbook-margins .rb-tire-fine-right{
+  right:clamp(40px,4.1vw,66px);
+  top:42%;
+  transform:rotate(-4deg);
+}
+@media(max-width:1100px) and (min-width:901px){
+  .home-roadbook-margins .rb-tire-fine{
+    width:16px;
+    opacity:.15;
+  }
+  .home-roadbook-margins .rb-tire-fine-left{left:36px}
+  .home-roadbook-margins .rb-tire-fine-right{right:36px}
+}
+</style>
+
+
+<style id="v281-traces-fines-separees-cadre">
+/*
+  Traces fines segmentées contre le cadre central.
+  Chaque segment occupe une zone libre distincte pour éviter les gros pneus,
+  les roses des vents et les repères OFFROAD existants.
+*/
+.home-roadbook-margins .rb-edge-track{
+  position:absolute;
+  width:9px;
+  opacity:.18;
+  box-sizing:border-box;
+  background:
+    linear-gradient(36deg,
+      transparent 0 25%,
+      #171512 26% 43%,
+      transparent 44% 57%,
+      #171512 58% 75%,
+      transparent 76%
+    ) 0 0/9px 24px repeat-y;
+  border-left:1px dashed rgba(23,21,18,.28);
+  border-right:1px dashed rgba(23,21,18,.28);
+}
+
+/* Les segments sont volontairement courts et non contigus. */
+.home-roadbook-margins .rb-edge-track-left-top{
+  left:2px; top:3%; height:15%;
+}
+.home-roadbook-margins .rb-edge-track-left-mid{
+  left:2px; top:36%; height:10%;
+}
+.home-roadbook-margins .rb-edge-track-left-bottom{
+  left:2px; top:88%; height:9%;
+}
+.home-roadbook-margins .rb-edge-track-right-top{
+  right:2px; top:3%; height:5%;
+}
+.home-roadbook-margins .rb-edge-track-right-mid{
+  right:2px; top:48%; height:18%;
+}
+.home-roadbook-margins .rb-edge-track-right-bottom{
+  right:2px; top:88%; height:9%;
+}
+
+@media(max-width:1100px){
+  .home-roadbook-margins .rb-edge-track{display:none !important;}
+}
+</style>
+
+
+<style id="v283-traces-fines-noires-interieures">
+/*
+  V10_283 : on conserve V10_281 telle quelle.
+  Ajout de deux traces fines noires CONTRE LE CADRE CENTRAL,
+  côté intérieur de la marge orange, sans toucher aux gros motifs existants.
+*/
+.home-roadbook-margins .rb-inner-track{
+  position:absolute;
+  top:5%;
+  height:90%;
+  width:12px;
+  opacity:.34;
+  box-sizing:border-box;
+  background:
+    linear-gradient(35deg,
+      transparent 0 24%,
+      #111 25% 44%,
+      transparent 45% 55%,
+      #111 56% 75%,
+      transparent 76%
+    ) 0 0/12px 28px repeat-y;
+  border-left:1px solid rgba(17,17,17,.36);
+  border-right:1px solid rgba(17,17,17,.36);
+  z-index:1;
+}
+
+/* Placement vers l'INTÉRIEUR : juste le long du bord du cadre central. */
+.home-roadbook-margins .rb-inner-track-left{
+  left:calc(50% - min(46vw, 700px) - 13px);
+}
+.home-roadbook-margins .rb-inner-track-right{
+  right:calc(50% - min(46vw, 700px) - 13px);
+}
+
+@media(max-width:1100px) and (min-width:901px){
+  .home-roadbook-margins .rb-inner-track{
+    width:9px;
+    opacity:.25;
+  }
+}
+@media(max-width:900px){
+  .home-roadbook-margins .rb-inner-track{
+    display:none !important;
+  }
+}
+</style>
+
+
+<style id="v284-traces-plus-interieures">
+/* Décalage des deux traces fines noires davantage vers le cadre central. */
+.home-roadbook-margins .rb-inner-track-left{
+  left:calc(50% - min(46vw, 700px) + 3px) !important;
+}
+.home-roadbook-margins .rb-inner-track-right{
+  right:calc(50% - min(46vw, 700px) + 3px) !important;
+}
+</style>
+
+
+<style id="v285-traces-franchement-plus-interieures">
+/* Décalage nettement plus marqué vers le cadre central. */
+.home-roadbook-margins .rb-inner-track-left{
+  left:calc(50% - min(46vw, 700px) + 28px) !important;
+}
+.home-roadbook-margins .rb-inner-track-right{
+  right:calc(50% - min(46vw, 700px) + 28px) !important;
+}
+</style>
+
+
+<style id="v286-traces-accollees-cadre-interieur">
+/* Traces fines déplacées franchement vers l'intérieur, accolées au cadre central. */
+.home-roadbook-margins .rb-inner-track-left{
+  left:calc(50% - min(46vw, 700px) + 52px) !important;
+}
+.home-roadbook-margins .rb-inner-track-right{
+  right:calc(50% - min(46vw, 700px) + 52px) !important;
+}
+</style>
+
+
+<style id="v287-traces-blanches-et-roses-vents">
+/* Deux grandes traces blanches translucides, façon pneus, qui croisent volontairement
+   les décors noirs existants pour équilibrer les deux marges. 100 % CSS. */
+.home-roadbook-margins .rb-white-tire{
+  position:absolute;
+  width:52px;
+  height:620px;
+  opacity:.28;
+  z-index:1;
+  box-sizing:border-box;
+  background:
+    linear-gradient(34deg,
+      transparent 0 20%,
+      rgba(255,255,255,.96) 21% 42%,
+      transparent 43% 57%,
+      rgba(255,255,255,.96) 58% 79%,
+      transparent 80%
+    ) 0 0/26px 46px repeat-y,
+    linear-gradient(-34deg,
+      transparent 0 20%,
+      rgba(255,255,255,.96) 21% 42%,
+      transparent 43% 57%,
+      rgba(255,255,255,.96) 58% 79%,
+      transparent 80%
+    ) 26px 23px/26px 46px repeat-y;
+  border-left:2px dashed rgba(255,255,255,.64);
+  border-right:2px dashed rgba(255,255,255,.64);
+  filter:drop-shadow(0 0 1px rgba(255,255,255,.25));
+}
+.home-roadbook-margins .rb-white-tire-left{
+  left:14px;
+  top:10%;
+  transform:rotate(7deg);
+}
+.home-roadbook-margins .rb-white-tire-right{
+  right:14px;
+  top:43%;
+  transform:rotate(-7deg);
+}
+
+/* Roses des vents plus graphiques, inspirées du visuel de référence,
+   sans aucune image : double cercle, axes, pointes cardinales et diagonales. */
+.home-roadbook-margins .rb-compass{
+  width:86px !important;
+  height:86px !important;
+  border:2px solid rgba(255,248,237,.94) !important;
+  border-radius:50% !important;
+  opacity:.94 !important;
+  box-shadow:
+    inset 0 0 0 6px rgba(255,248,237,.08),
+    inset 0 0 0 12px rgba(255,248,237,.06),
+    0 0 0 1px rgba(17,17,17,.24) !important;
+}
+.home-roadbook-margins .rb-compass::before,
+.home-roadbook-margins .rb-compass::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:58px;
+  height:2px;
+  background:rgba(255,248,237,.88);
+  transform-origin:center;
+}
+.home-roadbook-margins .rb-compass::before{
+  transform:translate(-50%,-50%) rotate(45deg);
+}
+.home-roadbook-margins .rb-compass::after{
+  transform:translate(-50%,-50%) rotate(-45deg);
+}
+.home-roadbook-margins .rb-compass b{
+  width:30px !important;
+  height:30px !important;
+  background:
+    linear-gradient(135deg, rgba(255,248,237,.96) 0 50%, rgba(17,17,17,.82) 50% 100%) !important;
+  transform:translate(-50%,-50%) rotate(45deg) !important;
+  border:1px solid rgba(255,248,237,.88) !important;
+}
+.home-roadbook-margins .rb-compass-v{
+  width:2px !important;
+  height:72px !important;
+  left:50% !important;
+  top:7px !important;
+  background:rgba(255,248,237,.96) !important;
+}
+.home-roadbook-margins .rb-compass-h{
+  width:72px !important;
+  height:2px !important;
+  left:7px !important;
+  top:50% !important;
+  background:rgba(255,248,237,.96) !important;
+}
+.home-roadbook-margins .rb-compass .rb-n,
+.home-roadbook-margins .rb-compass .rb-e,
+.home-roadbook-margins .rb-compass .rb-s,
+.home-roadbook-margins .rb-compass .rb-w{
+  font-weight:900 !important;
+  color:#f4eee4 !important;
+  text-shadow:0 1px 0 rgba(17,17,17,.28);
+}
+.home-roadbook-margins .rb-compass .rb-n{top:-18px !important}
+.home-roadbook-margins .rb-compass .rb-e{right:-17px !important}
+.home-roadbook-margins .rb-compass .rb-s{bottom:-18px !important}
+.home-roadbook-margins .rb-compass .rb-w{left:-17px !important}
+
+@media(max-width:1100px) and (min-width:901px){
+  .home-roadbook-margins .rb-white-tire{
+    width:38px;
+    height:500px;
+    opacity:.22;
+  }
+  .home-roadbook-margins .rb-compass{
+    width:70px !important;
+    height:70px !important;
+  }
+}
+@media(max-width:900px){
+  .home-roadbook-margins .rb-white-tire{display:none !important;}
+}
+</style>
+
+
+<style id="v288-six-roses-des-vents-detaillees">
+/* V10_288 : six roses des vents blanches, 3 de chaque côté,
+   de tailles différentes et réparties de manière équilibrée. 100 % CSS. */
+
+.home-roadbook-margins .rb-compass{
+  color:#f4eee4 !important;
+  border-color:rgba(255,255,255,.94) !important;
+  background:
+    radial-gradient(circle at center,
+      transparent 0 15%,
+      rgba(255,255,255,.10) 16% 17%,
+      transparent 18% 34%,
+      rgba(255,255,255,.13) 35% 36%,
+      transparent 37% 49%,
+      rgba(255,255,255,.08) 50% 51%,
+      transparent 52%
+    ) !important;
+  box-shadow:
+    inset 0 0 0 5px rgba(255,255,255,.05),
+    inset 0 0 0 11px rgba(255,255,255,.04),
+    0 0 0 1px rgba(255,255,255,.22) !important;
+}
+
+/* Anneau intermédiaire et diagonales supplémentaires */
+.home-roadbook-margins .rb-compass::before,
+.home-roadbook-margins .rb-compass::after{
+  opacity:.92 !important;
+}
+.home-roadbook-margins .rb-compass{
+  --diag-size:62%;
+}
+.home-roadbook-margins .rb-compass::before,
+.home-roadbook-margins .rb-compass::after{
+  width:var(--diag-size) !important;
+  height:1.5px !important;
+  background:rgba(255,255,255,.92) !important;
+}
+
+/* Pointe centrale davantage détaillée */
+.home-roadbook-margins .rb-compass b{
+  clip-path:polygon(50% 0,64% 36%,100% 50%,64% 64%,50% 100%,36% 64%,0 50%,36% 36%) !important;
+  border:none !important;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.98) 0 50%, rgba(255,255,255,.32) 50% 100%) !important;
+  box-shadow:0 0 0 1px rgba(255,255,255,.72);
+}
+
+/* Marques cardinales plus fines */
+.home-roadbook-margins .rb-compass .rb-n,
+.home-roadbook-margins .rb-compass .rb-e,
+.home-roadbook-margins .rb-compass .rb-s,
+.home-roadbook-margins .rb-compass .rb-w{
+  color:#f4eee4 !important;
+  font-size:10px !important;
+  font-weight:900 !important;
+  letter-spacing:.5px !important;
+}
+
+/* Rose existante gauche : taille moyenne */
+.home-roadbook-margins .rb-compass-left{
+  left:9px !important;
+  top:41% !important;
+  width:82px !important;
+  height:82px !important;
+  opacity:.88 !important;
+}
+/* Rose existante droite : taille moyenne */
+.home-roadbook-margins .rb-compass-right{
+  right:9px !important;
+  top:68% !important;
+  width:82px !important;
+  height:82px !important;
+  opacity:.88 !important;
+}
+
+/* Gauche : petite en haut, moyenne au milieu, grande en bas */
+.home-roadbook-margins .rb-compass-left-small{
+  left:18px !important;
+  top:16% !important;
+  width:58px !important;
+  height:58px !important;
+  opacity:.66 !important;
+}
+.home-roadbook-margins .rb-compass-left-large{
+  left:4px !important;
+  top:73% !important;
+  width:104px !important;
+  height:104px !important;
+  opacity:.76 !important;
+}
+
+/* Droite : grande en haut, moyenne en bas-centre, petite plus bas */
+.home-roadbook-margins .rb-compass-right-large{
+  right:3px !important;
+  top:12% !important;
+  width:108px !important;
+  height:108px !important;
+  opacity:.76 !important;
+}
+.home-roadbook-margins .rb-compass-right-small{
+  right:20px !important;
+  top:87% !important;
+  width:56px !important;
+  height:56px !important;
+  opacity:.64 !important;
+}
+
+/* Adapter les axes et le centre à toutes les tailles */
+.home-roadbook-margins .rb-compass-left-small .rb-compass-v,
+.home-roadbook-margins .rb-compass-right-small .rb-compass-v{
+  height:44px !important; top:7px !important;
+}
+.home-roadbook-margins .rb-compass-left-small .rb-compass-h,
+.home-roadbook-margins .rb-compass-right-small .rb-compass-h{
+  width:44px !important; left:7px !important;
+}
+.home-roadbook-margins .rb-compass-left-small b,
+.home-roadbook-margins .rb-compass-right-small b{
+  width:22px !important; height:22px !important;
+}
+
+.home-roadbook-margins .rb-compass-left-large .rb-compass-v,
+.home-roadbook-margins .rb-compass-right-large .rb-compass-v{
+  height:88px !important; top:8px !important;
+}
+.home-roadbook-margins .rb-compass-left-large .rb-compass-h,
+.home-roadbook-margins .rb-compass-right-large .rb-compass-h{
+  width:88px !important; left:8px !important;
+}
+.home-roadbook-margins .rb-compass-left-large b,
+.home-roadbook-margins .rb-compass-right-large b{
+  width:38px !important; height:38px !important;
+}
+
+/* Placement des lettres pour petites et grandes roses */
+.home-roadbook-margins .rb-compass-left-small .rb-n,
+.home-roadbook-margins .rb-compass-right-small .rb-n{top:-15px !important}
+.home-roadbook-margins .rb-compass-left-small .rb-e,
+.home-roadbook-margins .rb-compass-right-small .rb-e{right:-14px !important}
+.home-roadbook-margins .rb-compass-left-small .rb-s,
+.home-roadbook-margins .rb-compass-right-small .rb-s{bottom:-15px !important}
+.home-roadbook-margins .rb-compass-left-small .rb-w,
+.home-roadbook-margins .rb-compass-right-small .rb-w{left:-14px !important}
+
+.home-roadbook-margins .rb-compass-left-large .rb-n,
+.home-roadbook-margins .rb-compass-right-large .rb-n{top:-19px !important}
+.home-roadbook-margins .rb-compass-left-large .rb-e,
+.home-roadbook-margins .rb-compass-right-large .rb-e{right:-18px !important}
+.home-roadbook-margins .rb-compass-left-large .rb-s,
+.home-roadbook-margins .rb-compass-right-large .rb-s{bottom:-19px !important}
+.home-roadbook-margins .rb-compass-left-large .rb-w,
+.home-roadbook-margins .rb-compass-right-large .rb-w{left:-18px !important}
+
+@media(max-width:1100px) and (min-width:901px){
+  .home-roadbook-margins .rb-compass-left-large,
+  .home-roadbook-margins .rb-compass-right-large{
+    width:86px !important;
+    height:86px !important;
+  }
+  .home-roadbook-margins .rb-compass-left-small,
+  .home-roadbook-margins .rb-compass-right-small{
+    width:50px !important;
+    height:50px !important;
+  }
+}
+</style>
+
+
+<style id="v289-roses-style-reference">
+/*
+  V10_289 — remplacement du dessin des 6 roses des vents
+  par une version CSS inspirée de la référence fournie :
+  cercle blanc fin + étoile nautique à multiples pointes + N/E/S/O.
+  Aucune image utilisée.
+*/
+.home-roadbook-margins .rb-compass{
+  border:2px solid rgba(255,255,255,.92) !important;
+  border-radius:50% !important;
+  background:
+    radial-gradient(circle at center,
+      transparent 0 9%,
+      rgba(255,255,255,.22) 10% 11%,
+      transparent 12% 46%,
+      rgba(255,255,255,.20) 47% 48%,
+      transparent 49% 100%
+    ) !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+}
+
+/* étoile principale : 8 pointes fines */
+.home-roadbook-margins .rb-compass::before{
+  content:"" !important;
+  position:absolute !important;
+  left:50% !important;
+  top:50% !important;
+  width:76% !important;
+  height:76% !important;
+  transform:translate(-50%,-50%) !important;
+  background:
+    conic-gradient(from 0deg,
+      rgba(255,255,255,.98) 0deg 2deg,
+      transparent 2deg 43deg,
+      rgba(255,255,255,.98) 43deg 47deg,
+      transparent 47deg 88deg,
+      rgba(255,255,255,.98) 88deg 92deg,
+      transparent 92deg 133deg,
+      rgba(255,255,255,.98) 133deg 137deg,
+      transparent 137deg 178deg,
+      rgba(255,255,255,.98) 178deg 182deg,
+      transparent 182deg 223deg,
+      rgba(255,255,255,.98) 223deg 227deg,
+      transparent 227deg 268deg,
+      rgba(255,255,255,.98) 268deg 272deg,
+      transparent 272deg 313deg,
+      rgba(255,255,255,.98) 313deg 317deg,
+      transparent 317deg 360deg
+    ) !important;
+  clip-path:polygon(
+    50% 0%, 54% 39%, 71% 6%, 61% 42%,
+    100% 50%, 61% 58%, 71% 94%, 54% 61%,
+    50% 100%, 46% 61%, 29% 94%, 39% 58%,
+    0% 50%, 39% 42%, 29% 6%, 46% 39%
+  ) !important;
+  opacity:.92 !important;
+}
+
+/* étoile secondaire tournée de 22,5° : petites pointes intermédiaires */
+.home-roadbook-margins .rb-compass::after{
+  content:"" !important;
+  position:absolute !important;
+  left:50% !important;
+  top:50% !important;
+  width:58% !important;
+  height:58% !important;
+  transform:translate(-50%,-50%) rotate(22.5deg) !important;
+  background:
+    conic-gradient(from 0deg,
+      rgba(255,255,255,.82) 0deg 3deg,
+      transparent 3deg 42deg,
+      rgba(255,255,255,.82) 42deg 48deg,
+      transparent 48deg 87deg,
+      rgba(255,255,255,.82) 87deg 93deg,
+      transparent 93deg 132deg,
+      rgba(255,255,255,.82) 132deg 138deg,
+      transparent 138deg 177deg,
+      rgba(255,255,255,.82) 177deg 183deg,
+      transparent 183deg 222deg,
+      rgba(255,255,255,.82) 222deg 228deg,
+      transparent 228deg 267deg,
+      rgba(255,255,255,.82) 267deg 273deg,
+      transparent 273deg 312deg,
+      rgba(255,255,255,.82) 312deg 318deg,
+      transparent 318deg 360deg
+    ) !important;
+  clip-path:polygon(
+    50% 0%, 55% 40%, 100% 50%, 55% 60%,
+    50% 100%, 45% 60%, 0% 50%, 45% 40%
+  ) !important;
+  opacity:.70 !important;
+}
+
+/* on masque les anciennes lignes et l'ancien losange central */
+.home-roadbook-margins .rb-compass-v,
+.home-roadbook-margins .rb-compass-h{
+  display:none !important;
+}
+.home-roadbook-margins .rb-compass b{
+  position:absolute !important;
+  left:50% !important;
+  top:50% !important;
+  width:12% !important;
+  height:12% !important;
+  transform:translate(-50%,-50%) rotate(45deg) !important;
+  background:rgba(255,255,255,.95) !important;
+  border:1px solid rgba(255,255,255,.95) !important;
+  clip-path:none !important;
+  box-shadow:none !important;
+}
+
+/* Lettres cardinales proches de la référence */
+.home-roadbook-margins .rb-compass .rb-n,
+.home-roadbook-margins .rb-compass .rb-e,
+.home-roadbook-margins .rb-compass .rb-s,
+.home-roadbook-margins .rb-compass .rb-w{
+  position:absolute !important;
+  z-index:3 !important;
+  color:rgba(255,255,255,.96) !important;
+  font-size:9px !important;
+  font-weight:800 !important;
+  letter-spacing:.2px !important;
+  line-height:1 !important;
+  text-shadow:none !important;
+}
+.home-roadbook-margins .rb-compass .rb-n{
+  left:50% !important; top:-15px !important; transform:translateX(-50%) !important;
+}
+.home-roadbook-margins .rb-compass .rb-e{
+  right:-14px !important; top:50% !important; transform:translateY(-50%) !important;
+}
+.home-roadbook-margins .rb-compass .rb-s{
+  left:50% !important; bottom:-15px !important; transform:translateX(-50%) !important;
+}
+.home-roadbook-margins .rb-compass .rb-w{
+  left:-14px !important; top:50% !important; transform:translateY(-50%) !important;
+}
+</style>
+
+
+<style id="v290-roses-reference-nettes">
+/* V10_290 — roses des vents redessinées plus fidèlement à la référence :
+   pas de cercle, étoile 8 directions très nette, pointes longues cardinales,
+   pointes diagonales plus courtes, alternance plein/contour, lettres serif. */
+
+.home-roadbook-margins .rb-compass{
+  border:none !important;
+  border-radius:0 !important;
+  background:none !important;
+  box-shadow:none !important;
+  overflow:visible !important;
+  opacity:.88 !important;
+}
+
+/* Etoile principale à 8 pointes : silhouette nette */
+.home-roadbook-margins .rb-compass::before{
+  content:"" !important;
+  position:absolute !important;
+  left:50% !important;
+  top:50% !important;
+  width:82% !important;
+  height:82% !important;
+  transform:translate(-50%,-50%) !important;
+  background:rgba(255,255,255,.98) !important;
+  clip-path:polygon(
+    50% 0%,
+    56% 36%,
+    78% 22%,
+    64% 44%,
+    100% 50%,
+    64% 56%,
+    78% 78%,
+    56% 64%,
+    50% 100%,
+    44% 64%,
+    22% 78%,
+    36% 56%,
+    0% 50%,
+    36% 44%,
+    22% 22%,
+    44% 36%
+  ) !important;
+  opacity:.98 !important;
+  z-index:1 !important;
+}
+
+/* Découpe intérieure orange pour obtenir les branches blanches/vides
+   proches du dessin noir/blanc de la référence */
+.home-roadbook-margins .rb-compass::after{
+  content:"" !important;
+  position:absolute !important;
+  left:50% !important;
+  top:50% !important;
+  width:74% !important;
+  height:74% !important;
+  transform:translate(-50%,-50%) !important;
+  background:#f57916 !important;
+  clip-path:polygon(
+    50% 4%,
+    52% 39%,
+    74% 27%,
+    60% 46%,
+    96% 50%,
+    60% 54%,
+    74% 73%,
+    52% 61%,
+    50% 96%,
+    48% 61%,
+    26% 73%,
+    40% 54%,
+    4% 50%,
+    40% 46%,
+    26% 27%,
+    48% 39%,
+    50% 50%
+  ) !important;
+  opacity:1 !important;
+  z-index:2 !important;
+}
+
+/* Petit noyau blanc central pour retrouver le croisement franc */
+.home-roadbook-margins .rb-compass b{
+  display:block !important;
+  position:absolute !important;
+  left:50% !important;
+  top:50% !important;
+  width:10% !important;
+  height:10% !important;
+  transform:translate(-50%,-50%) rotate(45deg) !important;
+  background:rgba(255,255,255,.98) !important;
+  border:0 !important;
+  clip-path:none !important;
+  box-shadow:none !important;
+  z-index:4 !important;
+}
+
+/* Anciennes lignes supprimées */
+.home-roadbook-margins .rb-compass-v,
+.home-roadbook-margins .rb-compass-h{
+  display:none !important;
+}
+
+/* Lettres cardinales au style de la référence */
+.home-roadbook-margins .rb-compass .rb-n,
+.home-roadbook-margins .rb-compass .rb-e,
+.home-roadbook-margins .rb-compass .rb-s,
+.home-roadbook-margins .rb-compass .rb-w{
+  position:absolute !important;
+  z-index:5 !important;
+  color:#f4eee4 !important;
+  font-family:"Times New Roman", Georgia, serif !important;
+  font-size:13px !important;
+  font-weight:700 !important;
+  line-height:1 !important;
+  letter-spacing:0 !important;
+  text-shadow:none !important;
+}
+.home-roadbook-margins .rb-compass .rb-n{
+  left:50% !important;
+  top:-20px !important;
+  transform:translateX(-50%) !important;
+}
+.home-roadbook-margins .rb-compass .rb-e{
+  right:-20px !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+}
+.home-roadbook-margins .rb-compass .rb-s{
+  left:50% !important;
+  bottom:-20px !important;
+  transform:translateX(-50%) !important;
+}
+.home-roadbook-margins .rb-compass .rb-w{
+  left:-22px !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+}
+
+/* Sur les grandes roses, accentuer encore le caractère de la référence */
+.home-roadbook-margins .rb-compass-left-large::before,
+.home-roadbook-margins .rb-compass-right-large::before{
+  width:88% !important;
+  height:88% !important;
+}
+.home-roadbook-margins .rb-compass-left-large::after,
+.home-roadbook-margins .rb-compass-right-large::after{
+  width:80% !important;
+  height:80% !important;
+}
+.home-roadbook-margins .rb-compass-left-large .rb-n,
+.home-roadbook-margins .rb-compass-left-large .rb-e,
+.home-roadbook-margins .rb-compass-left-large .rb-s,
+.home-roadbook-margins .rb-compass-left-large .rb-w,
+.home-roadbook-margins .rb-compass-right-large .rb-n,
+.home-roadbook-margins .rb-compass-right-large .rb-e,
+.home-roadbook-margins .rb-compass-right-large .rb-s,
+.home-roadbook-margins .rb-compass-right-large .rb-w{
+  font-size:15px !important;
+}
+</style>
+
+
+<style id="v291-roses-plus-grandes-noires">
+/* V10_291 : mêmes roses validées, plus grandes et entièrement noires. */
+.home-roadbook-margins .rb-compass{
+  opacity:.78 !important;
+}
+
+/* Tailles augmentées tout en conservant 3 roses de chaque côté */
+.home-roadbook-margins .rb-compass-left,
+.home-roadbook-margins .rb-compass-right{
+  width:102px !important;
+  height:102px !important;
+}
+.home-roadbook-margins .rb-compass-left-small,
+.home-roadbook-margins .rb-compass-right-small{
+  width:76px !important;
+  height:76px !important;
+}
+.home-roadbook-margins .rb-compass-left-large,
+.home-roadbook-margins .rb-compass-right-large{
+  width:132px !important;
+  height:132px !important;
+}
+
+/* Etoiles noires */
+.home-roadbook-margins .rb-compass::before{
+  background:rgba(17,17,17,.98) !important;
+}
+.home-roadbook-margins .rb-compass b{
+  background:rgba(17,17,17,.98) !important;
+  border-color:rgba(17,17,17,.98) !important;
+}
+
+/* La découpe garde l'orange du fond pour dessiner les branches évidées */
+.home-roadbook-margins .rb-compass::after{
+  background:#f57916 !important;
+}
+
+/* Lettres cardinales noires */
+.home-roadbook-margins .rb-compass .rb-n,
+.home-roadbook-margins .rb-compass .rb-e,
+.home-roadbook-margins .rb-compass .rb-s,
+.home-roadbook-margins .rb-compass .rb-w{
+  color:#111 !important;
+  font-size:15px !important;
+}
+.home-roadbook-margins .rb-compass-left-large .rb-n,
+.home-roadbook-margins .rb-compass-left-large .rb-e,
+.home-roadbook-margins .rb-compass-left-large .rb-s,
+.home-roadbook-margins .rb-compass-left-large .rb-w,
+.home-roadbook-margins .rb-compass-right-large .rb-n,
+.home-roadbook-margins .rb-compass-right-large .rb-e,
+.home-roadbook-margins .rb-compass-right-large .rb-s,
+.home-roadbook-margins .rb-compass-right-large .rb-w{
+  font-size:17px !important;
+}
+
+@media(max-width:1100px) and (min-width:901px){
+  .home-roadbook-margins .rb-compass-left,
+  .home-roadbook-margins .rb-compass-right{
+    width:86px !important;
+    height:86px !important;
+  }
+  .home-roadbook-margins .rb-compass-left-small,
+  .home-roadbook-margins .rb-compass-right-small{
+    width:62px !important;
+    height:62px !important;
+  }
+  .home-roadbook-margins .rb-compass-left-large,
+  .home-roadbook-margins .rb-compass-right-large{
+    width:106px !important;
+    height:106px !important;
+  }
+}
+</style>
+
+
+<style id="v292-roses-noires-plus-fines">
+/* Même principe validé, mais avec un dessin plus fin, élancé et élégant. */
+.home-roadbook-margins .rb-compass{
+  opacity:.62 !important;
+}
+
+/* Silhouette plus fine : pointes cardinales longues, diagonales étroites. */
+.home-roadbook-margins .rb-compass::before{
+  width:84% !important;
+  height:84% !important;
+  background:rgba(17,17,17,.96) !important;
+  clip-path:polygon(
+    50% 0%,
+    53% 40%,
+    73% 27%,
+    59% 44%,
+    100% 50%,
+    59% 56%,
+    73% 73%,
+    53% 60%,
+    50% 100%,
+    47% 60%,
+    27% 73%,
+    41% 56%,
+    0% 50%,
+    41% 44%,
+    27% 27%,
+    47% 40%
+  ) !important;
+}
+
+/* Évidements plus larges pour alléger visuellement chaque branche. */
+.home-roadbook-margins .rb-compass::after{
+  width:78% !important;
+  height:78% !important;
+  background:#f57916 !important;
+  clip-path:polygon(
+    50% 5%,
+    51.3% 42%,
+    70% 31%,
+    56% 47%,
+    95% 50%,
+    56% 53%,
+    70% 69%,
+    51.3% 58%,
+    50% 95%,
+    48.7% 58%,
+    30% 69%,
+    44% 53%,
+    5% 50%,
+    44% 47%,
+    30% 31%,
+    48.7% 42%,
+    50% 50%
+  ) !important;
+}
+
+/* Centre beaucoup plus discret. */
+.home-roadbook-margins .rb-compass b{
+  width:6% !important;
+  height:6% !important;
+  background:#111 !important;
+}
+
+/* Lettres plus fines et légèrement moins présentes. */
+.home-roadbook-margins .rb-compass .rb-n,
+.home-roadbook-margins .rb-compass .rb-e,
+.home-roadbook-margins .rb-compass .rb-s,
+.home-roadbook-margins .rb-compass .rb-w{
+  color:#111 !important;
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-weight:600 !important;
+  font-size:13px !important;
+  opacity:.86 !important;
+}
+.home-roadbook-margins .rb-compass-left-large .rb-n,
+.home-roadbook-margins .rb-compass-left-large .rb-e,
+.home-roadbook-margins .rb-compass-left-large .rb-s,
+.home-roadbook-margins .rb-compass-left-large .rb-w,
+.home-roadbook-margins .rb-compass-right-large .rb-n,
+.home-roadbook-margins .rb-compass-right-large .rb-e,
+.home-roadbook-margins .rb-compass-right-large .rb-s,
+.home-roadbook-margins .rb-compass-right-large .rb-w{
+  font-size:14px !important;
+}
+</style>
+
+
+<style id="v293-quatre-roses-mieux-reparties">
+/* 2 roses de chaque côté, mieux espacées verticalement. */
+.home-roadbook-margins .rb-compass-left-small,
+.home-roadbook-margins .rb-compass-right-small{
+  display:none !important;
+}
+
+/* Gauche : une moyenne dans le tiers supérieur, une grande dans le tiers inférieur. */
+.home-roadbook-margins .rb-compass-left{
+  left:9px !important;
+  top:27% !important;
+}
+.home-roadbook-margins .rb-compass-left-large{
+  left:4px !important;
+  top:68% !important;
+}
+
+/* Droite : disposition légèrement décalée pour éviter un effet trop symétrique. */
+.home-roadbook-margins .rb-compass-right-large{
+  right:3px !important;
+  top:19% !important;
+}
+.home-roadbook-margins .rb-compass-right{
+  right:9px !important;
+  top:63% !important;
+}
+</style>
+
+
+<style id="v294-traces-blanches-fines-cadre">
+/* Fines traces blanches accolées aux deux côtés du cadre central. */
+.home-roadbook-margins .rb-frame-white-track{
+  position:absolute;
+  top:4%;
+  height:92%;
+  width:10px;
+  z-index:1;
+  opacity:.46;
+  box-sizing:border-box;
+  background:
+    linear-gradient(36deg,
+      transparent 0 27%,
+      rgba(255,255,255,.96) 28% 42%,
+      transparent 43% 57%,
+      rgba(255,255,255,.96) 58% 72%,
+      transparent 73%
+    ) 0 0/10px 27px repeat-y;
+  border-left:1px solid rgba(255,255,255,.40);
+  border-right:1px solid rgba(255,255,255,.40);
+}
+.home-roadbook-margins .rb-frame-white-track-left{
+  left:calc(50% - min(46vw, 700px) + 64px);
+}
+.home-roadbook-margins .rb-frame-white-track-right{
+  right:calc(50% - min(46vw, 700px) + 64px);
+}
+@media(max-width:1100px) and (min-width:901px){
+  .home-roadbook-margins .rb-frame-white-track{
+    width:8px;
+    opacity:.38;
+    background-size:8px 24px;
+  }
+}
+@media(max-width:900px){
+  .home-roadbook-margins .rb-frame-white-track{
+    display:none !important;
+  }
+}
+</style>
+
+
+<style id="v296-roses-fines-sans-chevauchement">
+/*
+  V10_296 — correction des roses :
+  - 2 par côté
+  - plus fines et plus petites
+  - placées dans la zone orange libre
+  - aucun chevauchement avec les traces
+  - masquées si la marge orange devient trop étroite
+*/
+
+/* Toujours seulement 2 roses de chaque côté */
+.home-roadbook-margins .rb-compass-left-small,
+.home-roadbook-margins .rb-compass-right-small{
+  display:none !important;
+}
+
+/* Dessin nettement plus fin */
+.home-roadbook-margins .rb-compass{
+  border:none !important;
+  background:none !important;
+  box-shadow:none !important;
+  opacity:.54 !important;
+  overflow:visible !important;
+}
+
+.home-roadbook-margins .rb-compass::before{
+  width:88% !important;
+  height:88% !important;
+  background:#111 !important;
+  clip-path:polygon(
+    50% 0%,
+    51.8% 43%,
+    69% 31%,
+    56% 46%,
+    100% 50%,
+    56% 54%,
+    69% 69%,
+    51.8% 57%,
+    50% 100%,
+    48.2% 57%,
+    31% 69%,
+    44% 54%,
+    0% 50%,
+    44% 46%,
+    31% 31%,
+    48.2% 43%
+  ) !important;
+}
+
+/* Découpe très proche du bord : branches fines, non massives */
+.home-roadbook-margins .rb-compass::after{
+  width:84% !important;
+  height:84% !important;
+  background:#f57916 !important;
+  clip-path:polygon(
+    50% 3%,
+    50.8% 44%,
+    67% 34%,
+    54% 48%,
+    97% 50%,
+    54% 52%,
+    67% 66%,
+    50.8% 56%,
+    50% 97%,
+    49.2% 56%,
+    33% 66%,
+    46% 52%,
+    3% 50%,
+    46% 48%,
+    33% 34%,
+    49.2% 44%,
+    50% 50%
+  ) !important;
+}
+
+.home-roadbook-margins .rb-compass b{
+  width:4px !important;
+  height:4px !important;
+  background:#111 !important;
+  border:0 !important;
+  opacity:.75 !important;
+}
+
+/* Lettres plus discrètes */
+.home-roadbook-margins .rb-compass .rb-n,
+.home-roadbook-margins .rb-compass .rb-e,
+.home-roadbook-margins .rb-compass .rb-s,
+.home-roadbook-margins .rb-compass .rb-w{
+  color:#111 !important;
+  font-family:Georgia,"Times New Roman",serif !important;
+  font-size:11px !important;
+  font-weight:600 !important;
+  opacity:.72 !important;
+}
+.home-roadbook-margins .rb-compass .rb-n{ top:-15px !important; }
+.home-roadbook-margins .rb-compass .rb-s{ bottom:-15px !important; }
+.home-roadbook-margins .rb-compass .rb-e{ right:-15px !important; }
+.home-roadbook-margins .rb-compass .rb-w{ left:-15px !important; }
+
+/* Tailles réduites pour réellement tenir entre les traces */
+.home-roadbook-margins .rb-compass-left,
+.home-roadbook-margins .rb-compass-right{
+  width:82px !important;
+  height:82px !important;
+}
+.home-roadbook-margins .rb-compass-left-large,
+.home-roadbook-margins .rb-compass-right-large{
+  width:96px !important;
+  height:96px !important;
+}
+
+/*
+  Sur écran large, la marge orange mesure au moins ~180 px :
+  on place les roses au milieu de l'espace libre, après les traces extérieures.
+*/
+@media(min-width:1760px){
+  .home-roadbook-margins .rb-compass-left{
+    left:92px !important;
+    top:24% !important;
+  }
+  .home-roadbook-margins .rb-compass-left-large{
+    left:84px !important;
+    top:70% !important;
+  }
+  .home-roadbook-margins .rb-compass-right-large{
+    right:84px !important;
+    top:17% !important;
+  }
+  .home-roadbook-margins .rb-compass-right{
+    right:92px !important;
+    top:63% !important;
+  }
+}
+
+/* Si la marge est trop étroite, on ne force pas un chevauchement */
+@media(max-width:1759px){
+  .home-roadbook-margins .rb-compass-left,
+  .home-roadbook-margins .rb-compass-left-large,
+  .home-roadbook-margins .rb-compass-right,
+  .home-roadbook-margins .rb-compass-right-large{
+    display:none !important;
+  }
+}
+</style>
+
+
+<style id="v297-deux-boussoles-reference-fix">
+.home-roadbook-margins .rb-compass{display:none!important}
+.home-roadbook-margins .rb-compass-left,.home-roadbook-margins .rb-compass-right-large{display:block!important;width:96px!important;height:96px!important;border:2px solid rgba(17,17,17,.82)!important;border-radius:50%!important;background:repeating-conic-gradient(from 0deg,#111 0 1deg,transparent 1deg 8deg)!important;box-shadow:inset 0 0 0 5px #f57916,inset 0 0 0 6px rgba(17,17,17,.78),inset 0 0 0 12px #f57916,inset 0 0 0 13px rgba(17,17,17,.48)!important;opacity:.66!important;overflow:visible!important;z-index:2!important}
+.home-roadbook-margins .rb-compass-left::before,.home-roadbook-margins .rb-compass-right-large::before{content:""!important;position:absolute!important;left:50%!important;top:50%!important;width:84%!important;height:84%!important;transform:translate(-50%,-50%)!important;background:#111!important;clip-path:polygon(50% 0,53% 39%,70% 24%,60% 44%,100% 50%,60% 56%,70% 76%,53% 61%,50% 100%,47% 61%,30% 76%,40% 56%,0 50%,40% 44%,30% 24%,47% 39%)!important;z-index:2!important}
+.home-roadbook-margins .rb-compass-left::after,.home-roadbook-margins .rb-compass-right-large::after{content:""!important;position:absolute!important;left:50%!important;top:50%!important;width:76%!important;height:76%!important;transform:translate(-50%,-50%)!important;background:#f57916!important;clip-path:polygon(50% 5%,51% 42%,67% 29%,57% 47%,95% 50%,57% 53%,67% 71%,51% 58%,50% 95%,49% 58%,33% 71%,43% 53%,5% 50%,43% 47%,33% 29%,49% 42%)!important;z-index:3!important}
+.home-roadbook-margins .rb-compass-left b,.home-roadbook-margins .rb-compass-right-large b{display:block!important;position:absolute!important;left:50%!important;top:50%!important;width:12px!important;height:12px!important;transform:translate(-50%,-50%)!important;border-radius:50%!important;background:#f57916!important;border:3px solid #111!important;z-index:4!important}
+.home-roadbook-margins .rb-compass-left .rb-compass-v,.home-roadbook-margins .rb-compass-left .rb-compass-h,.home-roadbook-margins .rb-compass-right-large .rb-compass-v,.home-roadbook-margins .rb-compass-right-large .rb-compass-h{display:none!important}
+.home-roadbook-margins .rb-compass-left .rb-n,.home-roadbook-margins .rb-compass-left .rb-e,.home-roadbook-margins .rb-compass-left .rb-s,.home-roadbook-margins .rb-compass-left .rb-w,.home-roadbook-margins .rb-compass-right-large .rb-n,.home-roadbook-margins .rb-compass-right-large .rb-e,.home-roadbook-margins .rb-compass-right-large .rb-s,.home-roadbook-margins .rb-compass-right-large .rb-w{color:#111!important;font-family:Georgia,"Times New Roman",serif!important;font-size:11px!important;font-weight:700!important;opacity:.86!important;z-index:5!important}
+.home-roadbook-margins .rb-compass-left .rb-n,.home-roadbook-margins .rb-compass-right-large .rb-n{top:-15px!important}.home-roadbook-margins .rb-compass-left .rb-s,.home-roadbook-margins .rb-compass-right-large .rb-s{bottom:-15px!important}.home-roadbook-margins .rb-compass-left .rb-e,.home-roadbook-margins .rb-compass-right-large .rb-e{right:-14px!important}.home-roadbook-margins .rb-compass-left .rb-w,.home-roadbook-margins .rb-compass-right-large .rb-w{left:-14px!important}
+.home-roadbook-margins .rb-compass-left{left:20px!important;top:78%!important}.home-roadbook-margins .rb-compass-right-large{right:20px!important;top:11%!important}
+</style>
+
+<style id="v298-boussoles-rapprochees-traits-blancs">
+/* Position uniquement : boussoles rapprochées des traits blancs, sans changer leur style. */
+.home-roadbook-margins .rb-compass-left{left:72px!important;top:78%!important}
+.home-roadbook-margins .rb-compass-right-large{right:72px!important;top:18%!important}
+</style>
+
+<style id="v299-boussole-gauche-remontee">
+/* Position uniquement : remonte la boussole gauche. */
+.home-roadbook-margins .rb-compass-left{top:70%!important}
+</style>
+
+<style id="v300-boussole-gauche-encore-remontee">
+.home-roadbook-margins .rb-compass-left{
+  top:68% !important;
+}
+</style>
+
+
+<style id="v301-boussole-gauche-plus-1-5cm">
+.home-roadbook-margins .rb-compass-left{
+  transform:translateY(-56.7px) !important;
+}
+</style>
+
+</head>
+<body>
+
+<div class="home-roadbook-margins" aria-hidden="true">
+  <div class="rb-mark rb-left-top"><span>OFFROAD</span><i></i><small>32° / 65°</small></div>
+  <div class="rb-mark rb-right-mid"><small>PISTE • VOYAGE • AVENTURE</small><i></i></div>
+  <div class="rb-horizon rb-horizon-left"></div>
+  <div class="rb-horizon rb-horizon-right"></div>
+  <div class="rb-compass rb-compass-left" aria-hidden="true">
+    <span class="rb-n">N</span><span class="rb-e">E</span><span class="rb-s">S</span><span class="rb-w">O</span>
+    <i class="rb-compass-v"></i><i class="rb-compass-h"></i><b></b>
+  </div>
+  <div class="rb-compass rb-compass-right" aria-hidden="true">
+    <span class="rb-n">N</span><span class="rb-e">E</span><span class="rb-s">S</span><span class="rb-w">O</span>
+    <i class="rb-compass-v"></i><i class="rb-compass-h"></i><b></b>
+  </div>
+  <div class="rb-tire rb-tire-left" aria-hidden="true"></div>
+  <div class="rb-tire rb-tire-right" aria-hidden="true"></div>
+  <div class="rb-edge-track rb-edge-track-left-top" aria-hidden="true"></div>
+  <div class="rb-edge-track rb-edge-track-left-mid" aria-hidden="true"></div>
+  <div class="rb-edge-track rb-edge-track-left-bottom" aria-hidden="true"></div>
+  <div class="rb-edge-track rb-edge-track-right-top" aria-hidden="true"></div>
+  <div class="rb-edge-track rb-edge-track-right-mid" aria-hidden="true"></div>
+  <div class="rb-edge-track rb-edge-track-right-bottom" aria-hidden="true"></div>
+  <div class="rb-inner-track rb-inner-track-left" aria-hidden="true"></div>
+  <div class="rb-inner-track rb-inner-track-right" aria-hidden="true"></div>
+  <div class="rb-white-tire rb-white-tire-left" aria-hidden="true"></div>
+  <div class="rb-white-tire rb-white-tire-right" aria-hidden="true"></div>
+<div class="rb-frame-white-track rb-frame-white-track-left" aria-hidden="true"></div>
+<div class="rb-frame-white-track rb-frame-white-track-right" aria-hidden="true"></div>
+  <div class="rb-compass rb-compass-left-small" aria-hidden="true">
+    <span class="rb-n">N</span><span class="rb-e">E</span><span class="rb-s">S</span><span class="rb-w">O</span>
+    <i class="rb-compass-v"></i><i class="rb-compass-h"></i><b></b>
+  </div>
+  <div class="rb-compass rb-compass-left-large" aria-hidden="true">
+    <span class="rb-n">N</span><span class="rb-e">E</span><span class="rb-s">S</span><span class="rb-w">O</span>
+    <i class="rb-compass-v"></i><i class="rb-compass-h"></i><b></b>
+  </div>
+  <div class="rb-compass rb-compass-right-small" aria-hidden="true">
+    <span class="rb-n">N</span><span class="rb-e">E</span><span class="rb-s">S</span><span class="rb-w">O</span>
+    <i class="rb-compass-v"></i><i class="rb-compass-h"></i><b></b>
+  </div>
+  <div class="rb-compass rb-compass-right-large" aria-hidden="true">
+    <span class="rb-n">N</span><span class="rb-e">E</span><span class="rb-s">S</span><span class="rb-w">O</span>
+    <i class="rb-compass-v"></i><i class="rb-compass-h"></i><b></b>
+  </div>
+
+
+
+
+
+
+</div>
+
+<main class="site" aria-label="Site OFFROAD 32 65">
+  <div class="visual">
+    <img src="accueil-offroad3265.png" alt="OFFROAD 32 65 - Raids et aventures SSV, Quad, 4x4 et Motos">
+
+<nav class="topbar-uniform" aria-label="Navigation principale">
+  <a href="index.html">ACCUEIL</a>
+  <a href="a-propos.html">À PROPOS</a>
+  <div class="nav-drop">
+  <a href="nos-raids.html">Nos raids ▾</a>
+  <div class="nav-drop-menu"><a href="raids-maroc.html">Maroc</a><a href="raids-espagne.html">Espagne</a><a href="raids-sardaigne.html">Sardaigne</a><a href="raids-tunisie.html">Tunisie</a><a href="nos-raids.html">Tous nos raids</a><a href="raids-a-la-carte.html">Raids à la carte</a></div>
+</div>
+  <div class="topbar-menu topbar-documents-menu">
+    <a href="documents.html" class="topbar-menu-trigger">DOCUMENTS <span class="documents-arrow" aria-hidden="true">▾</span></a>
+    <div class="topbar-dropdown documents-dropdown-restored">
+      <a href="fiche-individuelle-renseignements.html">Fiche individuelle de renseignements</a>
+      <a href="contrat-inscription.html">Contrat d’inscription</a>
+      <a href="cgv-offroad.html">CGV OFFROAD 32 65</a>
+    </div>
+  </div>
+  <a href="partenaires.html">PARTENAIRES</a>
+  <a href="galerie.html" target="_blank" rel="noopener">GALERIE</a>
+  <a class="mail-uniform" href="mailto:aventureoffroad.3265@gmail.com" aria-label="E-mail">
+    <svg viewBox="0 0 32 24" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="29" height="21" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2.2"/>
+      <path d="M3 4.5 16 14 29 4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+  <a class="whatsapp-uniform" href="https://wa.me/33620933978" target="_blank" rel="noopener" aria-label="WhatsApp"><span>WHATSAPP</span>
+  </a>
+</nav>
+
+
+    <a class="hotspot accueil" href="#" aria-label="Accueil"></a>
+    <a class="hotspot apropos" href="a-propos.html" aria-label="À propos"></a>
+    <a class="hotspot raids" href="nos-raids.html" aria-label="Nos raids"></a>
+    <div class="raid-dropdown" aria-label="Sélectionner un pays pour les raids">
+      <a href="raids-maroc.html">Maroc</a>
+      <a href="raids-espagne.html">Espagne</a>
+      <a href="raids-sardaigne.html">Sardaigne</a>
+      <a href="raids-tunisie.html">Tunisie</a>
+    </div>
+    <span class="documents-label" aria-hidden="true">DOCUMENTS <span class="documents-arrow">▼</span></span>
+    <a class="hotspot destinations documents-trigger" href="#" aria-label="Documents" aria-haspopup="true" aria-expanded="false"></a>
+    <div class="documents-dropdown-home" aria-label="Choisir un document">
+      <a href="fiche-individuelle-renseignements.html">Fiche individuelle de renseignements</a>
+      <a href="contrat-inscription.html">Contrat d’inscription</a>
+<a href="cgv-offroad.html">CGV OFFROAD 32 65</a>
+    </div>
+    <a class="hotspot partenaires" href="partenaires.html" aria-label="Partenaires"></a>
+    <a class="hotspot galerie" href="https://www.instagram.com/offroad3265/" target="_blank" rel="noopener" aria-label="Galerie Instagram"></a>
+
+<div class="top-contact-actions" aria-label="Contacts OFFROAD 32 65">
+<a class="mail-top icon-only" href="mailto:aventureoffroad.3265@gmail.com" aria-label="Envoyer un e-mail">
+    <svg class="mail-logo" viewBox="0 0 32 24" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="29" height="21" rx="2" ry="2" fill="none" stroke="currentColor" stroke-width="2.2"/>
+      <path d="M3 4.5 16 14 29 4.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+
+  <a class="whatsapp-top" href="https://wa.me/33620933978" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg class="whatsapp-logo" viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M16 3C9.38 3 4 8.16 4 14.52c0 2.29.7 4.42 1.9 6.21L4.6 27l6.55-1.72A12.3 12.3 0 0 0 16 26.25c6.62 0 12-5.16 12-11.73S22.62 3 16 3Zm0 21.1c-1.65 0-3.25-.42-4.65-1.2l-.33-.18-3.89 1.02.79-3.74-.22-.35a9.16 9.16 0 0 1-1.5-5.13c0-5.18 4.4-9.38 9.8-9.38s9.8 4.2 9.8 9.38-4.4 9.58-9.8 9.58Zm5.37-7.14c-.29-.14-1.73-.82-2-.91-.27-.1-.47-.14-.67.14-.2.29-.76.92-.93 1.11-.17.19-.34.22-.63.08-.29-.14-1.23-.44-2.34-1.39-.86-.74-1.45-1.66-1.62-1.94-.17-.29-.02-.44.13-.58.13-.13.29-.34.44-.51.15-.17.2-.29.29-.48.1-.19.05-.36-.02-.51-.08-.14-.67-1.55-.91-2.12-.24-.56-.49-.48-.67-.49h-.57c-.2 0-.52.07-.79.36-.27.29-1.04.98-1.04 2.39 0 1.41 1.07 2.77 1.21 2.96.15.19 2.1 3.08 5.09 4.32.71.3 1.27.48 1.7.61.71.22 1.36.19 1.87.12.57-.08 1.73-.68 1.98-1.34.24-.66.24-1.22.17-1.34-.08-.12-.27-.19-.56-.33Z"/>
+    </svg>
+    <span>WHATSAPP</span>
+  </a>
+</div>
+
+
+    <a class="hotspot instagram" href="https://www.instagram.com/offroad3265/" target="_blank" rel="noopener" aria-label="Instagram OFFROAD 32 65"></a>
+    <a class="hotspot facebook" href="https://www.facebook.com/share/1RZtyJXaq6/" target="_blank" rel="noopener" aria-label="Facebook OFFROAD 32 65"></a>
+    <a class="hotspot email" href="mailto:aventureoffroad.3265@gmail.com" aria-label="Envoyer un e-mail à OFFROAD 32 65"></a>
+    <a class="hotspot whatsapp" href="https://wa.me/33620933978" target="_blank" rel="noopener" aria-label="Contacter OFFROAD 32 65 sur WhatsApp"></a>
+    <a class="hotspot phone" href="tel:+33620933978" aria-label="Appeler le 06 20 93 39 78"><svg class="phone-handset-icon" viewBox="0 0 24 24" aria-hidden="true">
+  <path fill="currentColor" d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/>
+</svg></a>
+
+    <a class="hotspot maroc" href="https://wa.me/33620933978?text=Bonjour%20OFFROAD%2032%2065%2C%20je%20souhaite%20des%20informations%20sur%20le%20raid%20Maroc%202026." target="_blank" rel="noopener" aria-label="Découvrir le Maroc"></a>
+    <a class="hotspot espagne" href="https://wa.me/33620933978?text=Bonjour%20OFFROAD%2032%2065%2C%20je%20souhaite%20des%20informations%20sur%20les%20raids%20Espagne." target="_blank" rel="noopener" aria-label="Découvrir l'Espagne"></a>
+    <a class="hotspot sardaigne" href="https://wa.me/33620933978?text=Bonjour%20OFFROAD%2032%2065%2C%20je%20souhaite%20des%20informations%20sur%20les%20raids%20Sardaigne." target="_blank" rel="noopener" aria-label="Découvrir la Sardaigne"></a>
+    <a class="hotspot tunisie" href="https://wa.me/33620933978?text=Bonjour%20OFFROAD%2032%2065%2C%20je%20souhaite%20être%20informé(e)%20du%20prochain%20raid%20Tunisie." target="_blank" rel="noopener" aria-label="Découvrir la Tunisie"></a>
+
+    
+<div class="sand-socials-final" aria-label="Réseaux sociaux OFFROAD 32 65">
+  <a class="instagram-final" href="https://www.instagram.com/offroad3265/" target="_blank" rel="noopener" aria-label="Instagram OFFROAD 32 65">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <rect x="5" y="5" width="22" height="22" rx="7" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <circle cx="16" cy="16" r="5.2" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      <circle cx="23" cy="9.4" r="1.5" fill="currentColor"/>
+    </svg>
+  </a>
+  <a class="facebook-final" href="https://www.facebook.com/share/1RZtyJXaq6/" target="_blank" rel="noopener" aria-label="Facebook OFFROAD 32 65">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path fill="currentColor" d="M18.7 28V17.5h3.6l.5-4.1h-4.1v-2.6c0-1.2.3-2 2.1-2h2.2V5.1c-.4-.1-1.7-.2-3.2-.2-3.2 0-5.4 1.9-5.4 5.5v3h-3.6v4.1h3.6V28h4.3z"/>
+    </svg>
+  </a>
+  <a class="phone-social-final" href="tel:+33620933978" aria-label="Téléphone OFFROAD 32 65">
+    <svg class="phone-social-handset" viewBox="0 0 24 24" aria-hidden="true">
+  <path d="M7.2 3.8 9.8 7c.35.43.31 1.06-.08 1.45L8.2 9.97c1.37 2.62 3.2 4.45 5.82 5.82l1.52-1.52c.39-.39 1.02-.43 1.45-.08l3.2 2.6c.5.4.57 1.14.14 1.62l-1.47 1.63c-.7.78-1.78 1.1-2.8.84C9.38 19.2 4.8 14.62 3.12 7.94c-.26-1.02.06-2.1.84-2.8L5.59 3.67c.48-.43 1.22-.36 1.61.13Z" fill="currentColor"/>
+</svg>
+    <span class="phone-social-number">06 20 93 39 78</span>
+  </a>
+
+</div>
+
+<section class="home-calendars" aria-label="Calendriers des raids par pays">
+      <article class="country-calendar" data-country="maroc">
+        <h3>Maroc</h3><select class="month-select" aria-label="Mois Maroc"></select>
+        <div class="mini-calendar"></div><div class="raid-caption"></div>
+        <a class="calendar-link" href="raids-maroc.html">Voir les raids →</a>
+      </article>
+      <article class="country-calendar" data-country="espagne">
+        <h3>Espagne</h3><select class="month-select" aria-label="Mois Espagne"></select>
+        <div class="mini-calendar"></div><div class="raid-caption"></div>
+        <a class="calendar-link" href="raids-espagne.html">Voir les raids →</a>
+      </article>
+      <article class="country-calendar" data-country="sardaigne">
+        <h3>Sardaigne</h3><select class="month-select" aria-label="Mois Sardaigne"></select>
+        <div class="mini-calendar"></div><div class="raid-caption"></div>
+        <a class="calendar-link" href="raids-sardaigne.html">Voir les raids →</a>
+      </article>
+      <article class="country-calendar" data-country="tunisie">
+        <h3>Tunisie</h3><select class="month-select" aria-label="Mois Tunisie"></select>
+        <div class="mini-calendar"></div><div class="raid-caption"></div>
+        <a class="calendar-link" href="raids-tunisie.html">Voir les raids →</a>
+      </article>
+    </section>
+  </div>
+</main>
+
+<script src="dates-raids.js"></script>
+<script>
+const monthNames=["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+const dayNames=["L","M","M","J","V","S","D"];
+const raids={maroc:[],espagne:[],sardaigne:[],tunisie:[]};
+
+function parseRaidRange(raid){
+  const text=String(raid.date||"").toUpperCase();
+  const year=Number(raid.annee);
+  const months={JANVIER:1,FEVRIER:2,"FÉVRIER":2,MARS:3,AVRIL:4,MAI:5,JUIN:6,JUILLET:7,AOUT:8,"AOÛT":8,SEPTEMBRE:9,OCTOBRE:10,NOVEMBRE:11,DECEMBRE:12,"DÉCEMBRE":12};
+
+  /* Formats actuellement utilisés : "08 → 13 NOV. 2026" et "19 ET 20 SEPTEMBRE 2026".
+     Si les dates précises ne sont pas encore connues, le raid reste visible via la page pays. */
+  let m=text.match(/(\d{1,2})\s*(?:→|AU|ET)\s*(\d{1,2})\s+([A-ZÉÛ\.]+)/);
+  if(!m) return null;
+  const key=m[3].replace(/\./g,"");
+  const month=months[key];
+  if(!month || !year) return null;
+  const pad=n=>String(n).padStart(2,"0");
+  return {
+    start:`${year}-${pad(month)}-${pad(Number(m[1]))}`,
+    end:`${year}-${pad(month)}-${pad(Number(m[2]))}`
+  };
+}
+
+(window.OFFROAD_RAIDS||[]).forEach(raid=>{
+  const country=String(raid.pays||"").toLowerCase();
+  if(!raids[country]) raids[country]=[];
+  const range=parseRaidRange(raid);
+  if(!range) return;
+  raids[country].push({
+    start:range.start,
+    end:range.end,
+    name:raid.titre||raid.id,
+    detail:raid.date||"",
+    href:"presentation-raid.html?id="+encodeURIComponent(raid.id)
+  });
+});
+function ym(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")}
+function iso(y,m,d){return y+"-"+String(m+1).padStart(2,"0")+"-"+String(d).padStart(2,"0")}
+function raidOn(country,date){
+  return raids[country].find(r=>date>=r.start && date<=r.end);
+}
+function render(card,y,m){
+  const country=card.dataset.country, grid=card.querySelector(".mini-calendar"), cap=card.querySelector(".raid-caption");
+  grid.innerHTML=dayNames.map(d=>`<div class="day-name">${d}</div>`).join("");
+  let first=(new Date(y,m,1).getDay()+6)%7, days=new Date(y,m+1,0).getDate();
+  for(let i=0;i<first;i++) grid.insertAdjacentHTML("beforeend",'<div class="day empty"></div>');
+  let monthRaids=[];
+  for(let d=1;d<=days;d++){
+    let date=iso(y,m,d), r=raidOn(country,date);
+    if(r && !monthRaids.includes(r)) monthRaids.push(r);
+    let el=document.createElement("div"); el.className="day"+(r?" raid":""); el.textContent=d;
+    if(r){el.title=r.name+" — "+r.detail; el.onclick=()=>location.href=r.href}
+    grid.appendChild(el);
+  }
+  if(monthRaids.length){
+    cap.innerHTML=monthRaids.map(r=>`<strong>${r.name}</strong> • ${r.detail}`).join("<br>");
+  } else {
+    cap.textContent="Aucun raid programmé sur ce mois.";
+  }
+}
+document.querySelectorAll(".country-calendar").forEach(card=>{
+  const select=card.querySelector(".month-select"), country=card.dataset.country;
+  let start=new Date(2026,7,1), end=new Date(2027,11,1);
+  for(let d=new Date(start);d<=end;d.setMonth(d.getMonth()+1)){
+    let o=document.createElement("option");
+    o.value=ym(d); o.textContent=monthNames[d.getMonth()]+" "+d.getFullYear();
+    select.appendChild(o);
+  }
+  let initial=country==="maroc"?"2026-11":country==="tunisie"?"2027-03":"2026-09";
+  select.value=initial;
+  let [y,m]=initial.split("-").map(Number); render(card,y,m-1);
+  select.addEventListener("change",()=>{
+    let [yy,mm]=select.value.split("-").map(Number); render(card,yy,mm-1);
+  });
+});
+</script>
+
+
+
+
+<script src="raid-status.js"></script>
+<script src="raid-manager.js"></script>
+<script src="raids-render.js"></script>
+<script src="programmes-raids.js"></script>
+<script src="raid-model.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const raids=Array.isArray(window.OFFROAD_RAIDS) ? window.OFFROAD_RAIDS : [];
+  const currentYear=new Date().getFullYear();
+
+  document.querySelectorAll(".country-calendar").forEach(card=>{
+    const heading=(card.querySelector("h3")?.textContent||"").toLowerCase();
+    let country="";
+    if(heading.includes("maroc")) country="maroc";
+    else if(heading.includes("espagne")) country="espagne";
+    else if(heading.includes("sardaigne")) country="sardaigne";
+    else if(heading.includes("tunisie")) country="tunisie";
+    if(!country) return;
+
+    [...card.children].forEach(el=>{
+      if(el.tagName!=="H3") el.remove();
+    });
+
+    const countryRaids=raids.filter(r=>r.pays===country);
+    const years=[...new Set(countryRaids.map(r=>Number(r.annee)))].sort((a,b)=>a-b);
+
+    // Garder aussi quelques années disponibles pour les futurs ajouts.
+    [currentYear,currentYear+1,currentYear+2].forEach(y=>{
+      if(!years.includes(y)) years.push(y);
+    });
+    years.sort((a,b)=>a-b);
+
+    const select=document.createElement("select");
+    select.className="raid-year-select";
+    select.setAttribute("aria-label","Choisir une année");
+    years.forEach(y=>{
+      const opt=document.createElement("option");
+      opt.value=String(y);
+      opt.textContent=String(y);
+      select.appendChild(opt);
+    });
+
+    // Sélectionner la première année contenant un raid, sinon l'année courante.
+    const firstRaidYear=countryRaids.length
+      ? Math.min(...countryRaids.map(r=>Number(r.annee)))
+      : currentYear;
+    select.value=String(firstRaidYear);
+
+    const list=document.createElement("div");
+    list.className="raid-date-list";
+
+    function render(){
+      const year=Number(select.value);
+      const rows=countryRaids
+        .filter(r=>Number(r.annee)===year)
+        .sort((a,b)=>window.OFFROAD_RENDER_RAIDS.compareByDate(a,b));
+
+      if(!rows.length){
+        list.innerHTML='<div class="no-announced-raid">Aucun raid annoncé pour cette année.</div>';
+        return;
+      }
+      list.innerHTML=rows.map(r=>`
+        <a class="raid-date-row" href="${window.OFFROAD_RAID_MODEL ? window.OFFROAD_RAID_MODEL.mediaUrl(r) : r.lien}">
+          <span class="raid-date-value">${r.date}</span>
+          <span class="raid-date-title">${r.titre}</span>
+          <span class="raid-date-status ${window.OFFROAD_RAID_STATUS?.isComplete(r)?"status-complet":window.OFFROAD_RAID_STATUS?.isOpen(r)?"status-disponible":""}">${window.OFFROAD_RAID_STATUS ? window.OFFROAD_RAID_STATUS.label(r) : r.statut}</span>
+        </a>`).join("");
+    }
+
+    card.appendChild(select);
+    card.appendChild(list);
+    select.addEventListener("change",render);
+    render();
+  });
+});
+</script>
+
+<script src="pays-raids.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const pays=(Array.isArray(window.OFFROAD_PAYS)?window.OFFROAD_PAYS:[])
+    .slice()
+    .sort((a,b)=>(Number(a.ordre)||999)-(Number(b.ordre)||999));
+
+  const markup=pays.map(p=>`<a href="${p.lien}">${p.nom}</a>`).join("")
+    + '<a href="nos-raids.html">Tous nos raids</a>'
+    + '<a href="raids-a-la-carte.html">Raids à la carte</a>';
+
+  // Menus standards des pages internes.
+  document.querySelectorAll(".nav-drop-menu").forEach(menu=>{
+    menu.innerHTML=markup;
+  });
+
+  // Menu de la page d'accueil, qui utilise une structure différente.
+  document.querySelectorAll(".raid-dropdown").forEach(menu=>{
+    menu.innerHTML=markup;
+  });
+});
+</script>
+
+
+<script id="home-documents-dropdown">
+document.addEventListener("DOMContentLoaded",()=>{
+  const trigger=document.querySelector(".documents-trigger");
+  const menu=document.querySelector(".documents-dropdown-home");
+  if(!trigger||!menu) return;
+
+  trigger.addEventListener("click",(e)=>{
+    e.preventDefault();
+    const open=menu.classList.toggle("is-open");
+    trigger.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+
+  document.addEventListener("click",(e)=>{
+    if(!trigger.contains(e.target) && !menu.contains(e.target)){
+      menu.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded","false");
+    }
+  });
+
+  document.addEventListener("keydown",(e)=>{
+    if(e.key==="Escape"){
+      menu.classList.remove("is-open");
+      trigger.setAttribute("aria-expanded","false");
+      trigger.blur();
+    }
+  });
+});
+</script>
+
+
+<script src="pages-config.js"></script>
+<script src="site-core.js"></script>
+
+<style id="offroad-accueil-mobile-largeur-fluide">
+/* Correction ciblée V8.1 : accueil uniquement, <=760px */
+@media(max-width:760px){
+  html,body{
+    max-width:100%!important;
+    overflow-x:hidden!important;
+  }
+  .site,
+  .visual{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+  }
+}
+</style>
+
+<script id="offroad-galerie-navigation-guard-global">
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelectorAll('a[href="galerie.html"]').forEach(link=>{
+    link.style.position="relative";
+    link.style.zIndex="20";
+    link.style.pointerEvents="auto";
+    link.addEventListener("click",(event)=>{
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      window.location.href="galerie.html";
+    },true);
+  });
+});
+</script>
+
+
+<script src="documents-config.js"></script>
+<script src="documents-runtime.js"></script>
+
+<script id="offroad-global-fixed-page-runtime-v89105">
+(function(){
+  const DESKTOP_W=1000, DESKTOP_H=650;
+
+  function reset(main, stage){
+    main.style.removeProperty("transform");
+    main.style.removeProperty("width");
+    main.style.removeProperty("margin-left");
+    main.style.removeProperty("margin-right");
+    if(stage){
+      stage.style.removeProperty("height");
+      stage.style.removeProperty("min-height");
+    }
+  }
+
+  function fit(){
+    const root=document.documentElement;
+    const main=document.querySelector("main");
+    if(!main) return;
+
+    const desktop=window.innerWidth>=DESKTOP_W && window.innerHeight>=DESKTOP_H;
+    if(!desktop){
+      root.classList.remove("offroad-fixed-page");
+      const stage=main.parentElement && main.parentElement.classList.contains("offroad-fixed-stage")
+        ? main.parentElement : null;
+      reset(main,stage);
+      return;
+    }
+
+    root.classList.add("offroad-fixed-page");
+
+    let stage=main.parentElement;
+    if(!stage || !stage.classList.contains("offroad-fixed-stage")){
+      stage=document.createElement("div");
+      stage.className="offroad-fixed-stage";
+      main.parentNode.insertBefore(stage,main);
+      stage.appendChild(main);
+    }
+
+    reset(main,stage);
+
+    const top=stage.getBoundingClientRect().top;
+    const available=Math.max(100,window.innerHeight-top);
+    stage.style.height=available+"px";
+
+    const naturalH=Math.max(main.scrollHeight,main.getBoundingClientRect().height);
+    if(naturalH<=available+2) return;
+
+    const scale=Math.min(1,available/naturalH);
+    main.style.transform="scale("+scale+")";
+
+    /* Compense la largeur créée par la réduction afin de préserver les marges
+       et empêcher tout décalage latéral. */
+    if(scale<1){
+      main.style.width=(100/scale)+"%";
+      main.style.marginLeft=((100-(100/scale))/2)+"%";
+      main.style.marginRight="0";
+    }
+  }
+
+  let timer;
+  function schedule(){
+    clearTimeout(timer);
+    timer=setTimeout(fit,60);
+  }
+
+  document.addEventListener("DOMContentLoaded",schedule);
+  window.addEventListener("load",schedule);
+  window.addEventListener("resize",schedule);
+  if(document.fonts && document.fonts.ready) document.fonts.ready.then(schedule);
+  setTimeout(schedule,250);
+  setTimeout(schedule,900);
+})();
+</script>
+
+
+
+<style id="v355-calendrier-espagne-defilement-ivoire">
+/* Espagne : dispositif de défilement 2027 renforcé, visible et fonctionnel, en ivoire, harmonisé avec les couleurs du site. */
+@media(min-width:761px){
+  .country-calendar[data-country="espagne"]{position:relative!important;}
+  .country-calendar[data-country="espagne"] .raid-date-list{
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    scrollbar-width:auto!important;
+    scrollbar-color:#f4eee4 #2a2a2a!important;
+    padding-right:24px!important;
+    scroll-behavior:smooth;
+    overscroll-behavior:contain;
+  }
+  .country-calendar[data-country="espagne"] .raid-date-list::-webkit-scrollbar{width:14px!important;}
+  .country-calendar[data-country="espagne"] .raid-date-list::-webkit-scrollbar-track{
+    background:#2a2a2a!important;
+    border:2px solid #f4eee4!important;
+    border-radius:10px!important;
+  }
+  .country-calendar[data-country="espagne"] .raid-date-list::-webkit-scrollbar-thumb{
+    background:#f4eee4!important;
+    border:2px solid #111!important;
+    border-radius:10px!important;
+    min-height:40px!important;
+  }
+  .country-calendar[data-country="espagne"] .raid-scroll-controls{
+    position:absolute;
+    z-index:60;
+    right:5px;
+    top:76px;
+    bottom:8px;
+    width:18px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    pointer-events:none;
+  }
+  .country-calendar[data-country="espagne"] .raid-scroll-controls button{
+    width:18px;
+    height:24px;
+    padding:0;
+    border:2px solid #111;
+    border-radius:5px;
+    background:#f4eee4;
+    color:#111;
+    font:900 14px/1 Arial,sans-serif;
+    cursor:pointer;
+    pointer-events:auto;
+    box-shadow:0 0 0 1px #f4eee4;
+  }
+  .country-calendar[data-country="espagne"] .raid-scroll-controls button:active{transform:translateY(1px);}
+  .country-calendar[data-country="espagne"] .raid-scroll-rail{
+    flex:1 1 auto;
+    width:8px;
+    margin:4px 0;
+    border-radius:999px;
+    background:#f4eee4;
+    border:2px solid #111;
+    opacity:.95;
+  }
+}
+@media(max-width:760px){
+  .country-calendar[data-country="espagne"] .raid-date-list{
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    scrollbar-width:auto!important;
+    scrollbar-color:#f4eee4 #2a2a2a!important;
+    -webkit-overflow-scrolling:touch;
+  }
+  .country-calendar[data-country="espagne"] .raid-date-list::-webkit-scrollbar{width:12px!important;}
+  .country-calendar[data-country="espagne"] .raid-date-list::-webkit-scrollbar-track{background:#2a2a2a!important;}
+  .country-calendar[data-country="espagne"] .raid-date-list::-webkit-scrollbar-thumb{
+    background:#f4eee4!important;
+    border:2px solid #111!important;
+    border-radius:10px!important;
+  }
+}
+</style>
+<script id="v353-calendrier-espagne-commandes-defilement">
+document.addEventListener("DOMContentLoaded",()=>{
+  const card=document.querySelector('.country-calendar[data-country="espagne"]');
+  if(!card) return;
+  const list=card.querySelector('.raid-date-list');
+  const select=card.querySelector('.raid-year-select');
+  if(!list) return;
+
+  let controls=card.querySelector('.raid-scroll-controls');
+  if(!controls){
+    controls=document.createElement('div');
+    controls.className='raid-scroll-controls';
+    controls.setAttribute('aria-label','Défilement des raids Espagne');
+    controls.innerHTML='<button type="button" class="raid-scroll-up" aria-label="Faire défiler les raids vers le haut">▲</button><div class="raid-scroll-rail" aria-hidden="true"></div><button type="button" class="raid-scroll-down" aria-label="Faire défiler les raids vers le bas">▼</button>';
+    card.appendChild(controls);
+  }
+
+  const step=()=>Math.max(70,Math.round(list.clientHeight*.55));
+  controls.querySelector('.raid-scroll-up').addEventListener('click',()=>list.scrollBy({top:-step(),behavior:'smooth'}));
+  controls.querySelector('.raid-scroll-down').addEventListener('click',()=>list.scrollBy({top:step(),behavior:'smooth'}));
+
+  if(select){
+    select.addEventListener('change',()=>{requestAnimationFrame(()=>{list.scrollTop=0;});});
+  }
+});
+</script>
+</body>
+</html>
+
+<style id="v350-calendrier-espagne-defilement-raids">
+/* Espagne : la liste des raids reste contenue dans la carte et devient défilable si nécessaire. */
+@media(min-width:761px){
+  .country-calendar[data-country="espagne"] .raid-date-list{
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    overscroll-behavior:contain;
+    scrollbar-gutter:stable;
+    padding-right:3px!important;
+  }
+  .country-calendar[data-country="espagne"] .raid-date-row{
+    flex:0 0 auto!important;
+  }
+}
+@media(max-width:760px){
+  .country-calendar[data-country="espagne"] .raid-date-list{
+    max-height:320px;
+    overflow-y:auto!important;
+    overflow-x:hidden!important;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
+  }
+}
+</style>

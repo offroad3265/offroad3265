@@ -1,0 +1,12 @@
+ARAGON/CATALOGNE — TITRE UNIQUE
+
+Le doublon provenait de :
+1. premier bandeau : #detailHeroTitle (ARAGON/CATALOGNE)
+2. second bandeau : #programTitle sous "Programme jour par jour"
+
+Correction :
+- le premier bandeau hero est masqué sur la page programme ;
+- le second est conservé : "Programme jour par jour" + ARAGON/CATALOGNE ;
+- l'espace libéré est récupéré pour le programme.
+
+Toutes les autres validations restent inchangées.

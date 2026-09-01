@@ -1,0 +1,5 @@
+V8.9.112 — correction ciblée depuis V8.9.111.
+- Sur « Choisissez votre destination » (nos-raids.html), restauration de « Tous nos raids ».
+- Restauration de « Raids à la carte ».
+- Correction appliquée au menu statique et au rendu dynamique.
+- Aucun autre élément modifié.

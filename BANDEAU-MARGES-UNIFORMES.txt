@@ -1,0 +1,7 @@
+AJUSTEMENT DU BANDEAU SUPÉRIEUR
+
+- La disposition interne déjà validée est conservée.
+- La marge entre le logo OFFROAD et ACCUEIL est harmonisée avec les espaces entre éléments.
+- La marge entre WHATSAPP et le logo NOMAD RAID TRAVEL est harmonisée de la même façon.
+- Les deux logos restent fixes.
+- Aucun autre élément de la page ou du site n'est modifié.

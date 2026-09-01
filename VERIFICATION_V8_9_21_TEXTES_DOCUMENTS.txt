@@ -1,0 +1,16 @@
+OFFROAD 32 65 — V8.9.21
+Textes harmonisés avec le nouveau dossier à 3 documents.
+
+Parcours d'inscription / Étape 1 DOSSIER :
+- texte explicatif mis à jour
+- condition de dossier complet mise à jour
+
+Menus DOCUMENTS :
+1. Fiche individuelle de renseignements
+2. Contrat d'inscription
+3. CGV OFFROAD 32 65
+
+Page DOCUMENTS :
+- rappel clair des trois documents à compléter et renvoyer
+
+Aucun fonctionnement modifié.
