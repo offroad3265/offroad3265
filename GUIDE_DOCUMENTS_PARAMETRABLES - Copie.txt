@@ -1,0 +1,31 @@
+OFFROAD 32 65 — DOCUMENTS PARAMÉTRABLES
+=========================================
+
+SOURCE UNIQUE
+Fichier : contenu-site.js
+Bloc : window.OFFROAD_CONTENU.documents
+
+AJOUTER UN DOCUMENT
+Ajouter un objet :
+{
+  id: "identifiant-unique",
+  actif: true,
+  ordre: 2,
+  titre: "Nom du document",
+  fichier: "mon-document.pdf",
+  description: "Description"
+}
+
+MODIFIER
+Changer uniquement le ou les champs concernés.
+
+SUPPRIMER
+Supprimer l'objet correspondant.
+
+MASQUER TEMPORAIREMENT
+Mettre actif: false.
+
+RÉORDONNER
+Modifier ordre.
+
+La mise en page de documents.html reste inchangée.

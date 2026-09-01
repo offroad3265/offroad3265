@@ -1,0 +1,19 @@
+/* =========================================================
+   OFFROAD 32 65 — VARIABLES GLOBALES
+   Les valeurs viennent de site-config.js et gardent ici
+   des valeurs de secours si JavaScript est désactivé.
+   ========================================================= */
+:root{
+  --offroad-orange:#f57916;
+  --offroad-orange-dark:#c84a00;
+  --offroad-black:#080808;
+  --offroad-panel:#111111;
+  --offroad-steel:#68727a;
+  --offroad-green:#2f9e50;
+  --offroad-white:#f5f5f5;
+  --offroad-muted:#aaaaaa;
+}
+h1,h2,h3,.section-title,.hero h1,.program-title h2,.tarifs-heading h2,
+.raid-copy h1,.route,.steps-intro span,.step-head h2,.eyebrow,.kicker{
+  font-family:Impact,Haettenschweiler,"Arial Narrow Bold","Arial Black",sans-serif;
+}

@@ -1,0 +1,18 @@
+PROGRAMMES — STRUCTURATION DES MOMENTS DE LA JOURNÉE
+
+Intégré sur le programme ARAGON/CATALOGNE :
+- DÉPART
+- MATINÉE
+- MIDI
+- APRÈS-MIDI
+- SOIR / ARRIVÉE selon la journée
+
+Présentation :
+- petit repère orange discret devant chaque intitulé ;
+- intitulé orange en capitales ;
+- texte blanc/gris à droite ;
+- séparation légère entre les moments ;
+- sur mobile, intitulé puis texte l'un sous l'autre.
+
+La structure est réutilisable pour les futurs raids : une rubrique absente ne s'affiche pas.
+Les règles adaptatives selon le nombre de jours sont conservées.

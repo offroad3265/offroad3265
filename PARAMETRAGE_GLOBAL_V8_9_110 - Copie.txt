@@ -1,0 +1,43 @@
+V8.9.110 — PARAMÉTRAGE GLOBAL NON DESTRUCTIF
+
+Toutes les pages éditoriales, pages pays et pages accessibles depuis les onglets principaux
+sont désormais reliées à un registre central : site-config.js.
+
+Ce système permet pour les prochaines demandes de :
+- modifier un texte ou un titre ;
+- ajouter un bloc ;
+- masquer/supprimer visuellement un élément ;
+- changer un lien/attribut ;
+- réafficher ou réordonner du contenu.
+
+Les configurations métier existantes restent prioritaires pour leurs contenus spécifiques
+(ex. partenaires et documents). Le HTML/CSS validé reste intact tant qu'une demande ne
+porte pas explicitement sur le design.
+
+Pages couvertes :
+- index.html
+- a-propos.html
+- nos-raids.html
+- raids-maroc.html
+- raids-espagne.html
+- raids-sardaigne.html
+- raids-tunisie.html
+- raids-a-la-carte.html
+- partenaires.html
+- detail-raid.html
+- presentation-raid.html
+- programme-detail.html
+- programme-raid.html
+- programme-universel.html
+- galerie.html
+- documents.html
+
+Configurations dédiées conservées :
+- documents-config.js
+- inscription-config.js
+- pages-config.js
+- partenaires-config.js
+- programme-config.js
+- site-config-runtime.js
+
+Les formulaires/pages techniques ne sont pas restructurés par cette couche.
