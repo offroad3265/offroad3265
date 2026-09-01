@@ -1,0 +1,22 @@
+OFFROAD 32 65 — GALERIE V8.8
+================================
+Architecture :
+- titre compact
+- filtres automatiques pays puis raid
+- grille responsive : 4 / 3 / 2 / 1 colonnes
+- visionneuse au clic avec précédent / suivant / fermeture
+- clavier : flèches + Échap
+
+Paramétrage :
+Fichier contenu-site.js, bloc galerie.
+Champs : id, actif, ordre, pays, raid, annee, fichier, legende, alt.
+
+Ajouter : ajouter un objet + le fichier image.
+Masquer : actif:false.
+Réordonner : modifier ordre.
+Supprimer : retirer l'objet.
+Créer un nouveau pays/raid : renseigner simplement de nouvelles valeurs pays/raid.
+Les filtres se créent automatiquement.
+
+Les 9 photos déjà présentes dans la V8.7 ont été utilisées comme contenu initial.
+Aucune autre page n'a été modifiée.

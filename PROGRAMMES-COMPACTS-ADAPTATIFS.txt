@@ -1,0 +1,17 @@
+PROGRAMMES — VERSION COMPACTE ADAPTATIVE
+
+Objectif :
+Conserver la page fixe tout en gardant la distinction visuelle des moments de journée.
+
+Ajustements :
+- réduction des espacements entre les moments ;
+- réduction du cartouche Jour ;
+- réduction de la police des titres de journée ;
+- réduction progressive de la police des textes selon le nombre de jours ;
+- 1 à 3 jours : vertical ;
+- 4 à 6 jours : 2 colonnes ;
+- 7 jours et plus : grille plus compacte ;
+- adaptation automatique supplémentaire si la page dépasse la hauteur disponible ;
+- mobile : retour en une seule colonne.
+
+Le contenu n'a pas été modifié.

@@ -1,0 +1,67 @@
+OFFROAD 32 65 - CONTENUS SYNCHRONISÉS
+=======================================
+
+RAIDS
+-----
+Source unique : dates-raids.js
+
+Quand un raid est ajouté, il apparaît automatiquement :
+- sur la carte du pays de la page d'accueil ;
+- dans la page Nos raids ;
+- dans la page du pays concerné (Nos raids > Maroc, Espagne, etc.).
+
+PAYS
+----
+Source unique : pays-raids.js
+
+Quand un pays est ajouté, il apparaît automatiquement :
+- dans le menu déroulant Nos raids sur toutes les pages ;
+- dans la structure générale des raids.
+
+DOCUMENTS
+---------
+Source unique : contenu-site.js, rubrique documents.
+
+Quand un document est ajouté :
+- il apparaît automatiquement dans la page Documents ;
+- un bouton de téléchargement est généré.
+
+PARTENAIRES
+------------
+Source : contenu-site.js, rubrique partenaires.
+
+GALERIE
+-------
+Source : galerie.js.
+Les filtres Pays / Année / Raid sont générés automatiquement.
+
+IMPORTANT
+---------
+Vous pouvez demander directement à ChatGPT d'ajouter, modifier ou supprimer
+un raid, un pays, un document, un partenaire, une photo ou une vidéo.
+Le design validé n'a pas besoin d'être modifié.
+
+
+RÈGLE "PROCHAINES DATES À VENIR"
+--------------------------------
+Sur chaque page pays :
+- tant qu'aucun raid n'est annoncé, la carte "Prochaines dates à venir" peut rester affichée ;
+- dès qu'au moins un raid est ajouté pour ce pays dans dates-raids.js,
+  cette carte est automatiquement supprimée/masquée et les raids annoncés prennent sa place.
+
+
+PROGRAMMES DES RAIDS
+--------------------
+Source : programmes-raids.js
+Page d'affichage : programme-raid.html
+
+Chaque raid possède un identifiant unique.
+Le bouton "Découvrir le programme" ouvre le programme du raid correspondant.
+Guide : AJOUTER-UN-PROGRAMME-RAID.txt
+
+
+MÉDIAS DES PROGRAMMES
+---------------------
+Chaque raid peut avoir une photo OU une vidéo dans « Découvrir le programme ».
+Source : programmes-raids.js
+Champs : media_type + media
