@@ -1,0 +1,12 @@
+Cause identifiée :
+deux implémentations WhatsApp coexistaient dans index.html.
+L'ancien bloc .top-contact-actions est masqué. Le bouton réellement visible
+est .whatsapp-uniform.
+
+Correction :
+- modification directe du bouton visible .whatsapp-uniform ;
+- suppression de la dépendance au fichier PNG pour le pictogramme ;
+- pictogramme WhatsApp blanc dessiné directement dans le HTML en SVG inline ;
+- même méthode de rendu que l'enveloppe Mail, qui s'affiche correctement ;
+- taille forcée à 23 x 23 px ;
+- menus NOS RAIDS et DOCUMENTS inchangés.

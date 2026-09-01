@@ -1,0 +1,40 @@
+OFFROAD 32 65 — AUDIT VISUEL GLOBAL
+
+Pages contrôlées : 20
+
+RÈGLES HARMONISÉES
+- Bandeau supérieur : fond noir et comportement de survol commun.
+- Grands titres : famille typographique OFFROAD commune.
+- Orange de référence centralisé : #f57916.
+- Fonds et cartes : noirs cohérents et rayons homogènes.
+- Boutons : géométrie commune.
+- Statut raid complet : bouton d'action rouge COMPLET conservé.
+- Responsive : les règles fixes desktop ne sont pas imposées au mobile.
+
+ARCHITECTURE
+- Nouveau fichier offroad-theme.css chargé en dernier sur toutes les pages.
+- Les styles propres à une page restent en place.
+- Les futures corrections globales doivent être faites dans offroad-theme.css quand elles concernent tout le site.
+- Les données raids restent dans les fichiers de configuration existants.
+
+CONTRÔLE PAR PAGE
+- a-propos.html: OK
+- contrat-inscription.html: OK
+- detail-raid.html: OK
+- documents.html: OK
+- fiche-individuelle-renseignements.html: OK
+- galerie.html: OK
+- index.html: sans header
+- inscription-raid.html: OK
+- maroc-2026.html: OK
+- nos-raids.html: OK
+- partenaires.html: OK
+- presentation-raid.html: OK
+- programme-detail.html: OK
+- programme-maroc-2026.html: OK
+- programme-raid.html: OK
+- programme-universel.html: OK
+- raids-espagne.html: OK
+- raids-maroc.html: OK
+- raids-sardaigne.html: OK
+- raids-tunisie.html: OK

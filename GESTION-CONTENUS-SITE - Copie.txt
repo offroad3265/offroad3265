@@ -1,0 +1,29 @@
+OFFROAD 32 65 - CONTENUS EVOLUTIFS
+===================================
+
+DESIGN
+------
+Le design validé reste verrouillé.
+
+PAYS
+----
+Fichier : pays-raids.js
+Guide   : AJOUTER-UN-PAYS.txt
+
+DATES DE RAIDS
+--------------
+Fichier : dates-raids.js
+Guide   : AJOUTER-UN-RAID.txt
+
+GALERIE
+-------
+Fichier : galerie.js
+Guide   : AJOUTER-DANS-LA-GALERIE.txt
+
+PARTENAIRES / DOCUMENTS
+-----------------------
+Fichier : contenu-site.js
+
+Vous pouvez également demander directement à ChatGPT d'ajouter,
+modifier ou retirer un pays, un raid, un partenaire, un document,
+une photo ou une vidéo. Le design n'a pas besoin d'être retouché.

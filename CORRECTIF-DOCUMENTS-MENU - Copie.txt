@@ -1,0 +1,9 @@
+CORRECTIF PAGE D'ACCUEIL
+
+- Le menu déroulant DOCUMENTS est restauré.
+- Il contient :
+  • FICHE INDIVIDUELLE DE RENSEIGNEMENTS
+  • CONTRAT D’INSCRIPTION
+- Ouverture au survol et au focus clavier.
+- Le menu NOS RAIDS reste inchangé avec la règle pays validée.
+- Les espacements du bandeau, logos et autres éléments restent inchangés.
