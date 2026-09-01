@@ -1,0 +1,12 @@
+CORRECTIF DISTANCE TOTALE ARAGON/CATALOGNE
+
+La donnée "Environ 500 km" était bien enregistrée mais son emplacement
+d'affichage n'était pas garanti dans la zone visible du programme.
+
+Correction :
+- la distance totale est maintenant générée directement dans #programDays ;
+- elle apparaît avant les blocs Jour 1 / Jour 2 ;
+- libellé : DISTANCE TOTALE — Environ 500 km ;
+- présentation compacte pour conserver la page fixe.
+
+Les distances Jour 1 (240 km) et Jour 2 (250 km) restent inchangées.

@@ -1,0 +1,13 @@
+CAUSE RÉELLE IDENTIFIÉE
+Le bouton vert du programme ARAGON/CATALOGNE a l'identifiant #signupLink.
+Le précédent correctif ciblait par erreur #signupRaidLink.
+De plus, le bouton contenait un fond vert directement dans son attribut style.
+
+CORRECTION
+- suppression du fond vert inline ;
+- règle CSS sur le véritable identifiant #signupLink ;
+- lorsqu'un raid est COMPLET, le script impose aussi directement le fond rouge #c61f1f ;
+- texte COMPLET blanc ;
+- bouton désactivé.
+
+La finalisation du dossier contrôlée reste intégrée.

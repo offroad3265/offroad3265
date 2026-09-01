@@ -1,0 +1,11 @@
+TARIFS & PRESTATIONS
+
+- Suppression de « pour 2 participants » dans la formule DUO.
+- « par participant » reste supprimé dans la formule SOLO.
+- Réduction supplémentaire de la hauteur des cartes tarifs.
+- Renforcement visuel de :
+  « LISTE NON EXHAUSTIVE À ADAPTER EN FONCTION DU RAID »
+- Police de la note augmentée et traits orange légèrement renforcés.
+- Adaptation conservée pour les écrans de faible hauteur.
+
+Aucun autre élément validé n'a été modifié.

@@ -1,0 +1,4 @@
+V8.9.142 - CHARTE NOIRE
+Fond noir, cadres de titres blancs avec texte noir, champs blancs avec texte noir, libellés blancs.
+7 rubriques conservées. 10 pages. 113 widgets interactifs.
+Parcours du site inchangé.

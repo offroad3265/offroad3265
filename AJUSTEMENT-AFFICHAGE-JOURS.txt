@@ -1,0 +1,7 @@
+AJUSTEMENT AFFICHAGE DES PROGRAMMES
+
+- Les blocs Jour sont désormais disposés verticalement, les uns sous les autres.
+- Cette règle est appliquée aux différents gabarits programme pour rester cohérente.
+- La police des libellés, titres et textes de chaque journée est agrandie.
+- Le comportement reste responsive sur mobile/tablette.
+- Aucun contenu du programme n'a été modifié.

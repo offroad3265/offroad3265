@@ -1,0 +1,13 @@
+CORRECTIF RÉEL DU BANDEAU
+
+Cause identifiée :
+les libellés de navigation étaient imprimés dans accueil-offroad3265.png.
+Les précédents réglages CSS ne pouvaient donc pas déplacer visuellement ces libellés.
+
+Correction :
+- nettoyage uniquement de la zone noire centrale entre les deux logos ;
+- logos OFFROAD et NOMAD conservés ;
+- reconstruction des onglets, Mail et WhatsApp en vrais éléments HTML visibles ;
+- espacement réellement uniforme obtenu avec une grille CSS et justify-content: space-between ;
+- tous les liens restent cliquables ;
+- aucun changement dans la zone sable, les calendriers ou le reste du site.

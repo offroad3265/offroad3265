@@ -1,0 +1,28 @@
+OFFROAD 32 65 — AUDIT MOBILE / TABLETTE ET PARCOURS D'INSCRIPTION
+Date : 18/08/2026
+
+CONTROLES EFFECTUES
+- Présence de la balise viewport sur les 21 pages HTML.
+- Vérification des liens internes vers les pages, PDF et médias présents dans le site.
+- Vérification des boutons dynamiques Présentation > Détail > Inscription.
+- Vérification de la transmission de l'identifiant du raid vers les pages d'inscription et documents.
+- Vérification du statut central des raids et du blocage des inscriptions pour les raids non ouverts.
+- Vérification des points de rupture CSS mobile/tablette des pages principales.
+- Vérification de la page DOCUMENTS : 2 colonnes sur ordinateur, 1 colonne sur petit écran.
+- Vérification des formulaires de retour de documents vers FormSubmit.
+
+PARCOURS MAROC 2026 VALIDE
+Nos raids / Maroc > Présentation du raid > Détail > S'inscrire > Fiche individuelle + Contrat > RIB / paiement > validation OFFROAD 32 65.
+L'identifiant maroc-2026 est conservé dans le parcours afin de rattacher les documents au bon raid.
+
+RESULTAT
+- Aucun lien interne vers un fichier inexistant détecté.
+- Les boutons dont le href initial vaut # sont alimentés par JavaScript avec l'identifiant du raid : ils ne sont pas des liens cassés dans le parcours normal.
+- Le statut « EN COURS D’INSCRIPTION » est reconnu comme ouvert.
+- Les statuts « À VENIR » et « COMPLET » empêchent l'inscription.
+- Les pages principales disposent de règles responsive pour passer les grilles en une colonne sur mobile.
+- DOCUMENTS conserve ses deux colonnes sur ordinateur et bascule en une colonne sur mobile.
+- Les formulaires Fiche individuelle et Contrat envoient vers aventureoffroad.3265@gmail.com via FormSubmit.
+
+POINT D'ATTENTION AVANT MISE EN LIGNE
+Le fonctionnement final de FormSubmit doit être testé une fois le site hébergé en HTTPS, avec un véritable envoi de fichier et réception de l'e-mail. Ce contrôle ne peut pas être validé hors ligne.
