@@ -1,0 +1,7 @@
+V8.9.45 — à partir de la V8.9.44.
+- Architecture validée inchangée.
+- Gros titre encore réduit et bandeau ramené à 112 px sur desktop.
+- Le contenu narratif remonte davantage.
+- Introduction, intertitres et paragraphes légèrement agrandis.
+- Davantage de hauteur est consacrée au texte.
+- CTA WhatsApp inchangé.

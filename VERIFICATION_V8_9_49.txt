@@ -1,0 +1,9 @@
+V8.9.49 — IVOIRE PREMIUM
+- Base V8.9.48 conservée.
+- Architecture et textes inchangés.
+- Fond brun-noir remplacé par un ivoire très clair.
+- Texte principal anthracite chaud.
+- Accents ocre/sable conservés et adaptés au fond clair.
+- Filets beige/ocre très discrets.
+- Bouton PROPOSER MON PROJET en ocre soutenu.
+- Aucun ajout de photo à ce stade.

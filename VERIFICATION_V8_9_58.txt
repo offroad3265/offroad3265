@@ -1,0 +1,5 @@
+V8.9.58 — à partir de la V8.9.57.
+- Italique supprimé du titre « IMAGINEZ LE RAID QUI VOUS RESSEMBLE ».
+- Inclinaison/skew supprimée.
+- Esprit sport mécanique condensé et puissant conservé.
+- Architecture, textes, couleurs, espacements et CTA inchangés.

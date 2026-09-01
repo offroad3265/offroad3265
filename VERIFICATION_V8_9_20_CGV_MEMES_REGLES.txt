@@ -1,0 +1,12 @@
+OFFROAD 32 65 — V8.9.20
+Les CGV OFFROAD 32 65 suivent désormais la même logique que les autres documents du parcours :
+
+- page dédiée cgv-offroad.html
+- accès au PDF depuis cette page
+- formulaire d'envoi dédié, sur le même modèle que le contrat
+- même service FormSubmit
+- même page de confirmation
+- dans le parcours DOSSIER, le bouton CGV ouvre la page dédiée
+- suppression du bouton spécial vers le formulaire générique DOCUMENTS
+- menus DOCUMENTS reliés à la page dédiée
+- PDF interactif conservé

@@ -1,0 +1,7 @@
+V8.9.95 — finition depuis V8.9.94.
+- Phrase d'introduction maintenue sur une seule ligne sur écran large.
+- Phrase d'introduction en caractères gras.
+- Logos encore agrandis : cadre 245 px, zone utile 210 x 125 px.
+- Phrase de conclusion en bas de page en caractères gras.
+- Retour à la ligne automatique conservé sur écrans plus étroits.
+- Tous les autres éléments de V8.9.94 restent inchangés.

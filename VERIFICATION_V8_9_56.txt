@@ -1,0 +1,6 @@
+V8.9.56 — à partir de la V8.9.55.
+- Référence visuelle utilisée : lettrage OFFROAD 32 65 intégré à l'image d'accueil.
+- Le titre « IMAGINEZ LE RAID QUI VOUS RESSEMBLE » est rendu plus massif,
+  très condensé, carré et serré pour se rapprocher de ce lettrage.
+- Aucune police externe ni fichier de police ajouté.
+- Architecture, ordre d'introduction, espacements, palette ivoire, textes et CTA inchangés.

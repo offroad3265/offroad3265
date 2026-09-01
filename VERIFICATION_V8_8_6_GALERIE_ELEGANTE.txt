@@ -1,0 +1,15 @@
+OFFROAD 32 65 — V8.8.6 GALERIE ÉLÉGANTE
+===========================================
+Page modifiée : galerie.html uniquement.
+
+Corrections :
+- suppression du doublon visuel de titre
+- un seul titre GALERIE
+- titre orange nettement réduit
+- sous-titre compact
+- zone supérieure resserrée
+- filtres pays conservés
+- page fixe conservée
+- davantage de hauteur rendue aux photos
+- grille et visionneuse inchangées
+- autres pages inchangées

@@ -1,0 +1,10 @@
+OFFROAD 32 65 — V8.9.22
+Correction de la page dédiée CGV OFFROAD 32 65.
+Les textes hérités du modèle Contrat ont été remplacés par des instructions propres aux CGV :
+- ouvrir les CGV
+- cocher l'acceptation
+- renseigner nom, prénom et date
+- enregistrer le PDF
+- joindre les CGV complétées
+- renvoyer les CGV complétées
+Fonctionnement d'envoi et confirmation inchangés.

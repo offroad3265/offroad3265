@@ -1,0 +1,10 @@
+OFFROAD 32 65 — V8.9.2 GALERIE MÊME LARGEUR
+================================================
+Page modifiée : galerie.html uniquement.
+
+- architecture V8.9.1 conservée à l'identique
+- galerie recentrée
+- largeur maximale alignée sur la largeur de contenu du site : 900px
+- marges latérales cohérentes avec accueil / partenaires
+- filtres, grille 4 colonnes, page fixe et visionneuse conservés
+- aucune autre page modifiée

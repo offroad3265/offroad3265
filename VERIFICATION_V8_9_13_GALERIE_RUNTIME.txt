@@ -1,0 +1,18 @@
+OFFROAD 32 65 — V8.9.13 GALERIE RÉELLEMENT RESTAURÉE
+=========================================================
+Cause exacte trouvée et corrigée :
+- erreur de syntaxe dans contenu-site.js : "documents:documents:"
+
+Validation réelle effectuée :
+- syntaxe JavaScript : OK
+- exécution de contenu-site.js : OK
+- photos réellement exposées à galerie.html : 9
+- fichiers : 17546.jpg, 17550.jpg, 17663.jpg, 18542.jpg, 18843.jpg, 20100.jpg, 20102.jpg, 20113.jpg, 20115.jpg
+
+Albums disponibles :
+- Maroc : 9 photos
+- Espagne : 0
+- Sardaigne : 0
+- Tunisie : 0
+
+Présentation visuelle inchangée.

@@ -1,0 +1,7 @@
+V8.9.94 — finition depuis V8.9.93.
+- « L'AVENTURE SE CONSTRUIT AUSSI EN ÉQUIPE » maintenu sur une seule ligne sur écran large.
+- Bloc titre compacté et ligne de séparation remontée.
+- Espace récupéré utilisé pour agrandir les logos.
+- Cadres logos : 215 px ; zone utile logo : 180 x 108 px.
+- ROADBOOK déplacé davantage vers le bord gauche et légèrement plus bas pour ne plus empiéter sur le texte.
+- Bandeau, marges, couleurs, micro-typographie et structure V8.9.93 conservés.

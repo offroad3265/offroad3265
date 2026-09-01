@@ -1,0 +1,16 @@
+V8.9.109 — correction de l'ouverture des documents depuis l'onglet DOCUMENTS.
+
+Cause identifiée :
+- documents.html conservait un ancien listener JavaScript directement sur #document-select.
+- documents-runtime.js gérait en parallèle le même sélecteur.
+- Cette double gestion pouvait produire une navigation incohérente et afficher
+  « impossible d'accéder à votre fichier ».
+
+Correction :
+- suppression de l'ancien listener inline de documents.html ;
+- un seul système de navigation reste actif dans documents-runtime.js ;
+- la destination est convertie en URL relative sûre avec new URL(..., window.location.href) ;
+- le contexte raid est conservé ;
+- toutes les pages document référencées existent dans l'archive.
+
+Aucune autre page n'a été modifiée.
