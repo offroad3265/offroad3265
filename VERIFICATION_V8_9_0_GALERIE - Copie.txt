@@ -1,0 +1,14 @@
+OFFROAD 32 65 — V8.9.0 GALERIE CORRIGÉE
+==========================================
+Page modifiée : galerie.html uniquement.
+
+- suppression du bandeau "photos et vidéo classées par pays, année et raids"
+- suppression de tout espace associé à ce bandeau
+- titre GALERIE remonté
+- titre GALERIE encore légèrement réduit
+- aucun texte sous le titre
+- filtres pays conservés
+- grille conservée
+- visionneuse conservée
+- page fixe conservée
+- aucune autre page modifiée

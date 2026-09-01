@@ -1,0 +1,8 @@
+OFFROAD 32 65 — V8.9.17
+Correction ciblée CGV OFFROAD :
+- lien CGV présent dans l'onglet DOCUMENTS de la page d'accueil
+- lien CGV présent directement dans l'étape DOSSIER du parcours d'inscription
+- lien CGV conservé dans la page DOCUMENTS
+- PDF interactif conservé
+- aucun lien local cassé
+- JavaScript valide

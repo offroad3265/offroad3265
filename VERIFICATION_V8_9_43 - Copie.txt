@@ -1,0 +1,8 @@
+V8.9.43 — ajustement demandé à partir de la V8.9.42 validée.
+- Architecture inchangée.
+- Gros titre encore légèrement réduit.
+- Hauteur du hero légèrement réduite.
+- Texte d'introduction agrandi.
+- Paragraphes narratifs agrandis.
+- Intertitres légèrement agrandis.
+- CTA WhatsApp inchangé.

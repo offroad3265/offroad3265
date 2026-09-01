@@ -1,0 +1,4 @@
+V8.9.23 — Mécanisme CGV généralisé à toutes les entrées.
+Toute entrée CGV du site ouvre désormais la page dédiée cgv-offroad.html.
+Tous les menus DOCUMENTS comportant la fiche et le contrat comportent aussi les CGV.
+La page dédiée applique la procédure propre aux CGV : ouverture, acceptation, nom/prénom/date, enregistrement, pièce jointe et renvoi.

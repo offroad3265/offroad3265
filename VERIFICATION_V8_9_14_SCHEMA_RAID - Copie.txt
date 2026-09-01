@@ -1,0 +1,8 @@
+OFFROAD 32 65 — V8.9.14 SCHÉMA RAID + VALIDATION
+====================================================
+- schéma obligatoire d'un raid défini dans raid-model.js
+- fonction OFFROAD_VALIDATE_RAID ajoutée
+- détection automatique des informations obligatoires manquantes
+- aucune information obligatoire ne doit être inventée
+- ajout du raid seulement après complétion du schéma
+- architecture et pages existantes inchangées

@@ -1,0 +1,8 @@
+V8.9.46 — à partir de la V8.9.45.
+- « Votre raid Votre groupe Votre Aventure » placé sur une seule ligne sur desktop.
+- Taille du titre ajustée pour tenir sur une ligne.
+- Bandeau supérieur fortement réduit à 76 px.
+- Le gain vertical est intégralement rendu au contenu narratif.
+- Architecture et taille des textes de la V8.9.45 conservées.
+- Sur petits écrans, le titre peut revenir naturellement à plusieurs lignes pour éviter toute coupure.
+- CTA WhatsApp inchangé.

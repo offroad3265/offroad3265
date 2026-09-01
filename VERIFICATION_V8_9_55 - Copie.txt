@@ -1,0 +1,8 @@
+V8.9.55 — à partir de la V8.9.54.
+- La police de « IMAGINEZ LE RAID QUI VOUS RESSEMBLE » reprend explicitement
+  la pile typographique utilisée dans la feuille de style de la page d'accueil
+  pour l'identité des gros titres OFFROAD 32 65 :
+  Impact, Haettenschweiler, Arial Narrow Bold, Arial Black, sans-serif.
+- Ordre d'introduction V8.9.54 conservé.
+- Espaces avant 01 et après 03 conservés.
+- Palette, textes et CTA inchangés.
