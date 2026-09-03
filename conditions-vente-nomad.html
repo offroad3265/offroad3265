@@ -820,5 +820,28 @@ document.addEventListener("DOMContentLoaded",()=>{
 <script src="documents-config.js"></script>
 <script src="documents-runtime.js"></script>
 <script src="dates-raids.js"></script>
+  <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const select = document.getElementById("raid");
+  if (!select || !Array.isArray(window.OFFROAD_RAIDS)) return;
+
+  select.innerHTML = '<option value="">Choisir...</option>';
+
+  window.OFFROAD_RAIDS.forEach(raid => {
+    const option = document.createElement("option");
+    option.value = raid.id;
+    option.textContent =
+      raid.pays.toUpperCase() + " - " +
+      raid.date + " - " +
+      raid.titre;
+    select.appendChild(option);
+  });
+
+  const autre = document.createElement("option");
+  autre.value = "autre";
+  autre.textContent = "Autre / à définir";
+  select.appendChild(autre);
+});
+</script>
 </body>
 </html>
