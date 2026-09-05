@@ -7,7 +7,7 @@
    ============================================================ */
 
 window.OFFROAD_DOCUMENTS_CONFIG = {
-  version: "8.9.27",
+  version: "8.9.28",
   retourEmail: "aventureoffroad.3265@gmail.com",
 
   documents: [
@@ -83,7 +83,7 @@ window.OFFROAD_DOCUMENTS_CONFIG = {
       actif: true,
       titre: "RIB OFFROAD 32 65",
       titreCourt: "RIB OFFROAD 32 65",
-      menu: false,
+      menu: true,
       pageDocuments: true,
       inscription: false,
       obligatoire: false,
