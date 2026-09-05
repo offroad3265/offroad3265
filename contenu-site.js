@@ -59,17 +59,7 @@ window.OFFROAD_CONTENU = {
 
   
   galerieAlbums: {
-    "Maroc": [
-      { id:"maroc-01", actif:true, ordre:1, annee:"2026", fichier:"17546.jpg", legende:"", alt:"Raid Maroc OFFROAD 32 65" },
-      { id:"maroc-02", actif:true, ordre:2, annee:"2026", fichier:"17550.jpg", legende:"", alt:"Raid Maroc OFFROAD 32 65" },
-      { id:"maroc-03", actif:true, ordre:3, annee:"2026", fichier:"17663.jpg", legende:"", alt:"Raid Maroc OFFROAD 32 65" },
-      { id:"maroc-04", actif:true, ordre:4, annee:"2026", fichier:"18542.jpg", legende:"", alt:"Raid Maroc OFFROAD 32 65" },
-      { id:"maroc-05", actif:true, ordre:5, annee:"2026", fichier:"18843.jpg", legende:"", alt:"Raid Maroc OFFROAD 32 65" },
-      { id:"maroc-06", actif:true, ordre:6, annee:"2026", fichier:"20100.jpg", legende:"", alt:"Raid Maroc OFFROAD 32 65" },
-      { id:"maroc-07", actif:true, ordre:7, annee:"2026", fichier:"20102.jpg", legende:"", alt:"Raid Maroc OFFROAD 32 65" },
-      { id:"maroc-08", actif:true, ordre:8, annee:"2026", fichier:"20113.jpg", legende:"", alt:"Raid Maroc OFFROAD 32 65" },
-      { id:"maroc-09", actif:true, ordre:9, annee:"2026", fichier:"20115.jpg", legende:"", alt:"Raid Maroc OFFROAD 32 65" }
-    ],
+    "Maroc": [],
     "Espagne": [],
     "Sardaigne": [],
     "Tunisie": []
