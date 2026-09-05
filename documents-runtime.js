@@ -182,10 +182,7 @@
 
     var intro = document.querySelector(".documents-intro");
     if(intro){
-      var req = api.obligatoires();
-      intro.innerHTML = "<strong>Dossier d’inscription :</strong> les " + req.length +
-        " documents à compléter et à renvoyer sont " +
-        req.map(function(d){ return d.titre.toLowerCase(); }).join(", ").replace(/, ([^,]*)$/, " et $1") + ".";
+      intro.textContent = "Sélectionnez le document que vous souhaitez consulter ou télécharger.";
     }
   }
 
