@@ -3885,6 +3885,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 }
 </style>
 <style id="mobile-final-offroad-3265">
+/* Accueil uniquement : mise en page mobile consolidée, sans effet au-dessus de 760px. */
 @media (max-width:760px){
 
   html,body{
@@ -3893,85 +3894,186 @@ document.addEventListener("DOMContentLoaded",()=>{
     overflow-x:hidden!important;
   }
 
+  body{
+    display:block!important;
+    overflow-y:auto!important;
+  }
+
   .site{
     width:100%!important;
     max-width:100%!important;
     margin:0!important;
   }
 
+  /*
+    Le bandeau occupe sa propre zone au-dessus de l'image.
+    Le logo NOMAD RAID Travel, intégré à l'image, n'est donc jamais recouvert.
+  */
   .visual{
     width:100%!important;
     max-width:100%!important;
+    height:auto!important;
+    aspect-ratio:auto!important;
+    margin:0!important;
+    padding-top:176px!important;
+    overflow:visible!important;
+  }
+
+  .visual>img{
+    width:100%!important;
+    height:auto!important;
+    object-fit:contain!important;
+  }
+
+  .topbar-uniform{
+    position:absolute!important;
+    z-index:40!important;
+    left:0!important;
+    right:0!important;
+    top:0!important;
+    width:100%!important;
+    height:176px!important;
+    padding:10px 12px!important;
+    display:grid!important;
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    grid-auto-rows:34px!important;
+    align-items:center!important;
+    justify-content:stretch!important;
+    gap:7px 10px!important;
+    transform:none!important;
+    background:#080808!important;
+    border-bottom:1px solid rgba(245,121,22,.75)!important;
+    box-sizing:border-box!important;
+  }
+
+  .topbar-uniform > a,
+  .topbar-uniform > .nav-drop,
+  .topbar-uniform > .topbar-menu{
+    width:100%!important;
+    min-width:0!important;
+    max-width:none!important;
+    height:34px!important;
     margin:0!important;
   }
 
-  /* Bandeau supérieur : empêcher WhatsApp de recouvrir NOMAD */
-  .top-contact-actions{
-    left:auto!important;
-    right:2%!important;
-    top:5.15%!important;
-    transform:none!important;
-    transform-origin:center!important;
-    gap:4px!important;
+  .topbar-uniform > a,
+  .topbar-uniform .nav-drop > a,
+  .topbar-uniform .topbar-menu > a{
+    width:100%!important;
+    height:34px!important;
+    min-height:34px!important;
+    padding:0 6px!important;
+    font-size:12px!important;
+    line-height:1.15!important;
+    text-align:center!important;
     white-space:nowrap!important;
+    border:1px solid rgba(255,255,255,.14)!important;
+    border-radius:5px!important;
+    box-sizing:border-box!important;
   }
 
-  .top-contact-actions a{
-    min-height:24px!important;
-    padding:2px 5px!important;
-    font-size:9px!important;
-  }
-
-  .top-contact-actions .whatsapp-top{
+  .topbar-uniform .mail-uniform{
+    width:100%!important;
     min-width:0!important;
-    padding:3px 6px!important;
-    font-size:9px!important;
-    gap:4px!important;
+    max-width:none!important;
+    height:34px!important;
   }
 
-  .top-contact-actions .whatsapp-logo{
-    width:14px!important;
-    height:14px!important;
-    flex:0 0 14px!important;
+  .topbar-uniform .mail-uniform svg{
+    width:27px!important;
+    height:20px!important;
   }
 
-  .top-contact-actions .mail-top{
-    width:30px!important;
-    min-width:30px!important;
-    padding:0!important;
+  .topbar-uniform .whatsapp-uniform{
+    width:100%!important;
+    min-width:0!important;
+    max-width:none!important;
+    height:34px!important;
+    padding:0 8px!important;
+    gap:6px!important;
   }
 
-  .top-contact-actions .mail-logo{
-    width:24px!important;
-    height:auto!important;
+  .topbar-uniform .whatsapp-uniform::before{
+    width:20px!important;
+    height:20px!important;
+    min-width:20px!important;
+    flex:0 0 20px!important;
+    background-size:20px 20px!important;
   }
 
-  /* Réseaux sociaux + téléphone */
+  .topbar-uniform .nav-drop-menu,
+  .topbar-uniform .topbar-dropdown{
+    left:0!important;
+    right:auto!important;
+    min-width:min(280px,calc(100vw - 24px))!important;
+    max-width:calc(100vw - 24px)!important;
+  }
+
+  /* Réseaux sociaux et téléphone : rangée autonome, centrée et tactile. */
   .sand-socials-final{
-    transform:translate(-50%,-50%)!important;
-    transform-origin:center center!important;
+    position:relative!important;
+    z-index:30!important;
+    left:auto!important;
+    top:auto!important;
+    transform:none!important;
+    width:max-content!important;
+    max-width:94%!important;
+    margin:12px auto!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:9px!important;
   }
 
-  /* Calendriers : une colonne lisible au téléphone */
+  .sand-socials-final a{
+    width:42px!important;
+    height:42px!important;
+    flex:0 0 42px!important;
+  }
+
+  .sand-socials-final .phone-social-final{
+    width:auto!important;
+    min-width:142px!important;
+    height:42px!important;
+    flex:0 1 auto!important;
+    margin-left:0!important;
+    padding:0 10px!important;
+  }
+
+  /* Calendriers : une carte par ligne, sans hauteur artificielle. */
   .home-calendars{
-    grid-template-columns:1fr!important;
+    position:relative!important;
+    left:auto!important;
+    right:auto!important;
+    bottom:auto!important;
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:12px!important;
     width:100%!important;
     max-width:100%!important;
     height:auto!important;
     min-height:0!important;
-    padding:10px 3%!important;
+    padding:10px 3% 18px!important;
     margin:0!important;
+    overflow:visible!important;
   }
 
   .country-calendar{
     width:100%!important;
     height:auto!important;
     min-height:0!important;
+    overflow:visible!important;
   }
 
+  .country-calendar .raid-date-list,
   .country-calendar[data-country="espagne"] .raid-date-list{
     max-height:none!important;
-    overflow-y:visible!important;
+    overflow:visible!important;
+    padding-right:0!important;
+  }
+
+  /* Les boutons ▲/▼ injectés pour le défilement desktop n'ont pas lieu d'être sur mobile. */
+  .country-calendar[data-country="espagne"] .raid-scroll-controls{
+    display:none!important;
   }
 }
 </style>
