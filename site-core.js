@@ -92,8 +92,8 @@
 /* Menus du bandeau intérieur : ouverture tactile persistante sur téléphone. */
 (function(){
   function initMobileHeaderMenus(){
-    const mobile=window.matchMedia("(max-width:760px)");
-    const isMobile=()=>mobile.matches||window.innerWidth<=760;
+    const mobile=window.matchMedia("(max-width:900px)");
+    const isMobile=()=>mobile.matches||window.innerWidth<=900;
     const menus=[...document.querySelectorAll("header nav .nav-drop, header nav .nav-documents-drop")]
       .map(container=>{
         const documents=container.classList.contains("nav-documents-drop");
