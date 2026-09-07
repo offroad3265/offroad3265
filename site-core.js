@@ -89,6 +89,67 @@
   else apply();
 })();
 
+/* Menus du bandeau intérieur : ouverture tactile persistante sur téléphone. */
+(function(){
+  function initMobileHeaderMenus(){
+    const mobile=window.matchMedia("(max-width:760px)");
+    const menus=[...document.querySelectorAll("header nav .nav-drop, header nav .nav-documents-drop")]
+      .map(container=>{
+        const documents=container.classList.contains("nav-documents-drop");
+        return {
+          container,
+          trigger:documents
+            ? container.querySelector(".nav-documents-trigger")
+            : container.querySelector(":scope > a"),
+          menu:documents
+            ? container.querySelector(".nav-documents-menu")
+            : container.querySelector(".nav-drop-menu")
+        };
+      })
+      .filter(item=>item.trigger&&item.menu);
+
+    function close(item){
+      item.container.classList.remove("is-open");
+      item.trigger.setAttribute("aria-expanded","false");
+    }
+
+    menus.forEach(item=>{
+      item.trigger.setAttribute("aria-haspopup","true");
+      item.trigger.setAttribute("aria-expanded","false");
+      item.trigger.addEventListener("click",event=>{
+        if(!mobile.matches) return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        const opening=!item.container.classList.contains("is-open");
+        menus.forEach(close);
+        if(opening){
+          item.container.classList.add("is-open");
+          item.trigger.setAttribute("aria-expanded","true");
+        }
+      },true);
+      item.menu.querySelectorAll("a").forEach(link=>{
+        link.addEventListener("click",()=>close(item));
+      });
+    });
+
+    document.addEventListener("click",event=>{
+      if(!mobile.matches) return;
+      if(!menus.some(item=>item.container.contains(event.target))){
+        menus.forEach(close);
+      }
+    });
+    document.addEventListener("keydown",event=>{
+      if(event.key==="Escape") menus.forEach(close);
+    });
+  }
+
+  if(document.readyState==="loading"){
+    document.addEventListener("DOMContentLoaded",initMobileHeaderMenus);
+  }else{
+    initMobileHeaderMenus();
+  }
+})();
+
 
 /* ===== GARDE GLOBALE OFFROAD : tout bouton "COMPLET" est rouge ===== */
 (function(){
