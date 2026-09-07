@@ -1,92 +1,31 @@
-const allowedDocuments = new Map([
-  ["Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf", "fiche-individuelle-completee.pdf"],
-  ["CONTRAT_D_INSCRIPTION_A_UN_RAID_OFFROAD_32_65.pdf", "contrat-inscription-complete.pdf"],
-  ["CGV_OFFROAD_32_65.pdf", "cgv-offroad-completees.pdf"],
-  ["CONDITIONS_VENTE_NOMAD_RAID_TRAVEL.pdf", "conditions-nomad-completees.pdf"]
-]);
-
-const params = new URLSearchParams(window.location.search);
-const file = params.get("file") || "";
-const outputName = allowedDocuments.get(file);
-const returnTarget = params.get("return") || "documents.html";
-const status = document.getElementById("mobilePdfStatus");
-const saveButton = document.getElementById("savePdf");
-const returnLink = document.getElementById("returnToForm");
-const fallbackLink = document.getElementById("fallbackPdf");
-
-function safeReturnTarget(value) {
-  if (!value || /^(?:[a-z]+:|\/\/|\/)/i.test(value)) return "documents.html";
-  return value;
-}
-
-returnLink.href = safeReturnTarget(returnTarget);
-
-if (window.innerWidth >= 760 && outputName) {
-  window.location.replace(file);
-} else if (!outputName) {
-  status.textContent = "Document introuvable.";
-} else {
-  startViewer();
-}
-
-async function startViewer() {
-  try {
-    const pdfjsLib = await import("https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/legacy/build/pdf.min.mjs");
-    globalThis.pdfjsLib = pdfjsLib;
-    pdfjsLib.GlobalWorkerOptions.workerSrc =
-      "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/legacy/build/pdf.worker.min.mjs";
-
-    const { EventBus, PDFLinkService, PDFViewer } =
-      await import("https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/legacy/web/pdf_viewer.mjs");
-
-    const eventBus = new EventBus();
-    const linkService = new PDFLinkService({ eventBus });
-    const viewer = new PDFViewer({
-      container: document.getElementById("viewerContainer"),
-      viewer: document.getElementById("viewer"),
-      eventBus,
-      linkService,
-      annotationMode: pdfjsLib.AnnotationMode.ENABLE_FORMS,
-      textLayerMode: 1
-    });
-    linkService.setViewer(viewer);
-
-    const loadingTask = pdfjsLib.getDocument({ url: file });
-    const pdfDocument = await loadingTask.promise;
-    viewer.setDocument(pdfDocument);
-    linkService.setDocument(pdfDocument);
-
-    eventBus.on("pagesinit", function () {
-      viewer.currentScaleValue = "page-width";
-      saveButton.disabled = false;
-      status.textContent = "Document prêt à être complété.";
-    });
-
-    saveButton.addEventListener("click", async function () {
-      saveButton.disabled = true;
-      status.textContent = "Préparation du PDF complété…";
-      try {
-        const bytes = await pdfDocument.saveDocument();
-        const blob = new Blob([bytes], { type: "application/pdf" });
-        const url = URL.createObjectURL(blob);
-        const download = document.createElement("a");
-        download.href = url;
-        download.download = outputName;
-        document.body.appendChild(download);
-        download.click();
-        download.remove();
-        setTimeout(function () { URL.revokeObjectURL(url); }, 30000);
-        status.textContent = "PDF enregistré. Revenez maintenant pour l’envoyer.";
-      } catch (error) {
-        status.textContent = "L’enregistrement a échoué. Réessayez.";
-      } finally {
-        saveButton.disabled = false;
-      }
-    });
-  } catch (error) {
-    fallbackLink.href = file;
-    fallbackLink.download = outputName;
-    fallbackLink.hidden = false;
-    status.textContent = "Le lecteur intégré n’est pas compatible avec ce navigateur. Téléchargez le PDF ci-dessus.";
-  }
-}
+(function(){"use strict";
+var docs={
+"Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf":{title:"Fiche individuelle",output:"fiche-individuelle-completee.pdf",id:"fiche-individuelle",identity:true},
+"CONTRAT_D_INSCRIPTION_A_UN_RAID_OFFROAD_32_65.pdf":{title:"Contrat d’inscription",output:"contrat-inscription-complete.pdf",id:"contrat-inscription"},
+"CGV_OFFROAD_32_65.pdf":{title:"Conditions générales de vente",output:"cgv-offroad-completees.pdf",id:"cgv-offroad"},
+"CONDITIONS_VENTE_NOMAD_RAID_TRAVEL.pdf":{title:"Conditions de vente NOMAD RAID TRAVEL",output:"conditions-nomad-completees.pdf",id:"conditions-vente-nomad"}};
+var params=new URLSearchParams(location.search),file=params.get("file")||"",cfg=docs[file],status=document.getElementById("status"),area=document.getElementById("fields"),formEl=document.getElementById("pdfForm"),pdfDoc,pdfFields=[];
+document.getElementById("back").href=safeBack(params.get("return"));
+if(matchMedia("(min-width: 760px)").matches&&cfg){location.replace(file);return}
+if(!cfg){status.textContent="Document introuvable. Revenez à la page Documents.";return}
+document.getElementById("title").textContent=cfg.title;start();
+function safeBack(v){return !v||/^(?:[a-z]+:|\/\/|\/)/i.test(v)?"documents.html":v}
+async function start(){try{if(!window.PDFLib)throw Error();var r=await fetch(file,{cache:"no-store"});if(!r.ok)throw Error();pdfDoc=await PDFLib.PDFDocument.load(await r.arrayBuffer());pdfFields=pdfDoc.getForm().getFields();build(pdfFields);formEl.hidden=false;status.textContent="Le document est prêt. Complétez les champs puis préparez le PDF."}catch(e){status.textContent="Le formulaire n’a pas pu être chargé. Vérifiez votre connexion puis actualisez la page."}}
+function build(fields){var groups={};fields.forEach(function(f){var n=f.getName(),g=f.constructor.name==="PDFCheckBox"&&groupName(n);if(g)(groups[g]||(groups[g]=[])).push(f);else area.appendChild(makeField(f))});Object.keys(groups).forEach(function(g){area.appendChild(makeGroup(g,groups[g]))})}
+function makeField(f){var box=document.createElement("div"),n=f.getName(),type=f.constructor.name;box.className="field";
+if(type==="PDFCheckBox"){var choices=document.createElement("div"),lab=document.createElement("label"),input=document.createElement("input");choices.className="choices";input.type="checkbox";input.dataset.pdfName=n;lab.append(input,document.createTextNode(" "+label(n)));choices.appendChild(lab);box.appendChild(choices);return box}
+var lab=document.createElement("label"),control;lab.htmlFor=id(n);lab.textContent=label(n);box.appendChild(lab);
+if(type==="PDFDropdown"||type==="PDFOptionList"){control=document.createElement("select");addOption(control,"","— Choisir —");f.getOptions().forEach(function(o){addOption(control,o,o)})}else{control=n.indexOf("precision")>=0||n.indexOf("adresse")>=0?document.createElement("textarea"):document.createElement("input");if(control.tagName==="INPUT")control.type=/email/i.test(n)?"email":/telephone/i.test(n)?"tel":"text"}
+control.id=id(n);control.dataset.pdfName=n;box.appendChild(control);return box}
+function makeGroup(g,fields){var box=document.createElement("div"),title=document.createElement("div"),list=document.createElement("div");box.className="field";title.className="field-title";title.textContent=label(g);list.className="choices";box.appendChild(title);
+fields.forEach(function(f){var n=f.getName(),lab=document.createElement("label"),input=document.createElement("input");input.type="radio";input.name="group-"+id(g);input.dataset.pdfName=n;lab.append(input,document.createTextNode(" "+choice(n,g)));list.appendChild(lab)});box.appendChild(list);return box}
+function addOption(s,v,t){var o=document.createElement("option");o.value=v;o.textContent=t;s.appendChild(o)}
+function groupName(n){var m=n.match(/^(.*)_(oui|non|non_concerne)$/i);if(m)return m[1];var p=["formule","statut","chambre","reservation","mode","solde","duo_paye","role"];for(var i=0;i<p.length;i++)if(n.indexOf(p[i]+"_")===0)return p[i];return""}
+function choice(n,g){var v=n.slice(g.length+1).replace(/_/g," ");if(v==="oui")return"Oui";if(v==="non")return"Non";if(v==="non concerne")return"Non concerné";return v.replace(/\b\w/g,function(c){return c.toUpperCase()})}
+function label(n){var map={validation_nom:"Nom",validation_prenom:"Prénom",validation_date:"Date",validation_consentement:"Validation et consentement",acceptation_cgv:"J’accepte les conditions générales de vente",acceptation_nomad:"J’accepte les conditions de vente NOMAD RAID TRAVEL",nom_prenom_date:"Nom, prénom et date",rc:"Responsabilité civile",cp_ville:"Code postal et ville",checkbox_p6_7:"Suivez-vous un traitement médical ?",checkbox_p6_8:"Aucun traitement médical",checkbox_p6_10:"Informations médicales à signaler : oui",checkbox_p6_11:"Informations médicales à signaler : non",checkbox_p6_13:"Transmission des informations médicales en urgence : oui",checkbox_p6_14:"Transmission des informations médicales en urgence : non",checkbox_p7_1:"Pathologie connue : oui",checkbox_p7_2:"Pathologie connue : non",checkbox_p7_4:"Dispositif médical : oui",checkbox_p7_5:"Dispositif médical : non",checkbox_p7_7:"Donneur d’organes : oui",checkbox_p7_8:"Donneur d’organes : non"};if(map[n])return map[n];var t=n.replace(/_/g," ").replace(/\brc\b/gi,"responsabilité civile").replace(/\bveh\b/gi,"véhicule").replace(/\bexp\b/gi,"expérience");return t.charAt(0).toUpperCase()+t.slice(1)}
+function id(n){return"pdf-"+n.replace(/[^a-z0-9_-]/gi,"-")}
+formEl.addEventListener("submit",async function(e){e.preventDefault();var b=formEl.querySelector("button");b.disabled=true;status.textContent="Préparation de votre PDF complété…";try{applyValues();var bytes=await pdfDoc.save({updateFieldAppearances:false}),completed=new File([bytes],cfg.output,{type:"application/pdf"}),dt=new DataTransfer();dt.items.add(completed);document.getElementById("completedPdf").files=dt.files;prepareSend();status.textContent="Votre PDF est prêt. Complétez l’envoi ci-dessous.";document.getElementById("send").scrollIntoView({behavior:"smooth"})}catch(err){status.textContent="Le PDF n’a pas pu être préparé sur ce téléphone. Actualisez la page puis réessayez."}finally{b.disabled=false}});
+function applyValues(){pdfFields.forEach(function(f){var n=f.getName(),c=document.querySelector('[data-pdf-name="'+escapeAttr(n)+'"]'),type=f.constructor.name;if(!c)return;if(type==="PDFCheckBox"){if(c.checked)f.check();else f.uncheck()}else if((type==="PDFDropdown"||type==="PDFOptionList")&&c.value)f.select(c.value);else if(type==="PDFTextField")f.setText(c.value||"")})}
+function escapeAttr(v){return v.replace(/\\/g,"\\\\").replace(/"/g,'\\"')}
+function prepareSend(){document.getElementById("docType").value=cfg.title;document.getElementById("next").value="https://offroad3265.fr/confirmation-document.html?doc="+encodeURIComponent(cfg.id);if(cfg.identity){document.getElementById("identityField").hidden=false;document.getElementById("identity").required=true}document.getElementById("send").hidden=false}
+})();
