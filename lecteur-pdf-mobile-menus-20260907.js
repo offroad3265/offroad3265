@@ -159,7 +159,7 @@
       event.stopImmediatePropagation();
       var trigger = pendingTrigger;
       pendingTrigger = null;
-      trigger.click();
+      setTimeout(function () { trigger.click(); }, 50);
     }, true);
     document.addEventListener("pointercancel", function () { pendingTrigger = null; }, true);
     backdrop.addEventListener("click", function (event) {
