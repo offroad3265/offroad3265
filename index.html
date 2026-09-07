@@ -3636,6 +3636,66 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 </script>
 
+<style id="home-mobile-dropdowns-persistants">
+@media(max-width:760px){
+  .topbar-uniform .nav-drop.is-open .nav-drop-menu,
+  .topbar-uniform .topbar-documents-menu.is-open .documents-dropdown-restored{
+    display:block!important;
+  }
+}
+</style>
+<script id="home-mobile-dropdowns-persistants-script">
+document.addEventListener("DOMContentLoaded",()=>{
+  const mobile=window.matchMedia("(max-width:760px)");
+  const menus=[
+    {
+      container:document.querySelector(".topbar-uniform .nav-drop"),
+      trigger:document.querySelector(".topbar-uniform .nav-drop > a"),
+      menu:document.querySelector(".topbar-uniform .nav-drop-menu")
+    },
+    {
+      container:document.querySelector(".topbar-uniform .topbar-documents-menu"),
+      trigger:document.querySelector(".topbar-uniform .topbar-documents-menu > a"),
+      menu:document.querySelector(".topbar-uniform .documents-dropdown-restored")
+    }
+  ].filter(item=>item.container&&item.trigger&&item.menu);
+
+  function close(item){
+    item.container.classList.remove("is-open");
+    item.trigger.setAttribute("aria-expanded","false");
+  }
+
+  menus.forEach(item=>{
+    item.trigger.setAttribute("aria-haspopup","true");
+    item.trigger.setAttribute("aria-expanded","false");
+    item.trigger.addEventListener("click",event=>{
+      if(!mobile.matches) return;
+      event.preventDefault();
+      event.stopPropagation();
+      const opening=!item.container.classList.contains("is-open");
+      menus.forEach(close);
+      if(opening){
+        item.container.classList.add("is-open");
+        item.trigger.setAttribute("aria-expanded","true");
+      }
+    });
+    item.menu.querySelectorAll("a").forEach(link=>{
+      link.addEventListener("click",()=>close(item));
+    });
+  });
+
+  document.addEventListener("click",event=>{
+    if(!mobile.matches) return;
+    if(!menus.some(item=>item.container.contains(event.target))){
+      menus.forEach(close);
+    }
+  });
+  document.addEventListener("keydown",event=>{
+    if(event.key==="Escape") menus.forEach(close);
+  });
+});
+</script>
+
 
 <script src="pages-config.js"></script>
 <script src="site-core.js"></script>
