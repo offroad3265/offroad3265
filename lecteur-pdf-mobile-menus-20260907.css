@@ -1,0 +1,8 @@
+.mobile-choice-backdrop{position:fixed;inset:0;z-index:1000;display:flex;align-items:flex-end;justify-content:center;padding:16px;background:rgba(0,0,0,.55)}
+.mobile-choice-backdrop[hidden]{display:none}
+.mobile-choice-panel{width:min(100%,520px);max-height:72vh;overflow:auto;padding:16px;border:2px solid #111;border-radius:12px;background:#fff;color:#111;box-shadow:0 6px 24px rgba(0,0,0,.45)}
+.mobile-choice-panel h2{margin:0 0 12px;font-size:20px}
+.mobile-choice-options{display:grid;gap:8px}
+.mobile-choice-options button,.mobile-choice-cancel{width:100%;min-height:48px;padding:10px 12px;border:1px solid #555;border-radius:6px;background:#eef1ff;color:#111;font:700 16px Arial,sans-serif;text-align:left}
+.mobile-choice-options button[aria-current="true"]{border:3px solid #f57916}
+.mobile-choice-cancel{margin-top:12px;background:#222;color:#fff;text-align:center}
