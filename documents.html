@@ -273,6 +273,40 @@ body{
   transform-origin:top center!important;
   margin:0 auto!important;
 }
+
+/* Téléphone uniquement : conserver la taille réelle et les zones tactiles. */
+@media (max-width:759px){
+  html,body{
+    width:100%!important;
+    max-width:100%!important;
+    height:auto!important;
+    min-height:100%!important;
+    overflow-x:hidden!important;
+    overflow-y:auto!important;
+  }
+  body{
+    display:block!important;
+  }
+  #documents-fixed-shell{
+    width:100%!important;
+    max-width:100%!important;
+    transform:none!important;
+  }
+  .documents-selector-wrap,
+  .document-return-card{
+    width:auto!important;
+    max-width:none!important;
+    box-sizing:border-box!important;
+  }
+  .documents-select{
+    position:relative!important;
+    z-index:2!important;
+    width:100%!important;
+    min-height:48px!important;
+    font-size:16px!important;
+    touch-action:manipulation!important;
+  }
+}
 </style>
 
 
@@ -665,6 +699,13 @@ document.addEventListener("DOMContentLoaded",()=>{
   function fitDocumentsPage(){
     const shell = document.getElementById('documents-fixed-shell');
     if(!shell) return;
+
+    /* Ne jamais réduire la page ni ses zones tactiles sur téléphone. */
+    if(window.innerWidth < 760){
+      shell.style.transform = 'none';
+      shell.style.width = '100%';
+      return;
+    }
 
     shell.style.transform = 'none';
     shell.style.width = '100%';
