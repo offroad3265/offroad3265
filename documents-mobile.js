@@ -9,7 +9,7 @@
 
       var pdf = href.split("#")[0].split("?")[0];
       var back = window.location.pathname.split("/").pop() + window.location.search;
-      var viewer = "document-pdf-mobile-menus-v2-20260907.html?file=" + encodeURIComponent(pdf) +
+      var viewer = "document-pdf-mobile-menus-v3-20260907.html?file=" + encodeURIComponent(pdf) +
         "&return=" + encodeURIComponent(back);
 
       link.setAttribute("href", viewer);
