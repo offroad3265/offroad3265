@@ -112,7 +112,9 @@
       var width = Math.min(rect.width, window.innerWidth - 16);
       panel.style.width = width + "px";
       panel.style.left = Math.max(8, Math.min(rect.left, window.innerWidth - width - 8)) + "px";
-      panel.style.top = Math.min(rect.bottom + 2, window.innerHeight - panel.offsetHeight - 8) + "px";
+      var below = rect.bottom + 2;
+      var top = below + panel.offsetHeight <= window.innerHeight - 8 ? below : Math.max(8, rect.top - panel.offsetHeight - 2);
+      panel.style.top = top + "px";
       var selected = optionsBox.querySelector('[aria-current="true"]') || optionsBox.querySelector("button");
       if (selected) selected.focus();
     }
