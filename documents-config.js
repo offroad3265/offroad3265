@@ -7,7 +7,7 @@
    ============================================================ */
 
 window.OFFROAD_DOCUMENTS_CONFIG = {
-  version: "8.9.28",
+  version: "8.9.30",
   retourEmail: "aventureoffroad.3265@gmail.com",
 
   documents: [
@@ -23,7 +23,7 @@ window.OFFROAD_DOCUMENTS_CONFIG = {
       obligatoire: true,
       remplissable: true,
       aRenvoyer: true,
-      page: "fiche-individuelle-renseignements.html",
+      page: "fiche-individuelle-renseignements.html?v=20260907-1",
       fichier: "Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf",
       instructionCourte: "Complétez la fiche individuelle puis renvoyez-la à OFFROAD 32 65."
     },
