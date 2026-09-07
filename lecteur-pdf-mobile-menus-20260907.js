@@ -134,6 +134,7 @@
     }
 
     var pdfViewer = document.getElementById("viewer");
+    var pendingTrigger = null;
     enhanceMenus(pdfViewer);
     new MutationObserver(function () { enhanceMenus(pdfViewer); }).observe(pdfViewer, { childList: true, subtree: true });
     document.addEventListener("pointerdown", function (event) {
@@ -147,11 +148,20 @@
             event.clientY >= rect.top && event.clientY <= rect.bottom + extra) {
           event.preventDefault();
           event.stopImmediatePropagation();
-          trigger.click();
+          pendingTrigger = trigger;
           return;
         }
       }
     }, true);
+    document.addEventListener("pointerup", function (event) {
+      if (!pendingTrigger) return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      var trigger = pendingTrigger;
+      pendingTrigger = null;
+      trigger.click();
+    }, true);
+    document.addEventListener("pointercancel", function () { pendingTrigger = null; }, true);
     backdrop.addEventListener("click", function (event) {
       if (event.target === backdrop) closeMenu();
     });
