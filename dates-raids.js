@@ -58,7 +58,7 @@ window.OFFROAD_RAIDS = [
     id: "espagne-1000-bornes-2026",
     pays: "espagne",
     annee: 2026,
-    date: "08 → 11 OCT. 2026",
+    date: "09 → 12 OCT. 2026",
     titre: "LA 1000 BORNES",
     statut: "COMPLET",
     prix_solo: "900 €",
