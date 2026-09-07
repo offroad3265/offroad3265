@@ -129,6 +129,22 @@
     var pdfViewer = document.getElementById("viewer");
     enhanceMenus(pdfViewer);
     new MutationObserver(function () { enhanceMenus(pdfViewer); }).observe(pdfViewer, { childList: true, subtree: true });
+    document.addEventListener("pointerdown", function (event) {
+      if (!backdrop.hidden) return;
+      var triggers = pdfViewer.querySelectorAll(".pdf-mobile-choice-trigger");
+      for (var index = 0; index < triggers.length; index += 1) {
+        var trigger = triggers[index];
+        var rect = trigger.getBoundingClientRect();
+        var extra = Math.max(12, rect.height * 0.5);
+        if (event.clientX >= rect.left && event.clientX <= rect.right + extra &&
+            event.clientY >= rect.top && event.clientY <= rect.bottom + extra) {
+          event.preventDefault();
+          event.stopImmediatePropagation();
+          trigger.click();
+          return;
+        }
+      }
+    }, true);
     cancel.addEventListener("click", closeMenu);
     backdrop.addEventListener("click", function (event) {
       if (event.target === backdrop) closeMenu();
