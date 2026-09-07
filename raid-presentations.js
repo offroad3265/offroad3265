@@ -12,6 +12,7 @@ window.OFFROAD_RAID_PRESENTATIONS = {
     title: "Maroc 2026",
     route: "Errachidia • Merzouga • Zagora",
     intro: "Une aventure tout-terrain pensée comme un véritable voyage, entre pistes, dunes, bivouac, hébergements et moments de partage.",
+    video: "video-maroc-sans-texte.mp4",
     photos: [
       "photos-maroc-2026/agence-maroc-1.jpg",
       "photos-maroc-2026/agence-maroc-2.jpg",
