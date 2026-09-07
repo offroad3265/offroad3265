@@ -81,13 +81,17 @@
     document.body.appendChild(backdrop);
     var optionsBox = backdrop.querySelector(".mobile-choice-options");
     var cancel = backdrop.querySelector(".mobile-choice-cancel");
+    var activeTrigger = null;
 
     function closeMenu() {
       backdrop.hidden = true;
       optionsBox.replaceChildren();
+      if (activeTrigger) activeTrigger.focus();
+      activeTrigger = null;
     }
 
-    function openMenu(select) {
+    function openMenu(select, trigger) {
+      activeTrigger = trigger;
       optionsBox.replaceChildren();
       Array.prototype.forEach.call(select.options, function (option) {
         var button = document.createElement("button");
@@ -98,6 +102,7 @@
           select.value = option.value;
           select.dispatchEvent(new Event("input", { bubbles: true }));
           select.dispatchEvent(new Event("change", { bubbles: true }));
+          trigger.textContent = option.textContent;
           closeMenu();
         });
         optionsBox.appendChild(button);
@@ -107,19 +112,23 @@
       if (selected) selected.focus();
     }
 
-    document.addEventListener("pointerdown", function (event) {
-      var select = event.target.closest && event.target.closest(".choiceWidgetAnnotation select");
-      if (!select) return;
-      event.preventDefault();
-      event.stopImmediatePropagation();
-      openMenu(select);
-    }, true);
-    document.addEventListener("keydown", function (event) {
-      var select = event.target.closest && event.target.closest(".choiceWidgetAnnotation select");
-      if (!select || (event.key !== "Enter" && event.key !== " ")) return;
-      event.preventDefault();
-      openMenu(select);
-    }, true);
+    function enhanceMenus(root) {
+      root.querySelectorAll(".choiceWidgetAnnotation select:not([data-mobile-menu])").forEach(function (select) {
+        select.dataset.mobileMenu = "true";
+        select.tabIndex = -1;
+        var trigger = document.createElement("button");
+        trigger.type = "button";
+        trigger.className = "pdf-mobile-choice-trigger";
+        trigger.textContent = select.options[select.selectedIndex] ? select.options[select.selectedIndex].textContent : "Choisir";
+        trigger.setAttribute("aria-label", "Ouvrir le menu déroulant");
+        trigger.addEventListener("click", function () { openMenu(select, trigger); });
+        select.parentNode.appendChild(trigger);
+      });
+    }
+
+    var pdfViewer = document.getElementById("viewer");
+    enhanceMenus(pdfViewer);
+    new MutationObserver(function () { enhanceMenus(pdfViewer); }).observe(pdfViewer, { childList: true, subtree: true });
     cancel.addEventListener("click", closeMenu);
     backdrop.addEventListener("click", function (event) {
       if (event.target === backdrop) closeMenu();
