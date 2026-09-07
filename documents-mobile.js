@@ -9,7 +9,7 @@
 
       var pdf = href.split("#")[0].split("?")[0];
       var back = window.location.pathname.split("/").pop() + window.location.search;
-      var viewer = "formulaire-document-mobile-20260907.html?file=" + encodeURIComponent(pdf) +
+      var viewer = "formulaire-pdf-mobile-complet-20260907.html?file=" + encodeURIComponent(pdf) +
         "&return=" + encodeURIComponent(back);
 
       link.setAttribute("href", viewer);
