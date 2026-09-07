@@ -627,11 +627,6 @@ html,body,.hero,.wrap,.doc-workflow{background:#f57916!important;background-imag
         <div class="field"><label for="raid">Raid concerné *</label>
           <select id="raid" name="Raid" required>
             <option value="">Choisir...</option>
-            <option>Maroc</option>
-            <option>Espagne – Aragon/Catalogne</option>
-            <option>Sardaigne</option>
-            <option>Tunisie</option>
-            <option>Autre / à définir</option>
           </select>
         </div>
       </div>
@@ -657,7 +652,18 @@ html,body,.hero,.wrap,.doc-workflow{background:#f57916!important;background-imag
 <script>
 document.addEventListener("DOMContentLoaded",()=>{
  const id=new URLSearchParams(location.search).get("raid");
- const raid=(window.OFFROAD_RAIDS||[]).find(r=>r.id===id);
+ const raids=window.OFFROAD_RAIDS||[];
+ const raidSelect=document.getElementById("raid");
+ if(raidSelect){
+   raids.forEach(r=>{
+     const option=document.createElement("option");
+     option.value=r.titre+" — "+r.date;
+     option.textContent=r.titre+" — "+r.date;
+     option.dataset.raidId=r.id;
+     raidSelect.appendChild(option);
+   });
+ }
+ const raid=raids.find(r=>r.id===id);
  const n=document.getElementById("selectedRaidNotice");
  if(n&&raid){
    n.style.display="block";
@@ -688,10 +694,8 @@ document.addEventListener("DOMContentLoaded",()=>{
      }
    }
 
-   const raidSelect=document.getElementById("raid");
    if(raidSelect){
-     const country=String(raid.pays||"").toLowerCase();
-     const option=[...raidSelect.options].find(o=>String(o.textContent).toLowerCase().includes(country));
+     const option=[...raidSelect.options].find(o=>o.dataset.raidId===raid.id);
      if(option) raidSelect.value=option.value;
    }
  }
