@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <title>Compléter le document | OFFROAD 32 65</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pdfjs-dist@6.3.289/web/pdf_viewer.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.10.38/web/pdf_viewer.css">
   <link rel="stylesheet" href="mobile-pdf.css?v=1">
 </head>
 <body>
@@ -14,6 +14,7 @@
     <div class="mobile-pdf-actions">
       <button id="savePdf" type="button" disabled>Enregistrer le PDF complété</button>
       <a id="returnToForm" href="documents.html">Revenir pour envoyer</a>
+      <a id="fallbackPdf" href="#" hidden>Télécharger le PDF</a>
     </div>
     <div id="mobilePdfStatus" role="status" aria-live="polite">Chargement du document…</div>
   </header>
@@ -22,6 +23,6 @@
     <div id="viewer" class="pdfViewer"></div>
   </main>
 
-  <script type="module" src="mobile-pdf.js?v=1"></script>
+  <script type="module" src="mobile-pdf.js?v=2"></script>
 </body>
 </html>

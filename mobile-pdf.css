@@ -19,6 +19,8 @@ body{background:#262626;color:#111;font-family:Arial,sans-serif}
 .mobile-pdf-actions button{background:#111;color:#f57916}
 .mobile-pdf-actions button:disabled{opacity:.55}
 .mobile-pdf-actions a{background:#169c4b;color:#fff}
+.mobile-pdf-actions a[hidden]{display:none!important}
+#fallbackPdf{grid-column:1 / -1;background:#f4eee4;color:#111}
 #mobilePdfStatus{min-height:18px;margin-top:6px;font-size:13px;font-weight:700}
 #viewerContainer{
   position:absolute;inset:152px 0 0;overflow:auto;
