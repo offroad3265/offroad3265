@@ -839,7 +839,7 @@ nav .active{
 <script src="raid-manager.js"></script>
 <script src="programmes-raids.js"></script>
 <script src="raid-model.js"></script>
-<script src="raid-presentations.js?v=20260907-1"></script>
+<script src="raid-presentations.js?v=20260907-2"></script>
 <script src="site-core.js?v=20260907-4"></script>
 <script>
 document.addEventListener("DOMContentLoaded",()=>{
@@ -872,7 +872,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     p.title||"",
     p.route||""
   ].join(" "));
-  if(isBardenas) p.video="video-bardenas-boucle.mp4";
+  if(isBardenas){
+    p.video="video-bardenas-boucle.mp4";
+    p.videoSpeed=0.75;
+  }
   // Règles universelles des fiches raid : terminologie et textes communs.
   p.kicker=String(p.kicker||"Raid off-road").replace(/\s*4x4\s*/ig,"").trim();
   if(/informations de présentation de ce raid seront complétées prochainement/i.test(p.intro||"")) p.intro="";
@@ -908,7 +911,10 @@ document.addEventListener("DOMContentLoaded",()=>{
     visualZone.setAttribute("aria-label","Vidéo du raid");
     visualZone.innerHTML=`<video autoplay muted loop playsinline preload="metadata" disablepictureinpicture tabindex="-1" aria-label="Vidéo du raid Maroc"><source src="${p.video}" type="video/mp4"></video>`;
     const video=visualZone.querySelector("video");
-    if(video) video.play().catch(()=>{});
+    if(video){
+      video.playbackRate=Number(p.videoSpeed)||1;
+      video.play().catch(()=>{});
+    }
   }else{
     const photos=Array.isArray(p.photos)?p.photos:[];
     [1,2,3].forEach((n,i)=>{
