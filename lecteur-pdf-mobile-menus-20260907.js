@@ -77,10 +77,10 @@
     var backdrop = document.createElement("div");
     backdrop.className = "mobile-choice-backdrop";
     backdrop.hidden = true;
-    backdrop.innerHTML = '<div class="mobile-choice-panel" role="dialog" aria-modal="true" aria-labelledby="mobile-choice-title"><h2 id="mobile-choice-title">Choisissez une réponse</h2><div class="mobile-choice-options"></div><button class="mobile-choice-cancel" type="button">Annuler</button></div>';
+    backdrop.innerHTML = '<div class="mobile-choice-panel" role="listbox" aria-label="Propositions"><div class="mobile-choice-options"></div></div>';
     document.body.appendChild(backdrop);
     var optionsBox = backdrop.querySelector(".mobile-choice-options");
-    var cancel = backdrop.querySelector(".mobile-choice-cancel");
+    var panel = backdrop.querySelector(".mobile-choice-panel");
     var activeTrigger = null;
 
     function closeMenu() {
@@ -108,6 +108,11 @@
         optionsBox.appendChild(button);
       });
       backdrop.hidden = false;
+      var rect = trigger.getBoundingClientRect();
+      var width = Math.min(rect.width, window.innerWidth - 16);
+      panel.style.width = width + "px";
+      panel.style.left = Math.max(8, Math.min(rect.left, window.innerWidth - width - 8)) + "px";
+      panel.style.top = Math.min(rect.bottom + 2, window.innerHeight - panel.offsetHeight - 8) + "px";
       var selected = optionsBox.querySelector('[aria-current="true"]') || optionsBox.querySelector("button");
       if (selected) selected.focus();
     }
@@ -145,7 +150,6 @@
         }
       }
     }, true);
-    cancel.addEventListener("click", closeMenu);
     backdrop.addEventListener("click", function (event) {
       if (event.target === backdrop) closeMenu();
     });
