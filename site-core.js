@@ -93,6 +93,7 @@
 (function(){
   function initMobileHeaderMenus(){
     const mobile=window.matchMedia("(max-width:760px)");
+    const isMobile=()=>mobile.matches||window.innerWidth<=760;
     const menus=[...document.querySelectorAll("header nav .nav-drop, header nav .nav-documents-drop")]
       .map(container=>{
         const documents=container.classList.contains("nav-documents-drop");
@@ -114,12 +115,23 @@
     }
 
     menus.forEach(item=>{
+      item.lastTouchOpen=0;
       item.trigger.setAttribute("aria-haspopup","true");
       item.trigger.setAttribute("aria-expanded","false");
-      item.trigger.addEventListener("click",event=>{
-        if(!mobile.matches) return;
+      item.trigger.addEventListener("pointerdown",event=>{
+        if(!isMobile()||event.pointerType==="mouse") return;
         event.preventDefault();
         event.stopImmediatePropagation();
+        item.lastTouchOpen=Date.now();
+        menus.forEach(close);
+        item.container.classList.add("is-open");
+        item.trigger.setAttribute("aria-expanded","true");
+      },true);
+      item.trigger.addEventListener("click",event=>{
+        if(!isMobile()) return;
+        event.preventDefault();
+        event.stopImmediatePropagation();
+        if(Date.now()-item.lastTouchOpen<1000) return;
         const opening=!item.container.classList.contains("is-open");
         menus.forEach(close);
         if(opening){
@@ -133,7 +145,7 @@
     });
 
     document.addEventListener("click",event=>{
-      if(!mobile.matches) return;
+      if(!isMobile()) return;
       if(!menus.some(item=>item.container.contains(event.target))){
         menus.forEach(close);
       }
