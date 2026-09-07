@@ -866,6 +866,13 @@ document.addEventListener("DOMContentLoaded",()=>{
     ]
   };
   const p=Object.assign({},fallback,view||{});
+  const isBardenas=/bardenas/i.test([
+    raid.id||"",
+    raid.titre||"",
+    p.title||"",
+    p.route||""
+  ].join(" "));
+  if(isBardenas) p.video="video-bardenas-boucle.mp4";
   // Règles universelles des fiches raid : terminologie et textes communs.
   p.kicker=String(p.kicker||"Raid off-road").replace(/\s*4x4\s*/ig,"").trim();
   if(/informations de présentation de ce raid seront complétées prochainement/i.test(p.intro||"")) p.intro="";
