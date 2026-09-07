@@ -70,7 +70,8 @@
       }
       stepText.textContent =
         "Complétez puis renvoyez à OFFROAD 32 65 les " +
-        required.length + " documents nécessaires à votre inscription : " + phrase + ".";
+        required.length + " documents nécessaires à votre inscription : " + phrase +
+        ". Joignez également une pièce d’identité en cours de validité : de préférence le passeport ou, à défaut, la CNI.";
     }
 
     if(stepCondition){
@@ -80,7 +81,8 @@
         if(d.id === "cgv-offroad") return "CGV OFFROAD 32 65 acceptées et renseignées";
         return d.titre + " complété";
       });
-      stepCondition.textContent = "Dossier complet = " + labels.join(" + ") + ".";
+      stepCondition.textContent = "Dossier complet = " + labels.join(" + ") +
+        " + pièce d’identité en cours de validité (passeport de préférence ou, à défaut, CNI).";
     }
   }
 
