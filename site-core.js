@@ -118,14 +118,17 @@
       item.lastTouchOpen=0;
       item.trigger.setAttribute("aria-haspopup","true");
       item.trigger.setAttribute("aria-expanded","false");
-      item.trigger.addEventListener("pointerdown",event=>{
-        if(!isMobile()||event.pointerType==="mouse") return;
+      item.trigger.addEventListener("touchend",event=>{
+        if(!isMobile()) return;
         event.preventDefault();
         event.stopImmediatePropagation();
         item.lastTouchOpen=Date.now();
+        const opening=!item.container.classList.contains("is-open");
         menus.forEach(close);
-        item.container.classList.add("is-open");
-        item.trigger.setAttribute("aria-expanded","true");
+        if(opening){
+          item.container.classList.add("is-open");
+          item.trigger.setAttribute("aria-expanded","true");
+        }
       },true);
       item.trigger.addEventListener("click",event=>{
         if(!isMobile()) return;
