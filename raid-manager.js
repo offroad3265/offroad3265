@@ -174,3 +174,88 @@
     prepareDelete
   };
 })();
+
+/* =========================================================
+   SÉCURISATION DES ENVOIS DE DOCUMENTS VIA FORMSUBMIT
+   - contrôle la taille totale avant l'envoi
+   - évite les doubles clics pendant l'envoi
+   - ne modifie pas le fonctionnement si les fichiers sont conformes
+   ========================================================= */
+(function(){
+  "use strict";
+
+  function initDocumentUploadGuard(){
+    const form=document.querySelector('.return-form[action*="formsubmit.co"]');
+    if(!form || form.dataset.uploadGuardReady==="1") return;
+    form.dataset.uploadGuardReady="1";
+
+    const fileInputs=[...form.querySelectorAll('input[type="file"]')];
+    const submit=form.querySelector('button[type="submit"],input[type="submit"]');
+    if(!fileInputs.length || !submit) return;
+
+    /* FormSubmit accepte jusqu'à 10 Mo de pièces jointes au total.
+       On garde une petite marge pour éviter les refus à la limite exacte. */
+    const MAX_TOTAL=9.5*1024*1024;
+
+    const message=document.createElement("div");
+    message.setAttribute("role","alert");
+    message.style.display="none";
+    message.style.margin="12px 0";
+    message.style.padding="11px 13px";
+    message.style.border="1px solid #9b2c2c";
+    message.style.borderLeft="4px solid #d32f2f";
+    message.style.background="#2a1010";
+    message.style.color="#fff";
+    message.style.fontWeight="700";
+    submit.parentNode.insertBefore(message,submit);
+
+    function totalSize(){
+      return fileInputs.reduce((total,input)=>{
+        const files=input.files ? [...input.files] : [];
+        return total+files.reduce((sum,file)=>sum+file.size,0);
+      },0);
+    }
+
+    function formatMo(bytes){
+      return (bytes/1024/1024).toFixed(1).replace(".",",")+" Mo";
+    }
+
+    function validateFiles(){
+      const total=totalSize();
+      if(total>MAX_TOTAL){
+        message.textContent="Les fichiers sélectionnés pèsent "+formatMo(total)+" au total. Merci de réduire leur taille afin de rester sous 9,5 Mo avant de les envoyer.";
+        message.style.display="block";
+        return false;
+      }
+      message.style.display="none";
+      message.textContent="";
+      return true;
+    }
+
+    fileInputs.forEach(input=>input.addEventListener("change",validateFiles));
+
+    form.addEventListener("submit",function(event){
+      if(!validateFiles()){
+        event.preventDefault();
+        message.scrollIntoView({behavior:"smooth",block:"center"});
+        return;
+      }
+
+      /* Le formulaire continue ensuite son envoi normal vers FormSubmit. */
+      submit.disabled=true;
+      submit.dataset.originalText=submit.textContent||submit.value||"";
+      if(submit.tagName==="INPUT") submit.value="Envoi en cours…";
+      else submit.textContent="Envoi en cours…";
+
+      /* Réactive le bouton si le navigateur reste sur la page après un échec réseau. */
+      setTimeout(()=>{
+        submit.disabled=false;
+        if(submit.tagName==="INPUT") submit.value=submit.dataset.originalText||"Envoyer à OFFROAD 32 65";
+        else submit.textContent=submit.dataset.originalText||"Envoyer à OFFROAD 32 65";
+      },15000);
+    });
+  }
+
+  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",initDocumentUploadGuard);
+  else initDocumentUploadGuard();
+})();
