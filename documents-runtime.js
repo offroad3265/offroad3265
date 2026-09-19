@@ -184,7 +184,7 @@
 
     var intro = document.querySelector(".documents-intro");
     if(intro){
-      intro.textContent = "Sélectionnez le document que vous souhaitez consulter ou télécharger.";
+      intro.textContent = "Sélectionnez le document que vous souhaitez compléter et envoyer directement.";
     }
   }
 

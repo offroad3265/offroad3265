@@ -7,7 +7,7 @@
    ============================================================ */
 
 window.OFFROAD_DOCUMENTS_CONFIG = {
-  version: "8.9.30",
+  version: "8.9.31",
   retourEmail: "aventureoffroad.3265@gmail.com",
 
   documents: [
@@ -25,7 +25,7 @@ window.OFFROAD_DOCUMENTS_CONFIG = {
       aRenvoyer: true,
       page: "fiche-individuelle-renseignements.html?v=20260907-1",
       fichier: "Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf",
-      instructionCourte: "Complétez la fiche individuelle puis renvoyez-la à OFFROAD 32 65."
+      instructionCourte: "Complétez la fiche individuelle et envoyez-la directement à OFFROAD 32 65."
     },
     {
       id: "contrat-inscription",
@@ -41,7 +41,7 @@ window.OFFROAD_DOCUMENTS_CONFIG = {
       aRenvoyer: true,
       page: "contrat-inscription.html",
       fichier: "CONTRAT_D_INSCRIPTION_A_UN_RAID_OFFROAD_32_65.pdf",
-      instructionCourte: "Complétez, signez puis renvoyez le contrat d’inscription."
+      instructionCourte: "Complétez, signez et envoyez directement le contrat d’inscription."
     },
     {
       id: "cgv-offroad",
@@ -57,7 +57,7 @@ window.OFFROAD_DOCUMENTS_CONFIG = {
       aRenvoyer: true,
       page: "cgv-offroad.html",
       fichier: "CGV_OFFROAD_32_65.pdf",
-      instructionCourte: "Ouvrez les CGV, cochez l’acceptation, renseignez nom/prénom/date, enregistrez puis renvoyez le PDF."
+      instructionCourte: "Ouvrez les CGV, cochez l’acceptation, renseignez nom/prénom/date puis envoyez-les directement."
     },
     {
       id: "conditions-vente-nomad",
@@ -73,7 +73,7 @@ window.OFFROAD_DOCUMENTS_CONFIG = {
       aRenvoyer: true,
       page: "conditions-vente-nomad.html",
       fichier: "CONDITIONS_VENTE_NOMAD_RAID_TRAVEL.pdf",
-      instructionCourte: "Ouvrez les Conditions de Vente NOMAD RAID Travel, cochez l’acceptation, renseignez nom/prénom/date, enregistrez puis renvoyez le PDF."
+      instructionCourte: "Ouvrez les Conditions de Vente NOMAD RAID Travel, cochez l’acceptation, renseignez nom/prénom/date puis envoyez-les directement."
     },
     {
       id: "rib-offroad",

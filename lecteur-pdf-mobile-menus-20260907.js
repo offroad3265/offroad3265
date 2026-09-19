@@ -2,25 +2,22 @@
   "use strict";
 
   var allowed = {
-    "Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf": "fiche-individuelle-completee.pdf",
-    "CONTRAT_D_INSCRIPTION_A_UN_RAID_OFFROAD_32_65.pdf": "contrat-inscription-complete.pdf",
-    "CGV_OFFROAD_32_65.pdf": "cgv-offroad-completees.pdf",
-    "CONDITIONS_VENTE_NOMAD_RAID_TRAVEL.pdf": "conditions-nomad-completees.pdf"
+    "Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf": { output: "fiche-individuelle-completee.pdf", id: "fiche-individuelle", type: "Fiche individuelle de renseignements", identity: true },
+    "CONTRAT_D_INSCRIPTION_A_UN_RAID_OFFROAD_32_65.pdf": { output: "contrat-inscription-complete.pdf", id: "contrat-inscription", type: "Contrat d’inscription" },
+    "CGV_OFFROAD_32_65.pdf": { output: "cgv-offroad-completees.pdf", id: "cgv-offroad", type: "Conditions Générales de Vente OFFROAD 32 65" },
+    "CONDITIONS_VENTE_NOMAD_RAID_TRAVEL.pdf": { output: "conditions-nomad-completees.pdf", id: "conditions-vente-nomad", type: "Conditions de Vente NOMAD RAID Travel" }
   };
   var params = new URLSearchParams(location.search);
   var file = params.get("file") || "";
-  var output = allowed[file];
+  var documentInfo = allowed[file];
   var status = document.getElementById("status");
-  var save = document.getElementById("save");
+  var sendDirect = document.getElementById("sendDirect");
   var back = document.getElementById("back");
+  var pdfDocument = null;
 
   back.href = safeBack(params.get("return"));
   if (params.has("testMobile")) document.body.style.setProperty("display", "block", "important");
-  if (matchMedia("(min-width: 760px)").matches && output && !params.has("testMobile")) {
-    location.replace(file);
-    return;
-  }
-  if (!output) {
+  if (!documentInfo) {
     status.textContent = "Document introuvable.";
     return;
   }
@@ -46,31 +43,77 @@
       links.setDocument(doc);
       bus.on("pagesinit", function () {
         viewer.currentScaleValue = "page-width";
-        save.disabled = false;
+        sendDirect.disabled = false;
         status.textContent = "Document complet prêt à être rempli.";
       });
-      save.addEventListener("click", function () {
-        save.disabled = true;
-        status.textContent = "Préparation du PDF complété…";
-        doc.saveDocument().then(function (bytes) {
-          var url = URL.createObjectURL(new Blob([bytes], { type: "application/pdf" }));
-          var anchor = document.createElement("a");
-          anchor.href = url;
-          anchor.download = output;
-          document.body.appendChild(anchor);
-          anchor.click();
-          anchor.remove();
-          setTimeout(function () { URL.revokeObjectURL(url); }, 30000);
-          status.textContent = "PDF enregistré. Revenez maintenant pour l’envoyer.";
-        }).catch(function () {
-          status.textContent = "L’enregistrement a échoué. Réessayez.";
-        }).finally(function () {
-          save.disabled = false;
-        });
-      });
+      pdfDocument = doc;
     }).catch(failed);
   } catch (error) {
     failed(error);
+  }
+
+  installDirectSend();
+
+  function installDirectSend() {
+    var dialog = document.getElementById("sendDialog");
+    var close = document.getElementById("closeSendDialog");
+    var form = document.getElementById("directSendForm");
+    var raidSelect = document.getElementById("directRaid");
+    var identityField = document.getElementById("identityField");
+    var identityFile = document.getElementById("identityFile");
+    var generatedPdf = document.getElementById("generatedPdf");
+    var submit = document.getElementById("confirmDirectSend");
+    var sendStatus = document.getElementById("sendStatus");
+    var selectedRaid = params.get("raid") || "";
+
+    (window.OFFROAD_RAIDS || []).forEach(function (raid) {
+      var option = document.createElement("option");
+      option.value = raid.titre + " — " + raid.date;
+      option.textContent = (raid.pays ? raid.pays.toUpperCase() + " — " : "") + raid.date + " — " + raid.titre;
+      option.dataset.raidId = raid.id;
+      if (raid.id === selectedRaid) option.selected = true;
+      raidSelect.appendChild(option);
+    });
+
+    document.getElementById("directSubject").value = documentInfo.type + " complété — OFFROAD 32 65";
+    document.getElementById("directType").value = documentInfo.type;
+    document.getElementById("directNext").value = new URL("confirmation-document.html?doc=" + encodeURIComponent(documentInfo.id) + (selectedRaid ? "&raid=" + encodeURIComponent(selectedRaid) : ""), location.href).href;
+    identityField.hidden = !documentInfo.identity;
+    identityFile.required = !!documentInfo.identity;
+
+    sendDirect.addEventListener("click", function () {
+      dialog.hidden = false;
+      document.body.classList.add("dialog-open");
+      var first = form.querySelector('input[name="Nom_Prénom"]');
+      if (first) first.focus();
+    });
+    close.addEventListener("click", closeDialog);
+    dialog.addEventListener("click", function (event) { if (event.target === dialog) closeDialog(); });
+    document.addEventListener("keydown", function (event) { if (event.key === "Escape" && !dialog.hidden) closeDialog(); });
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (!form.reportValidity() || !pdfDocument) return;
+      submit.disabled = true;
+      sendStatus.textContent = "Préparation et envoi du document…";
+      pdfDocument.saveDocument().then(function (bytes) {
+        var completedPdf = new File([bytes], documentInfo.output, { type: "application/pdf", lastModified: Date.now() });
+        var transfer = new DataTransfer();
+        transfer.items.add(completedPdf);
+        generatedPdf.files = transfer.files;
+        if (!generatedPdf.files.length) throw new Error("Pièce jointe indisponible");
+        form.submit();
+      }).catch(function () {
+        submit.disabled = false;
+        sendStatus.textContent = "Le document n’a pas pu être préparé. Réessayez sans fermer cette page.";
+      });
+    });
+
+    function closeDialog() {
+      dialog.hidden = true;
+      document.body.classList.remove("dialog-open");
+      sendDirect.focus();
+    }
   }
 
   function installMobileChoiceMenu() {

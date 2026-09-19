@@ -1,1 +1,42 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Compléter le document | OFFROAD 32 65</title><link rel="stylesheet" href="vendor/pdfjs-3.11.174/pdf_viewer.css"><link rel="stylesheet" href="lecteur-pdf-mobile-une-fleche-20260907.css"><link rel="stylesheet" href="lecteur-pdf-mobile-menus-20260907.css?v=9"></head><body><header><div class="brand">OFFROAD <span>32 65</span></div><p>Appuyez sur les champs du document pour les compléter.</p><div class="actions"><button id="save" type="button" disabled>Enregistrer le PDF complété</button><a id="back" href="documents.html">Revenir pour envoyer</a></div><div id="status" role="status" aria-live="polite">Chargement du document complet…</div></header><div id="viewerContainer" role="main" tabindex="0"><div id="viewer" class="pdfViewer"></div></div><script src="vendor/pdfjs-3.11.174/pdf.min.js"></script><script src="vendor/pdfjs-3.11.174/pdf_viewer.js"></script><script src="lecteur-pdf-mobile-menus-20260907.js?v=9"></script></body></html>
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Compléter et envoyer le document | OFFROAD 32 65</title>
+  <link rel="stylesheet" href="vendor/pdfjs-3.11.174/pdf_viewer.css">
+  <link rel="stylesheet" href="lecteur-pdf-mobile-une-fleche-20260907.css?v=30">
+  <link rel="stylesheet" href="lecteur-pdf-mobile-menus-20260907.css?v=30">
+</head>
+<body>
+  <header>
+    <div class="brand">OFFROAD <span>32 65</span></div>
+    <p>Complétez les champs du document, puis envoyez-le directement.</p>
+    <div class="actions"><button id="sendDirect" type="button" disabled>Envoyer directement</button><a id="back" href="documents.html">Retour aux documents</a></div>
+    <div id="status" role="status" aria-live="polite">Chargement du document complet…</div>
+  </header>
+  <div id="viewerContainer" role="main" tabindex="0"><div id="viewer" class="pdfViewer"></div></div>
+  <div id="sendDialog" class="send-dialog" hidden>
+    <div class="send-dialog-card" role="dialog" aria-modal="true" aria-labelledby="sendTitle">
+      <button id="closeSendDialog" class="send-dialog-close" type="button" aria-label="Fermer">×</button>
+      <h1 id="sendTitle">Envoyer le document complété</h1>
+      <p>Le PDF rempli sera joint automatiquement. Vous n’avez pas besoin de l’enregistrer.</p>
+      <form id="directSendForm" action="https://formsubmit.co/aventureoffroad.3265@gmail.com" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="_subject" id="directSubject"><input type="hidden" name="_template" value="table"><input type="hidden" name="_next" id="directNext"><input type="hidden" name="Type_document" id="directType"><input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+        <div class="send-fields">
+          <label>Nom / prénom *<input name="Nom_Prénom" autocomplete="name" required></label>
+          <label>Votre e-mail *<input name="email" type="email" autocomplete="email" required></label>
+          <label>Téléphone<input name="Téléphone" type="tel" autocomplete="tel"></label>
+          <label>Raid concerné *<select id="directRaid" name="Raid" required><option value="">Choisir…</option></select></label>
+        </div>
+        <div id="identityField" class="identity-field" hidden><label for="identityFile"><strong>Joindre la pièce d’identité *</strong></label><p>Passeport de préférence ou, à défaut, CNI en cours de validité.</p><input id="identityFile" type="file" name="Piece_identite" accept="application/pdf,.pdf,image/jpeg,.jpg,.jpeg,image/png,.png"></div>
+        <input id="generatedPdf" class="generated-pdf" type="file" name="Document_OFFROAD" accept="application/pdf,.pdf">
+        <label class="direct-consent"><input type="checkbox" name="Consentement" value="Oui" required><span>J’accepte que les informations et les documents transmis soient utilisés par OFFROAD 32 65 pour traiter mon inscription et assurer le suivi administratif du raid.</span></label>
+        <button id="confirmDirectSend" class="direct-submit" type="submit">Envoyer à OFFROAD 32 65</button>
+        <div id="sendStatus" class="send-status" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+  <script src="vendor/pdfjs-3.11.174/pdf.min.js"></script><script src="vendor/pdfjs-3.11.174/pdf_viewer.js"></script><script src="dates-raids.js"></script><script src="lecteur-pdf-mobile-menus-20260907.js?v=30"></script>
+</body>
+</html>
