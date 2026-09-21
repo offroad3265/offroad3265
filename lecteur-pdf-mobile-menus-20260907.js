@@ -5,7 +5,8 @@
     "Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf": { output: "fiche-individuelle-completee.pdf", id: "fiche-individuelle", type: "Fiche individuelle de renseignements", identity: true },
     "CONTRAT_D_INSCRIPTION_A_UN_RAID_OFFROAD_32_65.pdf": { output: "contrat-inscription-complete.pdf", id: "contrat-inscription", type: "Contrat d’inscription" },
     "CGV_OFFROAD_32_65.pdf": { output: "cgv-offroad-completees.pdf", id: "cgv-offroad", type: "Conditions Générales de Vente OFFROAD 32 65" },
-    "CONDITIONS_VENTE_NOMAD_RAID_TRAVEL.pdf": { output: "conditions-nomad-completees.pdf", id: "conditions-vente-nomad", type: "Conditions de Vente NOMAD RAID Travel" }
+    "CONDITIONS_VENTE_NOMAD_RAID_TRAVEL.pdf": { output: "conditions-nomad-completees.pdf", id: "conditions-vente-nomad", type: "Conditions de Vente NOMAD RAID Travel" },
+    "RIB_OFFROAD_32_65.pdf": { id: "rib-offroad", type: "RIB OFFROAD 32 65", readOnly: true }
   };
   var params = new URLSearchParams(location.search);
   var file = params.get("file") || "";
@@ -20,6 +21,12 @@
   if (!documentInfo) {
     status.textContent = "Document introuvable.";
     return;
+  }
+
+  if (documentInfo.readOnly) {
+    sendDirect.hidden = true;
+    document.getElementById("downloadRib").hidden = false;
+    document.querySelector("header p").textContent = "Consultez ou téléchargez le RIB OFFROAD 32 65.";
   }
 
   installMobileChoiceMenu();
@@ -44,8 +51,8 @@
       links.setDocument(doc);
       bus.on("pagesinit", function () {
         viewer.currentScaleValue = "page-width";
-        sendDirect.disabled = false;
-        status.textContent = "Document complet prêt à être rempli.";
+        if (!documentInfo.readOnly) sendDirect.disabled = false;
+        status.textContent = documentInfo.readOnly ? "RIB prêt à être consulté." : "Document complet prêt à être rempli.";
       });
       pdfDocument = doc;
     }).catch(failed);
@@ -53,7 +60,7 @@
     failed(error);
   }
 
-  installDirectSend();
+  if (!documentInfo.readOnly) installDirectSend();
 
   function installDirectSend() {
     var dialog = document.getElementById("sendDialog");
