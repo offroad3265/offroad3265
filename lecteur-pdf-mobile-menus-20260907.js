@@ -12,10 +12,8 @@
   var documentInfo = allowed[file];
   var status = document.getElementById("status");
   var sendDirect = document.getElementById("sendDirect");
-  var back = document.getElementById("back");
   var pdfDocument = null;
 
-  back.href = safeBack(params.get("return"));
   if (params.has("testMobile")) document.body.style.setProperty("display", "block", "important");
   if (!documentInfo) {
     status.textContent = "Document introuvable.";
@@ -246,10 +244,6 @@
     backdrop.addEventListener("click", function (event) {
       if (event.target === backdrop) closeMenu();
     });
-  }
-
-  function safeBack(value) {
-    return !value || /^(?:[a-z]+:|\/\/|\/)/i.test(value) ? "documents.html" : value;
   }
 
   function failed(error) {
