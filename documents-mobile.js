@@ -8,12 +8,12 @@
       var target;
       try { target = new URL(href, window.location.href); } catch (error) { return; }
 
-      if (/\\.pdf$/i.test(target.pathname)) {
+      if (/\.pdf$/i.test(target.pathname)) {
         var back = window.location.pathname.split("/").pop() + window.location.search;
         target = new URL("document-pdf-mobile-menus-v9-20260907.html", window.location.href);
         target.searchParams.set("file", decodeURIComponent(new URL(href, window.location.href).pathname.split("/").pop()));
         target.searchParams.set("return", back);
-      } else if (!/document-pdf-mobile-menus-v9-20260907\\.html$/i.test(target.pathname)) {
+      } else if (!/document-pdf-mobile-menus-v9-20260907\.html$/i.test(target.pathname)) {
         return;
       }
       if (raid) target.searchParams.set("raid", raid);
