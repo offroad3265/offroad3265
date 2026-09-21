@@ -37,7 +37,8 @@
       textLayerMode: 1
     });
     links.setViewer(viewer);
-    var task = pdfjsLib.getDocument({ url: file });
+    var pdfUrl = file === "CGV_OFFROAD_32_65.pdf" ? file + "?v=20260921-alignement" : file;
+    var task = pdfjsLib.getDocument({ url: pdfUrl });
     task.promise.then(function (doc) {
       viewer.setDocument(doc);
       links.setDocument(doc);
