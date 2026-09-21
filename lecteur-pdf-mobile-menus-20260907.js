@@ -45,7 +45,7 @@
       textLayerMode: 1
     });
     links.setViewer(viewer);
-    var pdfUrl = file === "CGV_OFFROAD_32_65.pdf" ? file + "?v=20260921-alignement" : file === "CONDITIONS_VENTE_NOMAD_RAID_TRAVEL.pdf" ? file + "?v=20260922-siret" : file;
+    var pdfUrl = file === "CGV_OFFROAD_32_65.pdf" ? file + "?v=20260921-alignement" : file === "CONDITIONS_VENTE_NOMAD_RAID_TRAVEL.pdf" ? file + "?v=20260922-arcus-rc-pro" : file;
     var task = pdfjsLib.getDocument({ url: pdfUrl });
     task.promise.then(function (doc) {
       viewer.setDocument(doc);
