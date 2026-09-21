@@ -50,7 +50,7 @@
       viewer.setDocument(doc);
       links.setDocument(doc);
       bus.on("pagesinit", function () {
-        viewer.currentScaleValue = "page-width";
+        viewer.currentScaleValue = documentInfo.readOnly ? "page-fit" : "page-width";
         if (!documentInfo.readOnly) sendDirect.disabled = false;
         status.textContent = documentInfo.readOnly ? "RIB prêt à être consulté." : "Document complet prêt à être rempli.";
       });
