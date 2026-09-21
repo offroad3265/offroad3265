@@ -44,7 +44,7 @@
       var rib = api.ribPrincipal ? api.ribPrincipal() : null;
       if(rib){
         ribLink.textContent = rib.titreCourt || rib.titre || "RIB";
-        ribLink.href = rib.fichier || rib.page || "#";
+        ribLink.href = rib.page || rib.fichier || "#";
         ribLink.hidden = false;
         ribLink.removeAttribute("aria-hidden");
       }else{
@@ -184,7 +184,7 @@
 
     var intro = document.querySelector(".documents-intro");
     if(intro){
-      intro.textContent = "Sélectionnez le document que vous souhaitez compléter et envoyer directement.";
+      intro.textContent = "Sélectionnez le document que vous souhaitez compléter ou consulter.";
     }
   }
 
