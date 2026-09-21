@@ -126,18 +126,21 @@
         return preserveRaid(api.href(d));
       });
 
-      /* Navigation unique et fiable depuis l'onglet DOCUMENTS */
-      openSelect.addEventListener("change", function(){
-        var target = this.value;
-        if(!target) return;
-
-        try{
-          var url = new URL(target, window.location.href);
-          window.location.assign(url.href);
-        }catch(e){
-          window.location.assign(target);
-        }
-      });
+      var openButton = document.getElementById("open-selected-document");
+      if(openButton){
+        openSelect.addEventListener("change", function(){
+          openButton.disabled = !this.value;
+        });
+        openButton.addEventListener("click", function(){
+          var target = openSelect.value;
+          if(!target) return;
+          try{
+            window.location.assign(new URL(target, window.location.href).href);
+          }catch(e){
+            window.location.assign(target);
+          }
+        });
+      }
     }
 
     /* Sélecteur du type de document renvoyé :
