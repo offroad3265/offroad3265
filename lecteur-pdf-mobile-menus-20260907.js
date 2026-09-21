@@ -91,23 +91,60 @@
     dialog.addEventListener("click", function (event) { if (event.target === dialog) closeDialog(); });
     document.addEventListener("keydown", function (event) { if (event.key === "Escape" && !dialog.hidden) closeDialog(); });
 
-    form.addEventListener("submit", function (event) {
+    form.addEventListener("submit", async function (event) {
       event.preventDefault();
-      if (!form.reportValidity() || !pdfDocument) return;
+      if (!form.reportValidity() || !pdfDocument || submit.disabled) return;
       submit.disabled = true;
-      sendStatus.textContent = "Préparation et envoi du document…";
-      pdfDocument.saveDocument().then(function (bytes) {
+      sendStatus.textContent = "Préparation du document…";
+
+      try {
+        var bytes = await withTimeout(pdfDocument.saveDocument(), 30000, "La préparation du PDF prend trop de temps.");
         var completedPdf = new File([bytes], documentInfo.output, { type: "application/pdf", lastModified: Date.now() });
-        var transfer = new DataTransfer();
-        transfer.items.add(completedPdf);
-        generatedPdf.files = transfer.files;
-        if (!generatedPdf.files.length) throw new Error("Pièce jointe indisponible");
-        form.submit();
-      }).catch(function () {
+        var attachments = Array.prototype.slice.call(form.querySelectorAll('input[type="file"]'))
+          .reduce(function (total, input) {
+            return total + Array.prototype.slice.call(input.files).reduce(function (sum, file) { return sum + file.size; }, 0);
+          }, completedPdf.size);
+        if (attachments > 10 * 1024 * 1024) {
+          throw new Error("Les pièces jointes dépassent 10 Mo au total. Réduisez leur taille puis réessayez.");
+        }
+
+        var data = new FormData(form);
+        data.set("Document_OFFROAD", completedPdf, completedPdf.name);
+        sendStatus.textContent = "Envoi du document…";
+        var controller = new AbortController();
+        var timer = setTimeout(function () { controller.abort(); }, 60000);
+        var response;
+        try {
+          response = await fetch("https://formsubmit.co/ajax/aventureoffroad.3265@gmail.com", {
+            method: "POST", body: data, signal: controller.signal
+          });
+        } finally {
+          clearTimeout(timer);
+        }
+        if (!response.ok) throw new Error("Le service d’envoi a refusé le document. Réessayez dans quelques instants.");
+        var result = await response.json();
+        if (result.success !== "true" && result.success !== true) {
+          throw new Error(result.message || "Le service d’envoi n’a pas confirmé la réception.");
+        }
+        sendStatus.textContent = "Envoi confirmé. Ouverture de la page de confirmation…";
+        location.assign(document.getElementById("directNext").value);
+      } catch (error) {
         submit.disabled = false;
-        sendStatus.textContent = "Le document n’a pas pu être préparé. Réessayez sans fermer cette page.";
-      });
+        sendStatus.textContent = error.name === "AbortError"
+          ? "L’envoi n’a pas été confirmé après une minute. Vérifiez votre connexion avant de réessayer."
+          : (error.message || "L’envoi n’a pas été confirmé. Réessayez.");
+      }
     });
+
+    function withTimeout(promise, milliseconds, message) {
+      var timer;
+      return Promise.race([
+        promise,
+        new Promise(function (_, reject) {
+          timer = setTimeout(function () { reject(new Error(message)); }, milliseconds);
+        })
+      ]).finally(function () { clearTimeout(timer); });
+    }
 
     function closeDialog() {
       dialog.hidden = true;
