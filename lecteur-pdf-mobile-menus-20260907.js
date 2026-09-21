@@ -24,6 +24,7 @@
   }
 
   if (documentInfo.readOnly) {
+    document.body.classList.add("rib-page");
     sendDirect.hidden = true;
     document.getElementById("downloadRib").hidden = false;
     document.querySelector("header p").textContent = "Consultez ou téléchargez le RIB OFFROAD 32 65.";
