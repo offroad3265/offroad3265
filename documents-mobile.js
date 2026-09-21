@@ -1,44 +1,30 @@
 (function () {
   "use strict";
   function openPdfFormsInsideTheSite() {
-    document.querySelectorAll('a[href*=".pdf"]').forEach(function (link) {
+    var raid = new URLSearchParams(window.location.search).get("raid");
+    document.querySelectorAll("a[href]").forEach(function (link) {
       var href = link.getAttribute("href");
       if (!href) return;
+      var target;
+      try { target = new URL(href, window.location.href); } catch (error) { return; }
 
-      var pdf = href.split("#")[0].split("?")[0];
-      var back = window.location.pathname.split("/").pop() + window.location.search;
-      var viewer = "document-pdf-mobile-menus-v9-20260907.html?file=" + encodeURIComponent(pdf) +
-        "&return=" + encodeURIComponent(back);
-      var raid = new URLSearchParams(window.location.search).get("raid");
-      if (raid) viewer += "&raid=" + encodeURIComponent(raid);
-
-      link.setAttribute("href", viewer);
+      if (/\\.pdf$/i.test(target.pathname)) {
+        var back = window.location.pathname.split("/").pop() + window.location.search;
+        target = new URL("document-pdf-mobile-menus-v9-20260907.html", window.location.href);
+        target.searchParams.set("file", decodeURIComponent(new URL(href, window.location.href).pathname.split("/").pop()));
+        target.searchParams.set("return", back);
+      } else if (!/document-pdf-mobile-menus-v9-20260907\\.html$/i.test(target.pathname)) {
+        return;
+      }
+      if (raid) target.searchParams.set("raid", raid);
+      link.setAttribute("href", target.pathname.split("/").pop() + target.search);
       link.removeAttribute("download");
       link.removeAttribute("target");
     });
 
-    var cards = document.querySelectorAll(".doc-workflow-card");
-    if (cards.length) {
-      var firstCard = cards[0];
-      var pdfLink = firstCard.querySelector('a[href*=".pdf"]');
-      var intro = Array.prototype.find.call(firstCard.querySelectorAll(":scope > p"), function (paragraph) {
-        return paragraph.id !== "selectedRaidNotice";
-      });
-      if (intro) {
-        intro.textContent = "Complétez le document directement dans le site, puis envoyez-le en un seul clic. Aucun enregistrement ni ajout manuel du PDF n’est nécessaire.";
-      }
-      var steps = firstCard.querySelectorAll(".doc-step");
-      if (steps[0]) {
-        var strong = steps[0].querySelector("strong");
-        if (strong) strong.textContent = "Complétez et envoyez le document directement.";
-      }
-      for (var index = 1; index < steps.length; index += 1) steps[index].hidden = true;
-      if (pdfLink) pdfLink.textContent = "Compléter et envoyer";
-
-      for (var cardIndex = 1; cardIndex < cards.length; cardIndex += 1) {
-        if (cards[cardIndex].querySelector('form[action*="formsubmit.co"]')) cards[cardIndex].hidden = true;
-      }
-    }
+    document.querySelectorAll(".doc-workflow-card").forEach(function (card, index) {
+      if (index > 0 && card.querySelector('form[action*="formsubmit.co"]')) card.hidden = true;
+    });
   }
 
   if (document.readyState === "loading") {
