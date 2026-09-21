@@ -552,9 +552,9 @@ html,body,.doc-workflow {background:#101010!important}
   box-shadow:0 16px 48px rgba(0,0,0,.14);
   padding:clamp(26px,4vw,54px)!important;
   display:grid!important;
-  grid-template-columns:minmax(0,1fr) auto!important;
+  grid-template-columns:minmax(0,1fr)!important;
   align-items:center!important;
-  gap:clamp(24px,4vw,64px)!important;
+  gap:0!important;
 }
 .document-guide-content {min-width:0}
 .document-guide .document-guide-kicker {
@@ -574,6 +574,7 @@ html,body,.doc-workflow {background:#101010!important}
   margin:0!important;max-width:760px;color:#333!important;-webkit-text-fill-color:#333!important;
   font-size:clamp(17px,1.45vw,21px)!important;line-height:1.5!important
 }
+.document-guide-action {margin-top:28px}
 .document-guide-action .btn {
   display:inline-flex!important;align-items:center;justify-content:center;gap:18px;
   padding:18px 24px!important;background:#ff7917!important;color:#111!important;
@@ -584,7 +585,7 @@ html,body,.doc-workflow {background:#101010!important}
 .document-guide-action .btn span {font-size:23px;line-height:1}
 @media (min-width:1001px) {
   html,body {height:auto!important;min-height:100%!important;overflow-y:auto!important}
-  .doc-workflow {position:static!important;left:auto!important;top:auto!important;transform:none!important;display:flex!important;align-items:center!important;min-height:calc(100vh - 61px);box-sizing:border-box;width:min(96vw,1500px)!important;max-width:none!important;padding:28px 0 40px!important}
+  .doc-workflow {position:static!important;left:auto!important;top:auto!important;transform:none!important;display:flex!important;align-items:center!important;min-height:calc(100vh - 61px);box-sizing:border-box;width:min(88vw,1120px)!important;max-width:none!important;padding:28px 0 40px!important}
   .doc-workflow-card {width:100%!important;margin:0 0 22px!important}
 }
 @media (max-width:1000px) {
