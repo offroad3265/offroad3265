@@ -12,8 +12,10 @@
   var documentInfo = allowed[file];
   var status = document.getElementById("status");
   var sendDirect = document.getElementById("sendDirect");
+  var back = document.getElementById("back");
   var pdfDocument = null;
 
+  back.href = safeBack(params.get("return"));
   if (params.has("testMobile")) document.body.style.setProperty("display", "block", "important");
   if (!documentInfo) {
     status.textContent = "Document introuvable.";
@@ -244,6 +246,11 @@
     backdrop.addEventListener("click", function (event) {
       if (event.target === backdrop) closeMenu();
     });
+  }
+
+  function safeBack(value) {
+    var pages = ["documents.html", "fiche-individuelle-renseignements.html", "contrat-inscription.html", "cgv-offroad.html", "conditions-vente-nomad.html"];
+    return pages.indexOf(value) !== -1 ? value : "documents.html";
   }
 
   function failed(error) {
