@@ -7,7 +7,7 @@
    ============================================================ */
 
 window.OFFROAD_DOCUMENTS_CONFIG = {
-  version: "8.9.31",
+  version: "8.9.32",
   retourEmail: "aventureoffroad.3265@gmail.com",
 
   documents: [
@@ -89,7 +89,7 @@ window.OFFROAD_DOCUMENTS_CONFIG = {
       obligatoire: false,
       remplissable: false,
       aRenvoyer: false,
-      page: "",
+      page: "document-pdf-mobile-menus-v9-20260907.html?file=RIB_OFFROAD_32_65.pdf&return=documents.html",
       fichier: "RIB_OFFROAD_32_65.pdf",
       instructionCourte: "Document bancaire à consulter ou télécharger."
     }
