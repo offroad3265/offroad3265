@@ -252,7 +252,16 @@
 
   function safeBack(value) {
     var pages = ["documents.html", "fiche-individuelle-renseignements.html", "contrat-inscription.html", "cgv-offroad.html", "conditions-vente-nomad.html"];
-    return pages.indexOf(value) !== -1 ? value : "documents.html";
+    if (!value || value.charAt(0) === "/" || /^[a-z][a-z0-9+.-]*:/i.test(value)) return "documents.html";
+    try {
+      var url = new URL(value, location.href);
+      var page = url.pathname.split("/").pop();
+      if (url.origin !== location.origin || pages.indexOf(page) === -1) return "documents.html";
+      var raid = url.searchParams.get("raid");
+      return page + (raid ? "?raid=" + encodeURIComponent(raid) : "");
+    } catch (error) {
+      return "documents.html";
+    }
   }
 
   function failed(error) {
