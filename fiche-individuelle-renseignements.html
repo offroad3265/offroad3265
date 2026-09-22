@@ -617,7 +617,7 @@ html,body,.doc-workflow {background:#101010!important}
       <p class="document-guide-text">Ouvrez et complétez le PDF en ligne. Lors de l’envoi, joignez votre pièce d’identité (passeport ou CNI en cours de validité).</p>
     </div>
     <div class="document-guide-action">
-      <a class="btn" href="document-pdf-mobile-menus-v9-20260907.html?file=Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf&amp;return=fiche-individuelle-renseignements.html">Ouvrir et compléter le PDF <span aria-hidden="true">↗</span></a>
+      <a class="btn" href="document-pdf-mobile-menus-v9-20260907.html?file=Fiche_individuelle_de_renseignements_OFFROAD_32_65.pdf&amp;return=fiche-individuelle-renseignements.html" onclick="const raid=new URLSearchParams(location.search).get('raid');if(raid){const url=new URL(this.href);const back=new URL(url.searchParams.get('return'),location.href);back.searchParams.set('raid',raid);url.searchParams.set('return',back.pathname.split('/').pop()+back.search);url.searchParams.set('raid',raid);this.href=url.href}">Ouvrir et compléter le PDF <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
