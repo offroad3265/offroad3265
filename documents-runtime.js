@@ -9,7 +9,7 @@
     var api = docs();
     if(!api) return "";
     return api.menu().map(function(d){
-      return '<a href="' + api.href(d) + '">' + d.titre + '</a>';
+      return '<a href="' + preserveRaid(api.href(d)) + '">' + d.titre + '</a>';
     }).join("");
   }
 
@@ -35,7 +35,7 @@
     var container = document.querySelector(".step-dossier .compact-docs");
     if(container){
       container.innerHTML = api.inscription().map(function(d){
-        return '<a class="btn full" href="' + api.href(d) + '">' + d.titreCourt + '</a>';
+        return '<a class="btn full" href="' + preserveRaid(api.href(d)) + '">' + d.titreCourt + '</a>';
       }).join("");
     }
 
@@ -86,9 +86,33 @@
     }
   }
 
+  function currentRaid(){
+    var params = new URLSearchParams(window.location.search);
+    return params.get("raid") ||
+      (window.location.pathname.endsWith("/inscription-raid.html") ? params.get("id") : "") || "";
+  }
+
+  function applyViewerLinks(){
+    var raid = currentRaid();
+    if(!raid) return;
+    document.querySelectorAll('a[href*="document-pdf-mobile-menus-v9-20260907.html?"]').forEach(function(link){
+      try{
+        var url = new URL(link.getAttribute("href"), window.location.href);
+        url.searchParams.set("raid", raid);
+        var back = url.searchParams.get("return");
+        if(back){
+          var backUrl = new URL(back, window.location.href);
+          backUrl.searchParams.set("raid", raid);
+          url.searchParams.set("return", backUrl.pathname.split("/").pop() + backUrl.search);
+        }
+        link.href = url.pathname.split("/").pop() + url.search;
+      }catch(e){}
+    });
+  }
+
   function preserveRaid(href){
     if(!href) return "";
-    var raid = new URLSearchParams(window.location.search).get("raid");
+    var raid = currentRaid();
     if(!raid || /\.pdf(?:$|[?#])/i.test(href)) return href;
 
     try{
@@ -195,6 +219,7 @@
     applyMenus();
     applyInscription();
     applyDocumentsPage();
+    applyViewerLinks();
   }
 
   if(document.readyState === "loading"){
