@@ -68,6 +68,7 @@
     var close = document.getElementById("closeSendDialog");
     var form = document.getElementById("directSendForm");
     var raidSelect = document.getElementById("directRaid");
+    var raidIdField = document.getElementById("directRaidId");
     var identityField = document.getElementById("identityField");
     var identityFile = document.getElementById("identityFile");
     var generatedPdf = document.getElementById("generatedPdf");
@@ -86,7 +87,17 @@
 
     document.getElementById("directSubject").value = documentInfo.type + " complété — OFFROAD 32 65";
     document.getElementById("directType").value = documentInfo.type;
-    document.getElementById("directNext").value = new URL("confirmation-document.html?doc=" + encodeURIComponent(documentInfo.id) + (selectedRaid ? "&raid=" + encodeURIComponent(selectedRaid) : ""), location.href).href;
+    function syncRaidSelection() {
+      var option = raidSelect.options[raidSelect.selectedIndex];
+      var raidId = option && option.dataset.raidId || "";
+      raidIdField.value = raidId;
+      document.getElementById("directNext").value = new URL(
+        "confirmation-document.html?doc=" + encodeURIComponent(documentInfo.id) +
+        (raidId ? "&raid=" + encodeURIComponent(raidId) : ""), location.href
+      ).href;
+    }
+    raidSelect.addEventListener("change", syncRaidSelection);
+    syncRaidSelection();
     identityField.hidden = !documentInfo.identity;
     identityFile.required = !!documentInfo.identity;
     if (documentInfo.identity) {
@@ -107,6 +118,7 @@
     form.addEventListener("submit", async function (event) {
       event.preventDefault();
       if (!form.reportValidity() || !pdfDocument || submit.disabled) return;
+      syncRaidSelection();
       submit.disabled = true;
       sendStatus.textContent = "Préparation du document…";
 

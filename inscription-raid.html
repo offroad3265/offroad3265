@@ -637,9 +637,9 @@ a.wa-top:hover,
 <div class="step-head"><div class="num" id="step1Number">1</div><div><h2 id="step1Title">Dossier</h2>
 <p id="step1Text">Complétez puis renvoyez à OFFROAD 32 65 les trois documents nécessaires à votre inscription : la fiche individuelle de renseignements, le contrat d’inscription et les CGV OFFROAD 32 65. Joignez également une pièce d’identité en cours de validité : de préférence le passeport ou, à défaut, la CNI.</p></div></div>
 <div class="compact-docs">
-<a class="btn full" id="ficheLink" href="fiche-individuelle-renseignements.html">Fiche individuelle</a>
-<a class="btn full" id="contratLink" href="contrat-inscription.html">Contrat d’inscription signé</a>
-<a class="btn full" href="cgv-offroad.html">CGV OFFROAD 32 65</a>
+<a class="btn full" id="ficheLink" href="fiche-individuelle-renseignements.html" onclick="const id=new URLSearchParams(location.search).get('id');if(id){const url=new URL(this.href);url.searchParams.set('raid',id);this.href=url.href}">Fiche individuelle</a>
+<a class="btn full" id="contratLink" href="contrat-inscription.html" onclick="const id=new URLSearchParams(location.search).get('id');if(id){const url=new URL(this.href);url.searchParams.set('raid',id);this.href=url.href}">Contrat d’inscription signé</a>
+<a class="btn full" href="cgv-offroad.html" onclick="const id=new URLSearchParams(location.search).get('id');if(id){const url=new URL(this.href);url.searchParams.set('raid',id);this.href=url.href}">CGV OFFROAD 32 65</a>
 </div>
 <div class="condition compact-condition" id="step1Condition">Dossier complet = fiche individuelle renseignée + contrat d’inscription complété et signé + CGV OFFROAD 32 65 acceptées et renseignées + pièce d’identité en cours de validité (passeport de préférence ou, à défaut, CNI).</div>
 </article>
@@ -660,7 +660,7 @@ a.wa-top:hover,
 </section>
 
 <div class="compact-actions">
-<a class="btn outline" href="documents.html">Tous les documents</a>
+<a class="btn outline" href="documents.html" onclick="const id=new URLSearchParams(location.search).get('id');if(id){const url=new URL(this.href);url.searchParams.set('raid',id);this.href=url.href}">Tous les documents</a>
 <a class="btn outline" href="nos-raids.html">Retour aux raids</a>
 </div>
 </main>
