@@ -137,17 +137,5 @@ window.OFFROAD_RAIDS = [
     prix_duo: "640 €",
     programme: "presentation-raid.html?id=espagne-secteur-catalogne-juin-2027",
     lien: "presentation-raid.html?id=espagne-secteur-catalogne-juin-2027"
-  },
-  {
-    id: "espagne-sept-2026",
-    pays: "espagne",
-    annee: 2026,
-    date: "19 ET 20 SEPTEMBRE 2026",
-    titre: "Aragon/Catalogne",
-    statut: "COMPLET",
-    prix_solo: "450 €",
-    prix_duo: "650 €",
-    programme: "presentation-raid.html?id=espagne-sept-2026",
-    lien: "presentation-raid.html?id=espagne-sept-2026"
   }
 ];
