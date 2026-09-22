@@ -89,6 +89,10 @@
     document.getElementById("directNext").value = new URL("confirmation-document.html?doc=" + encodeURIComponent(documentInfo.id) + (selectedRaid ? "&raid=" + encodeURIComponent(selectedRaid) : ""), location.href).href;
     identityField.hidden = !documentInfo.identity;
     identityFile.required = !!documentInfo.identity;
+    if (documentInfo.identity) {
+      sendDirect.textContent = "Envoyer la fiche et la pièce d’identité";
+      document.querySelector(".send-dialog-card > p").textContent = "La fiche remplie sera jointe automatiquement. Ajoutez votre pièce d’identité avant l’envoi.";
+    }
 
     sendDirect.addEventListener("click", function () {
       dialog.hidden = false;
