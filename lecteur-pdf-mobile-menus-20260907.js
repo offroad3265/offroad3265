@@ -121,26 +121,16 @@
           throw new Error("Les pièces jointes dépassent 10 Mo au total. Réduisez leur taille puis réessayez.");
         }
 
-        var data = new FormData(form);
-        data.set("Document_OFFROAD", completedPdf, completedPdf.name);
-        sendStatus.textContent = "Envoi du document…";
-        var controller = new AbortController();
-        var timer = setTimeout(function () { controller.abort(); }, 60000);
-        var response;
-        try {
-          response = await fetch("https://formsubmit.co/ajax/aventureoffroad.3265@gmail.com", {
-            method: "POST", body: data, signal: controller.signal
-          });
-        } finally {
-          clearTimeout(timer);
+        // Le service prend en charge les fichiers via un formulaire multipart classique.
+        // Placer le PDF généré dans le champ fichier, à côté de la pièce d’identité.
+        var files = new DataTransfer();
+        files.items.add(completedPdf);
+        generatedPdf.files = files.files;
+        if (generatedPdf.files.length !== 1) {
+          throw new Error("Le PDF complété n’a pas pu être joint. Réessayez.");
         }
-        if (!response.ok) throw new Error("Le service d’envoi a refusé le document. Réessayez dans quelques instants.");
-        var result = await response.json();
-        if (result.success !== "true" && result.success !== true) {
-          throw new Error(result.message || "Le service d’envoi n’a pas confirmé la réception.");
-        }
-        sendStatus.textContent = "Envoi confirmé. Ouverture de la page de confirmation…";
-        location.assign(document.getElementById("directNext").value);
+        sendStatus.textContent = "Envoi des pièces jointes…";
+        HTMLFormElement.prototype.submit.call(form);
       } catch (error) {
         submit.disabled = false;
         sendStatus.textContent = error.name === "AbortError"
