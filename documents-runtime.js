@@ -39,6 +39,10 @@
       }).join("");
     }
 
+    document.querySelectorAll('a[href^="documents.html"]').forEach(function(link){
+      link.href = preserveRaid(link.getAttribute("href"));
+    });
+
     var ribLink = document.getElementById("ribLink");
     if(ribLink){
       var rib = api.ribPrincipal ? api.ribPrincipal() : null;
