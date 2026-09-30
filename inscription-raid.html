@@ -834,7 +834,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   });
 
   // Ensure FormSubmit returns to confirmation with the same raid context.
-  document.querySelectorAll('form[action*="formsubmit.co"]').forEach(form=>{
+  document.querySelectorAll('form[data-offroad-document-send], form[action*="formsubmit.co"]').forEach(form=>{
     const next=form.querySelector('input[name="_next"]');
     if(!next) return;
     const raw=next.value||"confirmation-document.html";

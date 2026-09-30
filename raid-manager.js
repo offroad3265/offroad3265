@@ -185,7 +185,7 @@
   "use strict";
 
   function initDocumentUploadGuard(){
-    const form=document.querySelector('.return-form[action*="formsubmit.co"]');
+    const form=document.querySelector('.return-form[data-offroad-document-send], .return-form[action*="formsubmit.co"]');
     if(!form || form.dataset.uploadGuardReady==="1") return;
     form.dataset.uploadGuardReady="1";
 

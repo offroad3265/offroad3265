@@ -623,7 +623,7 @@ html,body,.doc-workflow {background:#101010!important}
 
   <section class="doc-workflow-card">
     <h2>Renvoyer la fiche individuelle remplie</h2>
-    <form class="return-form" action="https://formsubmit.co/aventureoffroad.3265@gmail.com" method="POST" enctype="multipart/form-data">
+    <form class="return-form" action="https://offroad-documents.aventureoffroad-3265.workers.dev/" data-offroad-document-send method="POST" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="Fiche individuelle + pièce d'identité - OFFROAD 32 65">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_next" value="https://offroad3265.fr/confirmation-document.html?doc=fiche-individuelle">
@@ -707,6 +707,7 @@ document.addEventListener("DOMContentLoaded",()=>{
  }
 });
 </script>
+<script src="offroad-document-send.js?v=20260930"></script>
 <script src="site-config.js"></script>
 <script src="pages-config.js"></script>
 <script src="site-core.js?v=20260907-4"></script>
@@ -772,7 +773,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   });
 
   // Ensure FormSubmit returns to confirmation with the same raid context.
-  document.querySelectorAll('form[action*="formsubmit.co"]').forEach(form=>{
+  document.querySelectorAll('form[data-offroad-document-send], form[action*="formsubmit.co"]').forEach(form=>{
     const next=form.querySelector('input[name="_next"]');
     if(!next) return;
     const raw=next.value||"confirmation-document.html?doc=fiche-individuelle";

@@ -24,7 +24,7 @@
     });
 
     document.querySelectorAll(".doc-workflow-card").forEach(function (card, index) {
-      if (index > 0 && card.querySelector('form[action*="formsubmit.co"]')) card.hidden = true;
+      if (index > 0 && card.querySelector('form[data-offroad-document-send], form[action*="formsubmit.co"]')) card.hidden = true;
     });
   }
 

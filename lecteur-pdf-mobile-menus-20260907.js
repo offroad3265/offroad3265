@@ -133,16 +133,32 @@
           throw new Error("Les pièces jointes dépassent 10 Mo au total. Réduisez leur taille puis réessayez.");
         }
 
-        // Le service prend en charge les fichiers via un formulaire multipart classique.
-        // Placer le PDF généré dans le champ fichier, à côté de la pièce d’identité.
-        var files = new DataTransfer();
-        files.items.add(completedPdf);
-        generatedPdf.files = files.files;
-        if (generatedPdf.files.length !== 1) {
-          throw new Error("Le PDF complété n’a pas pu être joint. Réessayez.");
+        var data = new FormData(form);
+        data.set("Document_OFFROAD", completedPdf, completedPdf.name);
+        data.set("document_type", documentInfo.type);
+        data.set("client_name", data.get("Nom_Prénom") || "");
+        data.set("client_email", data.get("email") || "");
+        data.set("client_phone", data.get("Téléphone") || "");
+        data.set("raid", data.get("Raid") || selectedRaid || "");
+        data.set("source", "Site OFFROAD 32 65 — document complété en ligne");
+        sendStatus.textContent = "Envoi du document…";
+        var controller = new AbortController();
+        var timer = setTimeout(function () { controller.abort(); }, 60000);
+        var response;
+        try {
+          response = await fetch("https://offroad-documents.aventureoffroad-3265.workers.dev/", {
+            method: "POST", body: data, signal: controller.signal
+          });
+        } finally {
+          clearTimeout(timer);
         }
-        sendStatus.textContent = "Envoi des pièces jointes…";
-        HTMLFormElement.prototype.submit.call(form);
+        if (!response.ok) throw new Error("Le service d’envoi a refusé le document. Réessayez dans quelques instants.");
+        var result = await response.json();
+        if (result.success !== true) {
+          throw new Error(result.message || "Le service d’envoi n’a pas confirmé la réception.");
+        }
+        sendStatus.textContent = "Envoi confirmé. Ouverture de la page de confirmation…";
+        location.assign(document.getElementById("directNext").value);
       } catch (error) {
         submit.disabled = false;
         sendStatus.textContent = error.name === "AbortError"

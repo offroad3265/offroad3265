@@ -571,7 +571,7 @@ main.wrap{display:flex!important;align-items:center!important;justify-content:ce
   <p>Après avoir complété et enregistré votre PDF, vous pouvez le transmettre directement à
   <span class="email">aventureoffroad.3265@gmail.com</span>.</p>
 
-  <form action="https://formsubmit.co/aventureoffroad.3265@gmail.com"
+  <form action="https://offroad-documents.aventureoffroad-3265.workers.dev/" data-offroad-document-send
         method="POST" enctype="multipart/form-data" class="document-return-form" id="retour-document">
     <input type="hidden" name="_subject" value="Document OFFROAD 32 65 reçu depuis le site">
     <input type="hidden" name="_template" value="table">
@@ -750,7 +750,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   });
 
   // Ensure FormSubmit returns to confirmation with the same raid context.
-  document.querySelectorAll('form[action*="formsubmit.co"]').forEach(form=>{
+  document.querySelectorAll('form[data-offroad-document-send], form[action*="formsubmit.co"]').forEach(form=>{
     const next=form.querySelector('input[name="_next"]');
     if(!next) return;
     const raw=next.value||"confirmation-document.html";
@@ -790,6 +790,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 </script>
 
 
+<script src="offroad-document-send.js?v=20260930"></script>
 <script src="documents-config.js?v=8.9.32"></script>
 <script src="documents-runtime.js?v=20260922-raid-context-2"></script>
 </body></html>
