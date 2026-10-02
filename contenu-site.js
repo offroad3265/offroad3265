@@ -60,7 +60,80 @@ window.OFFROAD_CONTENU = {
   
   galerieAlbums: {
     "Maroc": [],
-    "Espagne": [],
+    "Espagne": [
+      {
+        "id": "espagne-22696",
+        "actif": true,
+        "ordre": 1,
+        "annee": "",
+        "fichier": "photos-espagne/22696.jpg",
+        "legende": "",
+        "alt": "Préparation des bagages dans le pick-up avant le raid en Espagne"
+      },
+      {
+        "id": "espagne-22650",
+        "actif": true,
+        "ordre": 2,
+        "annee": "",
+        "fichier": "photos-espagne/22650.jpg",
+        "legende": "",
+        "alt": "Pilote au volant d’un SSV Polaris lors du raid en Espagne"
+      },
+      {
+        "id": "espagne-22651",
+        "actif": true,
+        "ordre": 3,
+        "annee": "",
+        "fichier": "photos-espagne/22651.jpg",
+        "legende": "",
+        "alt": "SSV Segway au départ du raid en Espagne"
+      },
+      {
+        "id": "espagne-22649",
+        "actif": true,
+        "ordre": 4,
+        "annee": "",
+        "fichier": "photos-espagne/22649.jpg",
+        "legende": "",
+        "alt": "Participant près de son SSV Can-Am au départ du raid en Espagne"
+      },
+      {
+        "id": "espagne-23075",
+        "actif": true,
+        "ordre": 5,
+        "annee": "",
+        "fichier": "photos-espagne/23075.jpg",
+        "legende": "",
+        "alt": "Pick-up OFFROAD 32 65 sur une piste en Espagne"
+      },
+      {
+        "id": "espagne-23072",
+        "actif": true,
+        "ordre": 6,
+        "annee": "",
+        "fichier": "photos-espagne/23072.jpg",
+        "legende": "",
+        "alt": "SSV Can-Am sur une piste en Espagne"
+      },
+      {
+        "id": "espagne-23070",
+        "actif": true,
+        "ordre": 7,
+        "annee": "",
+        "fichier": "photos-espagne/23070.jpg",
+        "legende": "",
+        "alt": "Participants réunis autour d’une table pendant le raid en Espagne"
+      },
+      {
+        "id": "espagne-23071",
+        "actif": true,
+        "ordre": 8,
+        "annee": "",
+        "fichier": "photos-espagne/23071.jpg",
+        "legende": "",
+        "alt": "Convoi de SSV sur une piste en Espagne"
+      }
+    ],
     "Sardaigne": [],
     "Tunisie": []
   },
