@@ -1289,6 +1289,16 @@ body[data-raid-id="espagne-bardenas-2027"] .program-title h2{
 body[data-raid-id="espagne-bardenas-2027"] #programDays .day-card p + p{
   margin-top:5px!important;
 }
+@media(min-width:1000px){
+  html body[data-raid-id="espagne-bardenas-2027"] #programDays{
+    overflow-x:hidden!important;
+    overflow-y:auto!important;
+  }
+  html body[data-raid-id="espagne-bardenas-2027"] #programDays > .day-card,
+  html body[data-raid-id="espagne-bardenas-2027"] #programDays > .programme-total-visible{
+    flex-shrink:0!important;
+  }
+}
 </style>
 </head><body>
 <header>
