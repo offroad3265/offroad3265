@@ -151,7 +151,7 @@
         inclus: true, non_inclus: true, equipement: true, inscription: true
       },
       programme: {
-        titre_force: "LES BARDENAS",
+        titre_force: "Des Pyrénées à la Méditerranée",
         repartition: "moitie",
         ecart_jour_parcours_px: 48,
         espace_distance_jours_px: 18,

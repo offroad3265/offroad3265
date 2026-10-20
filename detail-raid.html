@@ -1280,6 +1280,16 @@ nav .active{
 }
 </style>
 
+<style id="janvier-2027-programme-valide">
+/* Présentation du programme de janvier uniquement. */
+body[data-raid-id="espagne-bardenas-2027"] .program-title h2{
+  font-size:clamp(22px,2.1vw,30px)!important;
+  line-height:1.1!important;
+}
+body[data-raid-id="espagne-bardenas-2027"] #programDays .day-card p + p{
+  margin-top:5px!important;
+}
+</style>
 </head><body>
 <header>
   <a class="brand" href="index.html">OFFROAD <span>32 65</span></a>
@@ -1334,12 +1344,12 @@ nav .active{
 
 <script src="pages-config.js"></script>
 <script src="pays-raids.js"></script>
-<script src="dates-raids.js?v=20261020"></script>
+<script src="dates-raids.js?v=20261020-janvier"></script>
 <script src="raid-status.js"></script>
 <script src="raid-manager.js"></script>
 <script src="programme-config.js"></script>
-<script src="detail-raid-config.js"></script>
-<script src="programmes-raids.js"></script>
+<script src="detail-raid-config.js?v=20261020-janvier"></script>
+<script src="programmes-raids.js?v=20261020-janvier"></script>
 <script src="prestations-globales.js"></script>
 <script src="prestations-admin.js"></script>
 <script src="raid-model.js"></script>
@@ -1407,12 +1417,16 @@ document.addEventListener("DOMContentLoaded",()=>{
       const cards = Array.from({length:nb},(_,i)=>{
         const e=steps[i]||{};
         const moments=Array.isArray(e.moments)?e.moments:[];
+        const januaryNarrative=id==="espagne-bardenas-2027"
+          ? `${e.sous_titre?`<p class="day-subtitle"><em>${e.sous_titre}</em></p>`:""}${(e.texte||"Contenu de la journée à compléter.").split(/\n\s*\n/).map(paragraph=>`<p>${paragraph}</p>`).join("")}`
+          : "";
         const contenu=moments.length
           ? `<div class="day-moments">${moments.map(m=>`
               <div class="day-moment">
                 <div class="moment-label">${m.moment||""}</div>
                 <div class="moment-text">${m.texte||""}</div>
               </div>`).join("")}</div>`
+          : id==="espagne-bardenas-2027" ? januaryNarrative
           : `<p>${id==="maroc-2026" ? (e.texte||"Contenu de la journée à compléter.").replace(/^(Matin|À midi|Après-midi)\s*:/gm, '<strong class="moment-inline">$1 :</strong>') : (e.texte||"Contenu de la journée à compléter.")}</p>`;
         return `<article class="day-card"><div class="day-badge">${e.repere||`Jour ${i+1}`}</div>
         <div>

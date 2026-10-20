@@ -239,19 +239,26 @@ window.OFFROAD_PROGRAMMES = window.OFFROAD_PROGRAMMES || {
   },
   "espagne-bardenas-2027": {
     modele: "global",
-    nb_jours: 2,
-    distance_totale: "environ 500 kms",
+    nb_jours: 3,
+    distance_totale: "Environ 700 km",
     jours: [
       {
         jour: 1,
-        titre: "EN ROUTE VERS LES BARDENAS",
-        sous_titre: "Premières pistes & grands espaces",
-        texte: "Dès 9h00, les équipages s’élancent par groupes de 5 véhicules, espacés de 15 minutes, pour donner le coup d’envoi de cette aventure Offroad en terre espagnole. Cap sur le spectaculaire désert des Bardenas, à travers un parcours alternant pistes roulantes et caillouteuses, vastes plaines et grands plateaux. Une première étape idéale pour prendre ses marques et profiter des paysages qui défilent au fil des kilomètres. À midi, halte pour partager un moment convivial autour de grillades au feu de bois, avant de reprendre la route. L’après-midi, retour sur les pistes et poursuite de l’aventure en direction des Bardenas, avec toujours ce sentiment de liberté propre aux grands espaces. En fin de journée, arrivée à proximité de Tudela. Installation à l’hôtel, dîner autour d’un buffet à volonté et nuit sur place. Une première journée entre pilotage, grands espaces et convivialité, pour entrer pleinement dans l’aventure Offroad espagnole."
+        titre: "PONT DE SUERT → VILAGRASA",
+        sous_titre: "Montagnes, panoramas et pistes variées",
+        texte: "Dès 9h00, départ de Pont de Suert par groupes de 5 véhicules, espacés de 15 minutes, pour donner le coup d’envoi de cette aventure Offroad. La matinée nous entraîne sur un parcours montagneux, entre pistes techniques et points de vue exceptionnels. Une première étape pour profiter du relief et des paysages tout en prenant ses marques.\n\nÀ midi, halte à Cellers pour partager un repas buffet dans un hôtel-restaurant en bordure de lac. L’après-midi, changement d’ambiance : les montagnes laissent place aux pistes roulantes de la plaine, avant de rejoindre Vilagrasa.\n\nEn fin de journée, repas du soir et nuit à l’hôtel à Vilagrasa, avec parking sécurisé pour les véhicules. Une station-service à proximité permet de préparer les véhicules pour la prochaine étape."
       },
       {
         jour: 2,
-        titre: "Bardenas & derniers défis",
-        texte: "Une dernière étape à la carte. Dès 9h00, départ par groupes de 5 véhicules, espacés de 15 minutes, pour une immersion au cœur du spectaculaire désert des Bardenas, traversé dans le strict respect de la réglementation en vigueur. À la sortie du désert, changement de décor et de terrain : pistes variées, passages montagneux, secteurs plus cassants et sous-bois rythment cette dernière matinée Offroad. Vers 14h30, place à un déjeuner bien mérité avant de choisir la suite de votre aventure. Deux options s’offrent alors à vous : retour tranquille au point de départ par 10 km de route, ou, pour prolonger le plaisir, une ultime boucle Offroad de 50 km à travers montagnes et sous-bois. Une dernière journée intense et contrastée, avec la liberté de terminer en douceur… ou de savourer jusqu’au dernier kilomètre de piste."
+        titre: "VILAGRASA → TARRAGONE → VILAGRASA",
+        sous_titre: "Entre plaines et coteaux, le plaisir des pistes",
+        texte: "Dès 9h00, départ de Vilagrasa par groupes de 5 véhicules, espacés de 15 minutes. Cap sur Tarragone à travers un parcours alternant plaines ouvertes et coteaux, où les pistes invitent à profiter du pilotage autant que des paysages. Au fil des kilomètres, les horizons se dévoilent et l’aventure se poursuit dans une ambiance conviviale.\n\nÀ midi, halte à Tarragone pour partager le repas et profiter d’un moment de détente. L’après-midi, retour vers Vilagrasa par un itinéraire différent, sur des pistes du même caractère, entre plaines et coteaux. De nouveaux passages à découvrir pour prolonger le plaisir jusqu’à la fin de l’étape.\n\nEn fin de journée, retour au même hôtel à Vilagrasa, avec parking sécurisé pour les véhicules. Repas du soir et nuit sur place, pour reprendre des forces avant la dernière journée de cette aventure."
+      },
+      {
+        jour: 3,
+        titre: "VILAGRASA → PONT DE SUERT",
+        sous_titre: "Dernières pistes, entre plaines et montagnes",
+        texte: "Dès 9h00, départ de Vilagrasa par groupes de 5 véhicules, espacés de 15 minutes, pour cette dernière journée d’aventure. La matinée se déroule en plaine, sur les pistes en direction de Cellers. Une nouvelle occasion de profiter des paysages ouverts et du plaisir de rouler ensemble avant de retrouver les reliefs.\n\nÀ midi, halte à Cellers autour d’un repas buffet. Un moment convivial pour reprendre des forces, partager les souvenirs des premières étapes et savourer cette dernière pause déjeuner du raid.\n\nL’après-midi, retour vers Pont de Suert par des pistes montagneuses et roulantes, permettant une progression fluide au cœur des reliefs. Les paysages changent à nouveau et accompagnent les derniers kilomètres de cette traversée Offroad. L’arrivée à Pont de Suert marque la fin de ces trois journées entre plaines, coteaux et montagnes, avec de beaux moments partagés."
       }
     ]
   },
