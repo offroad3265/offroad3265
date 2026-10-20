@@ -75,20 +75,6 @@
       },
       bouton_inscription: { taille_police_px: 14 }
     },
-    "espagne-1000-bornes-2026": {
-      sections: {
-        hero: true, programme: true, tarifs: true, note_prestations: true,
-        inclus: true, non_inclus: true, equipement: true, inscription: true
-      },
-      programme: {
-        titre_force: "LA 1000 BORNES",
-        repartition: "moitie",
-        ecart_jour_parcours_px: 48,
-        espace_distance_jours_px: 18,
-        taille_descriptif_px: 13.5
-      },
-      bouton_inscription: { taille_police_px: 14 }
-    },
     "espagne-bardegros-2026": {
       sections: {
         hero: true, programme: true, tarifs: true, note_prestations: true,

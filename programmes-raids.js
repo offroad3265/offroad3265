@@ -99,33 +99,6 @@ window.OFFROAD_PROGRAMMES = window.OFFROAD_PROGRAMMES || {
       }
     ]
   },
-  "espagne-1000-bornes-2026": {
-    modele: "global",
-    nb_jours: 4,
-    distance_totale: "environ 1000 kms",
-    jours: [
-      {
-        jour: 1,
-        titre: "Huesca → Saragosse",
-        texte: "Immersion dans les Monegros. Dès 9h00, départ du secteur de Huesca par groupes de 5 véhicules, espacés de 15 minutes. Cap au sud vers Saragosse pour une première immersion Offroad au cœur des paysages sauvages de l’Aragon. Direction le mythique désert des Monegros, entre pistes roulantes et caillouteuses, monts arides et grands plateaux. Un terrain varié, idéal pour prendre ses marques et profiter pleinement du pilotage. À midi, pause déjeuner avec grillades au feu de bois, dans une ambiance conviviale. L’après-midi, reprise des pistes et poursuite de l’aventure vers le sud de Saragosse. Fin d’étape à environ 50 km au sud de Saragosse, installation à l’hôtel et soirée détente après cette première journée entre poussière, grands espaces et plaisir de conduite."
-      },
-      {
-        jour: 2,
-        titre: "Cap sur Teruel",
-        texte: "Montagnes, panoramas & pistes sauvages. Dès 9h00, départ de l’hôtel par groupes de 5 véhicules, espacés de 15 minutes. Cap au sud, en direction de Teruel, pour une journée placée sous le signe du relief et de l’évasion. La matinée nous entraîne sur de superbes pistes montagneuses, ponctuées de passages offrant des points de vue remarquables sur les paysages sauvages de l’Aragon. À midi, pause pique-nique en pleine nature, avant de reprendre les pistes. L’après-midi alterne entre reliefs montagneux, grands plateaux et passages en sous-bois, offrant une belle diversité de terrains et d’ambiances. En fin de journée, arrivée dans le secteur de Calatayud, installation à l’hôtel et soirée détente."
-      },
-      {
-        jour: 3,
-        titre: "Cap sur les Bardenas",
-        texte: "Dès 9h00, départ par groupes de 5 véhicules, espacés de 15 minutes. Une nouvelle étape s’ouvre sur de belles pistes roulantes, entre vastes plaines et plateaux, avec pour objectif le spectaculaire désert des Bardenas. À midi, halte dans un petit restaurant d’un village espagnol. Une pause qui marque symboliquement la transition entre les paysages des Monegros et l’approche des Bardenas. L’après-midi, retour sur les pistes à travers de grandes étendues ouvertes, où le rythme devient plus roulant et les horizons toujours plus sauvages. En fin de journée, arrivée à proximité du désert des Bardenas, installation à l’hôtel et soirée conviviale autour d’un grand buffet à volonté. Une journée de transition et d’évasion, avec un décor qui change au fil des kilomètres et la promesse des Bardenas pour horizon."
-      },
-      {
-        jour: 4,
-        titre: "Bardenas & derniers défis",
-        texte: "Une dernière étape à la carte. Dès 9h00, départ par groupes de 5 véhicules, espacés de 15 minutes, pour une immersion au cœur du spectaculaire désert des Bardenas, traversé dans le strict respect de la réglementation en vigueur. À la sortie du désert, changement de décor et de terrain : pistes variées, passages montagneux, secteurs plus cassants et sous-bois rythment cette dernière matinée Offroad. Vers 14h30, place à un déjeuner bien mérité avant de choisir la suite de votre aventure. Deux options s’offrent alors à vous : retour tranquille au point de départ par 10 km de route, ou, pour prolonger le plaisir, une ultime boucle Offroad de 50 km à travers montagnes et sous-bois. Une dernière journée intense et contrastée, avec la liberté de terminer en douceur… ou de savourer jusqu’au dernier kilomètre de piste."
-      }
-    ]
-  },
   "espagne-aragon-catalogne-avril-2027": {
     modele: "global",
     nb_jours: 2,

@@ -55,18 +55,6 @@ window.OFFROAD_RAIDS = [
     lien: "presentation-raid.html?id=espagne-1000-bornes-mai-2027"
   },
   {
-    id: "espagne-1000-bornes-2026",
-    pays: "espagne",
-    annee: 2026,
-    date: "09 → 12 OCT. 2026",
-    titre: "LA 1000 BORNES",
-    statut: "COMPLET",
-    prix_solo: "900 €",
-    prix_duo: "1 300 €",
-    programme: "presentation-raid.html?id=espagne-1000-bornes-2026",
-    lien: "presentation-raid.html?id=espagne-1000-bornes-2026"
-  },
-  {
     id: "espagne-bardegros-2026",
     pays: "espagne",
     annee: 2026,
