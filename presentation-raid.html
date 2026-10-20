@@ -779,6 +779,30 @@ nav .active{
 .raid-meta .meta-status.full{border-color:#c61f1f!important;color:#c61f1f!important;-webkit-text-fill-color:#c61f1f!important;}
 .raid-meta .meta-status.upcoming{border-color:#111!important;color:#111!important;-webkit-text-fill-color:#111!important;}
 </style>
+<style id="janvier-2027-photo-terradets">
+/* Visuel unique du raid de janvier, avec son crédit photographique. */
+.visual-zone.is-single-photo{display:block;}
+.visual-zone.is-single-photo .raid-single-photo{
+  position:relative;margin:0;width:100%;height:100%;
+}
+.visual-zone.is-single-photo .raid-single-photo img{
+  width:100%;height:100%;object-fit:cover;object-position:center;
+}
+.visual-zone.is-single-photo .raid-photo-credit{
+  position:absolute;right:12px;bottom:12px;max-width:calc(100% - 24px);
+  padding:6px 8px;border-radius:3px;background:rgba(0,0,0,.68);
+  color:#fff!important;-webkit-text-fill-color:#fff!important;
+  font-size:11px;line-height:1.35;text-align:right;
+}
+.visual-zone.is-single-photo .raid-photo-credit a{
+  color:inherit!important;text-decoration:underline;
+}
+@media(max-width:650px){
+  .visual-zone.is-single-photo .raid-single-photo,
+  .visual-zone.is-single-photo .raid-single-photo img{height:auto;}
+  .visual-zone.is-single-photo .raid-photo-credit{font-size:10px;right:8px;bottom:8px;}
+}
+</style>
 </head>
 <body>
 <header>
@@ -871,7 +895,8 @@ document.addEventListener("DOMContentLoaded",()=>{
     ]
   };
   const p=Object.assign({},fallback,view||{});
-  const isBardenas=/bardenas/i.test([
+  const isPyreneesMediterranee=id==="espagne-bardenas-2027";
+  const isBardenas=!isPyreneesMediterranee && /bardenas/i.test([
     raid.id||"",
     raid.titre||"",
     p.title||"",
@@ -911,7 +936,14 @@ document.addEventListener("DOMContentLoaded",()=>{
   document.getElementById("raidPresentationIntro").textContent=p.intro;
 
   const visualZone=document.querySelector(".visual-zone");
-  if(p.video && visualZone){
+  if(isPyreneesMediterranee && visualZone){
+    visualZone.classList.add("is-single-photo");
+    visualZone.setAttribute("aria-label","Photo du lac de Terradets");
+    visualZone.innerHTML=`<figure class="raid-single-photo">
+      <img id="raidPhoto1" src="photos-espagne/raid-pyrenees-mediterranee-terradets.webp" width="1920" height="1152" alt="Lac de Terradets et montagnes en Catalogne" fetchpriority="high" decoding="async">
+      <figcaption class="raid-photo-credit">Photo : <a href="https://commons.wikimedia.org/wiki/File:Embassament_de_Terradets_4832.jpg" target="_blank" rel="noopener noreferrer">Jorge Franganillo</a> · <a href="https://creativecommons.org/licenses/by/2.0/deed.en" target="_blank" rel="noopener noreferrer">CC BY 2.0</a> · Cadrage adapté</figcaption>
+    </figure>`;
+  }else if(p.video && visualZone){
     visualZone.classList.add("is-video");
     visualZone.setAttribute("aria-label","Vidéo du raid");
     visualZone.innerHTML=`<video autoplay muted loop playsinline preload="metadata" disablepictureinpicture tabindex="-1" aria-label="Vidéo du raid Maroc"><source src="${p.video}" type="video/mp4"></video>`;
