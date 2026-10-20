@@ -240,25 +240,25 @@ window.OFFROAD_PROGRAMMES = window.OFFROAD_PROGRAMMES || {
   "espagne-bardenas-2027": {
     modele: "global",
     nb_jours: 3,
-    distance_totale: "Environ 700 km",
+    distance_totale: "Environ 700 kms",
     jours: [
       {
         jour: 1,
         titre: "PONT DE SUERT → VILAGRASA",
         sous_titre: "Montagnes, panoramas et pistes variées",
-        texte: "Dès 9h00, départ de Pont de Suert par groupes de 5 véhicules, espacés de 15 minutes, pour donner le coup d’envoi de cette aventure Offroad. La matinée nous entraîne sur un parcours montagneux, entre pistes techniques et points de vue exceptionnels. Une première étape pour profiter du relief et des paysages tout en prenant ses marques.\n\nÀ midi, halte à Cellers pour partager un repas buffet dans un hôtel-restaurant en bordure de lac. L’après-midi, changement d’ambiance : les montagnes laissent place aux pistes roulantes de la plaine, avant de rejoindre Vilagrasa.\n\nEn fin de journée, repas du soir et nuit à l’hôtel à Vilagrasa, avec parking sécurisé pour les véhicules. Une station-service à proximité permet de préparer les véhicules pour la prochaine étape."
+        texte: "Dès 9h00, départ de Pont de Suert par groupes de 5 véhicules, espacés de 15 minutes. Une matinée entre pistes techniques de montagne et panoramas grandioses.\n\nÀ midi, repas buffet à Cellers, dans un hôtel-restaurant au bord du lac. L’après-midi, cap sur Vilagrasa par les pistes roulantes de la plaine.\n\nRepas du soir et nuit à l’hôtel à Vilagrasa, avec parking sécurisé et station-service à proximité."
       },
       {
         jour: 2,
         titre: "VILAGRASA → TARRAGONE → VILAGRASA",
         sous_titre: "Entre plaines et coteaux, le plaisir des pistes",
-        texte: "Dès 9h00, départ de Vilagrasa par groupes de 5 véhicules, espacés de 15 minutes. Cap sur Tarragone à travers un parcours alternant plaines ouvertes et coteaux, où les pistes invitent à profiter du pilotage autant que des paysages. Au fil des kilomètres, les horizons se dévoilent et l’aventure se poursuit dans une ambiance conviviale.\n\nÀ midi, halte à Tarragone pour partager le repas et profiter d’un moment de détente. L’après-midi, retour vers Vilagrasa par un itinéraire différent, sur des pistes du même caractère, entre plaines et coteaux. De nouveaux passages à découvrir pour prolonger le plaisir jusqu’à la fin de l’étape.\n\nEn fin de journée, retour au même hôtel à Vilagrasa, avec parking sécurisé pour les véhicules. Repas du soir et nuit sur place, pour reprendre des forces avant la dernière journée de cette aventure."
+        texte: "Dès 9h00, départ de Vilagrasa par groupes de 5 véhicules, espacés de 15 minutes. Direction Tarragone, entre plaines ouvertes et coteaux.\n\nAprès le repas de midi à Tarragone, retour à Vilagrasa par un itinéraire différent, sur des pistes de même caractère.\n\nRepas du soir et nuit au même hôtel que la veille, avec parking sécurisé."
       },
       {
         jour: 3,
         titre: "VILAGRASA → PONT DE SUERT",
         sous_titre: "Dernières pistes, entre plaines et montagnes",
-        texte: "Dès 9h00, départ de Vilagrasa par groupes de 5 véhicules, espacés de 15 minutes, pour cette dernière journée d’aventure. La matinée se déroule en plaine, sur les pistes en direction de Cellers. Une nouvelle occasion de profiter des paysages ouverts et du plaisir de rouler ensemble avant de retrouver les reliefs.\n\nÀ midi, halte à Cellers autour d’un repas buffet. Un moment convivial pour reprendre des forces, partager les souvenirs des premières étapes et savourer cette dernière pause déjeuner du raid.\n\nL’après-midi, retour vers Pont de Suert par des pistes montagneuses et roulantes, permettant une progression fluide au cœur des reliefs. Les paysages changent à nouveau et accompagnent les derniers kilomètres de cette traversée Offroad. L’arrivée à Pont de Suert marque la fin de ces trois journées entre plaines, coteaux et montagnes, avec de beaux moments partagés."
+        texte: "Dès 9h00, départ de Vilagrasa par groupes de 5 véhicules, espacés de 15 minutes. Les pistes de la plaine nous conduisent à Cellers pour le repas buffet de midi.\n\nL’après-midi, retour vers Pont de Suert par des pistes montagneuses et roulantes, au fil des reliefs et des panoramas.\n\nUne dernière étape pour clore ces trois jours d’aventure, avec de beaux moments partagés."
       }
     ]
   },
